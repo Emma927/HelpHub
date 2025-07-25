@@ -25,15 +25,38 @@ Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomo
 
 ## 🔧 Instalacja lokalna
 
-1. Skopiowanie aplikacji na własne urządzenie:
-   `git clone https://github.com/Emma927/help-hub.git`
-2. Po skopiowaniu przejście do głównego folderu w terminalu:
+1. **Utwórz na swoim urządzeniu lokalny folder o nazwie `help-hub`**
+
+   To będzie miejsce, gdzie skopiujesz repozytorium.
+
+2. **Skopiuj aplikację do utworzonego folderu**
+
+   Użyj polecenia `git clone`, aby pobrać repozytorium:
+
+   `git clone https://github.com/Emma927/HelpHub.git`
+
+3. **Przejdź do głównego folderu w terminalu**
+
+   Przejdź do katalogu projektu, aby móc uruchamiać polecenia npm:
+
    `cd help-hub`
-3. Instalacja aplikacji:
+
+4. **Zainstaluj aplikację**
+
+   Zainstaluj wszystkie potrzebne zależności:
+
    `npm install`
-4. Uruchamia aplikację w trybie developerskim:
+
+5. **Uruchom aplikację w trybie developerskim**
+
+   Aby uruchomić aplikację w trybie developerskim, użyj:
+
    `npm run dev`
-5. Buduje aplikację do produkcji:
+
+6. **Buduj aplikację do produkcji**
+
+   Przygotuj aplikację do wdrożenia w środowisku produkcyjnym:
+
    `npm run build`
 
 ## 🧾 Instrukcje użycia
