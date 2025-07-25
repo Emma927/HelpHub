@@ -1,0 +1,144 @@
+// Bootstrap overrides - nadpisywanie całych klas Bootstrap
+.btn {
+  border-radius: 30px !important;
+  padding: 8px 8px !important;
+}
+
+//Nadpisanie styli Collapse-navbar
+.navbar {
+  background-color: rgb(216, 206, 206);
+
+  &-nav {
+    .nav {
+      &-link {
+        color: $primary;
+        font-weight: 500;
+
+        &:hover {
+          color: $primary-hover;
+        }
+
+        &.active {
+          color: $primary-hover;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  color: $primary;
+  min-height: 320px;
+  margin: 0 auto; // wycentruj w kolumnie, jeśli będzie mniejsza
+  overflow: hidden; // 🔷 dodaj to tutaj
+
+  @include md {
+    min-height: 410px;
+  }
+
+  @include lg {
+    min-height: 460px;
+  }
+
+  @include xl {
+    min-height: 400px;
+  }
+
+  &-img-container {
+    overflow: hidden; // dodanie containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+  }
+
+  &-img-top {
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+    transition: transform 0.2s ease-out;
+  }
+
+  &:hover .card-img-top {
+    transform: scale(1.2);
+  }
+}
+
+.btn {
+  &:hover {
+    background-color:  $primary-hover;
+  }
+
+  &.p-0 {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &.pl-2 {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.carousel {
+  &-item {
+    width: 580px;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $transparent;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-caption {
+    position: absolute; // caption jest absolutnie pozycjonowany względem .carousel
+    bottom: 0; // ustawienie na dole obrazu
+    left: 50%; // połowa szerokości rodzica
+    transform: translateX(-50%); // przesunięcie o połowę własnej szerokości w lewo, aby wycentrować
+    color: #d8d0d0;
+
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px; // odstęp od dołu
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; // teksty na dole
+
+    h3, p {
+      margin: 0;
+
+      @include sm {
+        font-size: 18px;
+      }
+
+      @include md {
+        font-size: 20px;
+      }
+
+      @include lg {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.alert-success {
+  background-color: rgba(188, 180, 180, 0.9);
+  color: $primary;
+  border: 0;
+  box-shadow: 0 0 7px 2px #706a6a;
+}

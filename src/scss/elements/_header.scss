@@ -1,0 +1,54 @@
+header {
+  height: 65px;
+  position: relative;
+
+  &.bg--fill {
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+  }
+
+  .logo {
+    font-size: 17px;
+
+    @include sm {
+      flex-direction: row !important;
+    }
+
+    @include md {
+      font-size: 20px;
+    }
+  }
+
+  .fav__heart {
+    transition: color 0.3s;
+    color: $primary;
+    border: none;
+    background-color: inherit; // dziedziczy kolor od swojego rodzica
+    font-size: 20px;
+
+    &:hover {
+      color: $danger;
+    }
+
+    @include md {
+      font-size: 25px;
+    }
+
+    @include lg {
+      font-size: 30px;
+    }
+  }
+
+  .form__bar {
+    padding: 5px;
+  }
+
+  .logo-chev--resp {
+    @include md {
+      font-size: 20px;
+    }
+
+    @include lg {
+      font-size: 20px;
+    }
+  }
+}

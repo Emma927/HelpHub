@@ -1,0 +1,52 @@
+footer {
+  //background-color: $primary;
+  height: 65px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $primary;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px; /* Odstęp między liniami */
+    left: 0;
+    right: 0;
+    border-top: 1px solid $primary;
+  }
+
+  a {
+    color: $primary;
+  }
+
+  .font-down--resp {
+    font-size: 10px; // Default size for xs
+
+    @include md {
+      font-size: 12px; // Size for sm and larger
+    }
+
+    @include lg {
+      font-size: 14px; // Size for lg and larger
+    }
+  }
+
+  .logo-down--resp {
+    font-size: 14px; // Default size for xs
+
+    @include md {
+      font-size: 16px; // Size for sm and larger
+    }
+
+    @include lg {
+      font-size: 18px; // Size for lg and larger
+    }
+  }
+}

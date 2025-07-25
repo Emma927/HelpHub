@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth; // sprawia, że przewijanie strony do kotwic (anchor links) staje się płynne, zamiast natychmiastowego przeskoku.
+}
+
+body {
+  background-color: $secondary;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden // może być potrzebny poniżej min-width: 768px - po przekroczeniu tego punktu, aby ukryć to co wystaje poza layout strony
+}
+
+.font--resp {
+  font-size: 12px;
+
+  @include md {
+    font-size: 14px;
+  }
+
+  @include lg {
+    font-size: 15px;
+  }
+}
+
+.logo-font--resp {
+  font-size: 25px;
+
+  @include md {
+    font-size: 30px;
+  }
+
+  @include lg {
+    font-size: 32px;
+  }
+}
