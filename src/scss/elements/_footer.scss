@@ -16,7 +16,7 @@ footer {
   &::after {
     content: '';
     position: absolute;
-    top: 2px; /* Odstęp między liniami */
+    top: 2px; // Odstęp między liniami
     left: 0;
     right: 0;
     border-top: 1px solid $primary;
@@ -27,26 +27,26 @@ footer {
   }
 
   .font-down--resp {
-    font-size: 10px; // Default size for xs
+    font-size: 10px;
 
     @include md {
-      font-size: 12px; // Size for sm and larger
+      font-size: 12px;
     }
 
     @include lg {
-      font-size: 14px; // Size for lg and larger
+      font-size: 14px;
     }
   }
 
   .logo-down--resp {
-    font-size: 14px; // Default size for xs
+    font-size: 14px;
 
     @include md {
-      font-size: 16px; // Size for sm and larger
+      font-size: 16px;
     }
 
     @include lg {
-      font-size: 18px; // Size for lg and larger
+      font-size: 18px;
     }
   }
 }
