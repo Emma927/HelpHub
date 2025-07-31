@@ -7,10 +7,12 @@ przez różne organizacje pomocowe.
 ## 🚀 Funkcje
 
 - Przeglądanie ogłoszeń
+- Filtrowanie ogłoszeń według wybranych kategorii
 - Responsywny interfejs
+- Rejestracja i logowanie użytkownika
 - Dodawanie / usuwanie ogłoszeń z ulubionych
 - Routing React Router
-- Dodawanie ogłoszeń (planowane)
+- Paginacja stron z ogłoszeniami
 
 ## 🛠️ Technologie
 
@@ -18,7 +20,7 @@ przez różne organizacje pomocowe.
 - React
 - Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
 - React Router
-- JSON server (używany jako baza danych dla ogłoszeń, umożliwiając szybkie symulowanie działania API)
+- JSON server (używany jako baza danych dla ogłoszeń, umożliwiając symulowanie działania API)
 - Bootstrap
 - React-Bootstrap
 - React-Icons
@@ -77,3 +79,13 @@ przez różne organizacje pomocowe.
 
 - do publikacji ogłoszenia potrzebna jest rejestracja organizacji i logowanie,
 - po założeniu konta można dodawać ogłoszenia.
+
+## 📊 Możliwości rozwoju aplikacji HelpHub
+
+- Rejestracja i logowanie dla organizacji pomocowych
+- Dodawanie ogłoszeń przez organizacje pomocowe
+- Filtrowanie ogłoszeń po dodatkowych kategoriach
+- Formularz płatności
+- Możliwość wyboru języka polski / angielski itd.
+- Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach
+  Polski 
