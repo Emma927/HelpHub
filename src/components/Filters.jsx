@@ -1,72 +1,53 @@
-import SearchBar from "@/components/SearchBar"; //  import SearchBar
-//@ zastępuje cały folder src, żeby nie musieć pisać ścieżek z dokłądną lokalizacją ./, ../../ itd.
-import Button from 'react-bootstrap/Button';
-import {Card} from 'react-bootstrap';
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from 'react';
+import { FiltersContext } from '@/context/FiltersContext'; //@ - zastępuje cały folder src, żeby nie musieć pisać ścieżek z dokłądną lokalizacją "./, ../../" itd.
 
-function Filters({ onNavigate, voivodeship, clothesAndShoes, accessories, urgent, filteredAnnouncements }) {
+const filterButtons = [
+  {
+    cat: 'clothesAndShoes',
+    label: 'Odzież i obuwie',
+  },
+  {
+    cat: 'accessories',
+    label: 'Akcesoria',
+  },
+  {
+    cat: 'urgent',
+    label: 'Pilne',
+  },
+];
 
-    const cards = [
-        {
-            title: "Odzież i obuwie",
-            description: "Zbieramy odzież i obuwie w dobrym stanie, aby pomóc osobom w trudnej sytuacji życiowej. Każda para spodni, bluzka czy buty mogą znacząco poprawić komfort życia potrzebujących. Przyjmujemy zarówno letnie, jak i zimowe ubrania dla dorosłych i dzieci.",
-            image: "src/assets/clothes.jpg",
-            filteredCategory: clothesAndShoes
-        },
-        {
-            title: "Akcesoria",
-            description: "“Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: torby, plecaki, biżuterię, czapki, szaliki i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.",
-            image: "src/assets/accessories.jpg",
-            filteredCategory: accessories
-        },
-        {
-            title: "Pilność",
-            description: "Ta zbiórka dotyczy pilnych potrzeb, takich jak żywność, środki higieny osobistej, koce czy leki. Szybka pomoc jest kluczowa w sytuacjach kryzysowych, dlatego każda darowizna ma ogromne znaczenie. Wspólnie możemy pomóc tym, którzy potrzebują natychmiastowego wsparcia.",
-            image: "src/assets/food.jpg",
-            filteredCategory: urgent
-        }
-    ];
+function Filters() {
+  const { selectedCategories, setSelectedCategories } =
+    useContext(FiltersContext);
 
-    const navigate = useNavigate();
-
-    //category w JSON jest obiektem, a nie stringiem. Jednak w kontekście funkcji handleFilterClick, zakładamy, że category jest przekazywane jako string reprezentujący jedną z właściwości tego obiektu, a nie cały obiekt.
-    const handleFilterClick = (filteredCategory) => {
-        navigate(`/announcements?category=${filteredCategory}`);
-    };
-    //   - Użycie category jako parametru zapytania w URL pozwala na przekazanie informacji o tym, jak chcesz filtrować dane na stronie. Na przykład, jeśli chcesz wyświetlić tylko ogłoszenia związane z ubraniami, możesz użyć /announcements-list_and_details?category=clothesAndShoes.
-
-    const category = [clothesAndShoes, accessories, urgent];
-
-    //nie wiem czy to będzie
-    function handleFilterVoi() {
-        setVoivodeship(voivodeship)
-    }
-
-    return (
-        <section className="section__home">
-            {/* Container z treścią */}
-            <div className="h-100 align-items-center text-white pt-5 mt-2">
-                {/* 🔷 SearchBar ponad napisem */}
-                <div className="w-100">
-                    <SearchBar onVoivodeship={handleFilterVoi}/>
-                </div>
-            </div>
-            <div className="container mb-5">
-                <div className="row g-3 justify-content-center">
-                    {cards.map(({ title, description, image }, index) => (
-                        <div key={index} className="col-12 col-sm-6 col-lg-4">
-                            <Button
-                                variant="primary"
-                                // key={key}
-                                // id={`filter-${key}`} //przypisanie id do przycisku
-                                onClick={() => handleFilterClick(filterCategory)}
-                            >Dołącz się!</Button>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+  // toggleCategory – przełącza obecność kategorii w liście selectedCategories. Dodaje lub usuwa kategorię z aktywnych filtrów -  jeśli kategoria jest już na liście, zostaje usunięta, a jeśli jej nie ma, zostaje dodana.
+  // cat - kategoria, którą chcę przełączyć (dodać lub usunąć z listy)
+  // setSelectedCategories - to funkcja, która aktualizuje stan selectedCategories
+  // prev reprezentuje poprzedni stan selectedCategories.
+  // prev.includes(cat) - Sprawdza, czy cat już znajduje się w liście selectedCategories.
+  // Operator warunkowy ? - Jeśli cat jest już w liście (prev.includes(cat) zwraca true), wykonuje prev.filter((c) => c !== cat).
+  // Jeśli cat nie jest w liście (prev.includes(cat) zwraca false), wykonuje [...prev, cat].
+  // prev.filter((c) => c !== cat) - Usuwa cat z listy. Tworzy nową listę, która zawiera wszystkie elementy z prev, z wyjątkiem cat
+  // [...prev, cat] - Dodaje cat do listy. Tworzy nową listę, która zawiera wszystkie elementy z prev oraz dodaje cat na końcu
+  const toggleCategory = (cat) => {
+    setSelectedCategories((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat],
     );
+  };
+
+  return (
+    <div className="d-flex justify-content-center gap-3 mt-5">
+      {filterButtons.map(({ cat, label }) => (
+        <button
+          key={cat}
+          className={`btn--welcome announcements__filters ${selectedCategories.includes(cat) ? 'announcements__filters--active' : ''}`}
+          onClick={() => toggleCategory(cat)}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  );
 }
 
 export default Filters;
