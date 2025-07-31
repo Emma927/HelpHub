@@ -19,36 +19,186 @@ main {
           font-size: 46px;
         }
       }
+    }
+  }
 
-      .btn--welcome {
-        display: inline-flex;
-        align-items: center;
-        background-color: $primary;
+  // Announcements
+  .announcements {
+    margin: 40px 0;
+
+    &__filters {
+      font-weight: 400;
+
+      &--active {
+        background-color: $primary-active;
         color: white;
-        border: none;
-        padding: 10px 20px;
-        font-weight: 600;
-        border-radius: 30px;
-        cursor: pointer;
-        overflow: hidden;
+      }
+    }
 
-        .arrow {
-          margin-right: 10px;
-          transition: transform 0.5s ease;
+    &__info {
 
+      p {
+        font-weight: bold;
+        margin: 3px 0;
+      }
+
+      span {
+        font-weight: normal;
+      }
+
+      a {
+        font-weight: normal;
+      }
+
+      .font__card-resp {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 7px 0;
+
+        @include md {
+          font-size: 15px;
         }
 
-        &:hover .arrow {
-          transform: translateX(7px);
+        @include lg {
+          font-size: 16px;
         }
 
-        &:hover {
-          background-color: $primary-hover;
-          transition: background-color 0.3s;
+        @include xl {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .card {
+      min-height: 500px;
+
+      @include md {
+        min-height: 540px;
+      }
+
+      @include lg {
+        min-height: 600px;
+      }
+
+      @include xl {
+        min-height: 570px;
+      }
+
+      &-img-container {
+        overflow: hidden; // dodanie containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+        position: relative;
+      }
+
+      &-img-top {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover; //zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
+        transition: transform 0.2s ease-out;
+        z-index: 3;
+      }
+    }
+
+    .select-filters {
+      &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        //width: 100%;
+        max-width: 410px;
+        margin: 0 auto; // wyśrodkowanie
+      }
+    }
+
+    // Style card-custom na ostatniej stronie paginacji kiedy znajduje się na niej tylko 1 albo 2 karty z ogłoszeniem
+    .card-custom { // Sam card-custom nie ma styli, działa jak identyfikator, używany po to aby JavaScript mógł łatwo odnaleźć karty i dodać dodatkowe style dla tych elementów
+      &.only-card {
+        /* Styl dla jedynej karty na stronie */
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      &.two-cards {
+        /* Styl dla kart, gdy są dokładnie dwie na stronie */
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    }
+  }
+
+  // AnnouncementDetails
+  .announcement {
+    &__details {
+      &-img {
+        max-width: 460px;
+        height: auto;
+        object-fit: cover; //zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
+
+        @include sm {
+          min-width: 520px;
+        }
+
+        @include md {
+          min-width: 580px;
+        }
+
+        @include lg {
+          max-width: 640px;
+        }
+
+        @include xl {
+          max-width: 700px;
+        }
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 17px;
+
+        @include md {
+          font-size: 18px;
+        }
+
+        @include lg {
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 14px;
+
+        @include sm {
+          font-size: 16px;
+        }
+
+        @include md {
+          font-size: 17px;
+        }
+
+        @include lg {
+          font-size: 19px;
+        }
+      }
+
+      .font--back {
+        font-size: 14px;
+
+        @include sm {
+          font-size: 16px;
+        }
+
+        @include md {
+          font-size: 17px;
         }
       }
     }
   }
+
 
   // Initiatives
   .initiatives {

@@ -36,3 +36,33 @@ body {
     font-size: 32px;
   }
 }
+
+.fav__heart {
+  transition: color 0.3s;
+  color: $primary;
+  border: none;
+  background-color: inherit; // dziedziczy kolor od swojego rodzica
+  font-size: 20px;
+
+  &:hover {
+    color: $danger;
+  }
+
+  @include md {
+    font-size: 25px;
+  }
+
+  @include lg {
+    font-size: 30px;
+  }
+}
+
+.custom-select option {
+  color: #212529;
+  font-weight: 400;
+  text-align: center;
+
+  &:hover {
+    background-color: #e6f6f5;
+  }
+}
