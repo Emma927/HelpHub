@@ -1,6 +1,8 @@
 # HelpHub
 
-Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomocowymi przeprowadzającymi zbiórki ubrań, akcesoriów i żywności w Polsce. Rozwiązuje problem braku jednego miejsca do przeglądania i dodawania zbiórek przez różne organizacje pomocowe.
+Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomocowymi przeprowadzającymi zbiórki ubrań,
+obuwia, akcesoriów i żywności w Polsce. Rozwiązuje problem braku jednego miejsca do przeglądania i dodawania zbiórek
+przez różne organizacje pomocowe.
 
 ## 🚀 Funkcje
 
@@ -16,12 +18,15 @@ Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomo
 - React
 - Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
 - React Router
+- JSON server (używany jako baza danych dla ogłoszeń, umożliwiając szybkie symulowanie działania API)
 - Bootstrap
 - React-Bootstrap
 - React-Icons
-- Responsive Web Design (Mobile-First)
+- Responsive Web Design
+- Context Api
 - localStorage
 - dotlottie-react
+- React-Select
 
 ## 🔧 Instalacja lokalna
 
@@ -62,11 +67,13 @@ Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomo
 ## 🧾 Instrukcje użycia
 
 ➡️ Dla każdego użytkownika:
+
 - kliknij przycisk na stronie głównej, aby przenieść się do publicznych ogłoszeń,
 - użyj filtrów na stronie do wyszukiwania zbiórek w określonych kategoriach,
 - do zapisania zbiórek w ulubionych potrzebna jest rejestracja konta i zalogowanie,
 - po założeniu konta można zapisać ogłoszenia do ulubionych.
 
 ➡️ Dla organizacji pomocowych (w planach):
+
 - do publikacji ogłoszenia potrzebna jest rejestracja organizacji i logowanie,
 - po założeniu konta można dodawać ogłoszenia.
