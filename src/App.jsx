@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Pages
 import Layout from '@/layout/Layout';
@@ -6,19 +5,16 @@ import Home from '@/pages/Home';
 import Announcements from '@/pages/Announcements';
 import AnnouncementDetails from '@/pages/AnnouncementDetails';
 import News from '@/pages/News';
-import Initiatives from '@/pages/Initiatives';
 import About from '@/pages/About';
-import ProtectedRoute from '@/user/ProtectedRoute.jsx'; //do rozważenia, czy jest potrzebna chroniona trasa
+import ProtectedRoute from '@/user/ProtectedRoute';
 import NotFound from '@/pages/NotFound';
 // User
-import UserLogin from '@/user/UserLogin.jsx';
-import UserRegister from '@/user/UserRegister.jsx';
-import UserDashboard from '@/user/UserDashboard.jsx';
-import FavoriteOffers from '@/user/FavoriteOffers.jsx';
+import UserLoginForm from '@/user/UserLoginForm';
+import UserRegisterForm from '@/user/UserRegisterForm';
+import FavouriteOffers from '@/user/FavouriteOffers';
+import React from 'react';
 
 function App() {
-  const [user, setUser] = useState(null);
-
   return (
     <Router>
       <Routes>
@@ -27,33 +23,17 @@ function App() {
           <Route path="announcements" element={<Announcements />} />
           <Route path="announcements/:id" element={<AnnouncementDetails />} />
           <Route path="news" element={<News />} />
-          <Route path="initiatives" element={<Initiatives />} />
           <Route path="about" element={<About />} />
 
-          {/* Ścieżki autoryzacji */}
           <Route path="auth">
             <Route path="user">
-              <Route path="login" element={<UserLogin setUser={setUser} />} />
-              <Route
-                path="register"
-                element={<UserRegister setUser={setUser} />}
-              />
+              <Route path="login" element={<UserLoginForm />} />
+              <Route path="register" element={<UserRegisterForm />} />
             </Route>
           </Route>
 
-          {/* Panel użytkownika */}
-          <Route
-            element={
-              <ProtectedRoute
-                isLoggedIn={user?.type === 'user'}
-                redirectTo="/auth/user/login"
-              />
-            }
-          >
-            <Route path="user">
-              <Route index element={<UserDashboard />} />
-              <Route path="ulubione" element={<FavoriteOffers />} />
-            </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="favourites" element={<FavouriteOffers />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />
