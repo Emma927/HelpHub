@@ -2,6 +2,7 @@
 .btn {
   border-radius: 30px !important;
   padding: 8px 8px !important;
+  border: none !important;
 }
 
 //Nadpisanie styli Collapse-navbar
@@ -30,8 +31,8 @@
 .card {
   color: $primary;
   min-height: 320px;
-  margin: 0 auto; // wycentruj w kolumnie, jeśli będzie mniejsza
-  overflow: hidden; // 🔷 dodaj to tutaj
+  margin: 0 auto; // wycentrowanie w kolumnie, jeśli będzie mniejsza
+  overflow: hidden;
 
   @include md {
     min-height: 410px;
@@ -46,7 +47,7 @@
   }
 
   &-img-container {
-    overflow: hidden; // dodanie containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+    overflow: hidden; // dodanie img-containera, który ogranicza ruch obrazka tylko do obszaru kontenera
   }
 
   &-img-top {
@@ -111,7 +112,7 @@
 
     text-align: center;
     width: 100%;
-    padding-bottom: 20px; // odstęp od dołu
+    padding-bottom: 20px;
 
     display: flex;
     flex-direction: column;

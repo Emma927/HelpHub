@@ -125,7 +125,12 @@ main {
         /* Styl dla kart, gdy są dokładnie dwie na stronie */
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 100%;
+
+        @include md {
+          width: 50%;
+          max-width: 400px;
+        }
       }
     }
   }

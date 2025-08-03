@@ -32,27 +32,29 @@ header {
     }
   }
 
-  .btn--rounded {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .btn {
+    &--rounded {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-    @include md {
-      // Ustawienie szerokości i wysokości na auto pozwala przyciskowi dostosować się do zawartości (tekst i ikona) oraz do stylów takich jak padding
-      width: auto;
-      height: auto;
-      border-radius: 0;
+      @include md {
+        // Ustawienie szerokości i wysokości na auto pozwala przyciskowi dostosować się do zawartości (tekst i ikona) oraz do stylów takich jak padding
+        width: auto;
+        height: auto;
+        border-radius: 0;
+      }
     }
-  }
 
-  .btn--text {
-    display: none;
+    &--text {
+      display: none;
 
-    @include md {
-      display: inline;
+      @include md {
+        display: inline;
+      }
     }
   }
 }

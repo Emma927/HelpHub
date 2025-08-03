@@ -1,0 +1,124 @@
+.user {
+  background: $transparent;
+
+  // UserLoginForm
+  &__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include lg {
+      flex-direction: row;
+    }
+
+    &-form {
+      color: $primary;
+      width: 80%;
+      //margin-left: 20px;
+
+      @include lg {
+        flex-direction: row;
+        width: 50%;
+        margin-left: 50px;
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
+    }
+
+    .img-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+      width: 100%;
+      height: 40vh;
+      overflow: hidden;
+
+      @include lg {
+        flex-direction: row;
+        //width: 80%;
+        height: 75vh;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      .text {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $secondary;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(220, 214, 214, 0.2);
+        z-index: 1;
+      }
+    }
+  }
+
+  // UserRegisterForm
+  &__register {
+
+    &-form {
+      color: $primary;
+      //width: 100%;
+      //margin-right: 20px;
+
+      //@include md {
+      //  //width: 50%;
+      //  flex-direction: row;
+      //  margin-right: 20px;
+      //}
+
+      @include lg {
+        flex-direction: row;
+        margin-right: 50px;
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
+    }
+
+    .img-container {
+      .text {
+        &-register {
+          color: #534444;
+        }
+      }
+
+      &--register {
+        &::after {
+          background-color: rgba(220, 214, 214, 0.5);
+        }
+      }
+    }
+  }
+}
