@@ -1,3 +1,45 @@
+import {
+  BsTwitterX,
+  BsFacebook,
+  BsInstagram,
+  BsYoutube,
+  BsWhatsapp,
+  BsTiktok,
+} from 'react-icons/bs';
+
+export const socialMediaSites = [
+  {
+    icon: BsFacebook,
+    address: 'https://www.facebook.com/helpchain',
+    label: 'Facebook naszej firmy',
+  },
+  {
+    icon: BsTwitterX,
+    address: 'https://www.x.com/helpchain',
+    label: 'X naszej firmy',
+  },
+  {
+    icon: BsInstagram,
+    address: 'https://www.instagram.com/helpchain',
+    label: 'Instagram naszej firmy',
+  },
+  {
+    icon: BsYoutube,
+    address: 'https://www.youtube.com/helpchain',
+    label: 'Youtube naszej firmy',
+  },
+  {
+    icon: BsWhatsapp,
+    address: 'https://www.whatsapp.com/helpchain',
+    label: 'Whatsapp naszej firmy',
+  },
+  {
+    icon: BsTiktok,
+    address: 'https://www.tiktok.com/helpchain',
+    label: 'TikTok naszej firmy',
+  },
+];
+
 export const navSites = [
   {
     name: 'Strona główna',
@@ -12,16 +54,12 @@ export const navSites = [
     path: 'news',
   },
   {
-    name: 'Inicjatywy',
-    path: 'initiatives',
-  },
-  {
     name: 'O nas',
     path: 'about',
   },
 ];
 
-export const constans = [
+export const voivodeships = [
   {
     value: 'all',
     label: 'Wybierz województwo',
@@ -93,6 +131,31 @@ export const constans = [
   },
 ];
 
+export const filterButtons = [
+  {
+    cat: 'clothesAndShoes',
+    label: 'Odzież i obuwie',
+  },
+  {
+    cat: 'accessories',
+    label: 'Akcesoria',
+  },
+  {
+    cat: 'urgent',
+    label: 'Pilne',
+  },
+];
+
+export const possibilities = [
+  'Licznik ulubionych ofert w nagłówku strony (header), widoczny po zalogowaniu,',
+  'Rejestracja i logowanie dla organizacji pomocowych, ',
+  'Indywidualne zamieszczenie ogłoszeń przez wszystkich organizatorów zbiórek,',
+  'Filtrowanie ogłoszeń po dodatkowych kategoriach,',
+  'Formularz płatności,',
+  'Możliwość wyboru języka polski /angielski itd.,',
+  'Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach Polski.',
+];
+
 export const customStyles = {
   control: (provided, state) => ({
     ...provided,
@@ -148,3 +211,9 @@ export const customStyles = {
 - **Argumenty**: provided.
 - **Dlaczego**: Umożliwia dostosowanie wyglądu menu, np. ustawiając zIndex, aby menu nie było zasłonięte przez inne elementy strony.
 Każda z tych funkcji pozwala na rozszerzenie lub nadpisanie domyślnych stylów dostarczanych przez react-select, co daje dużą elastyczność w dostosowywaniu wyglądu komponentu do specyficznych potrzeb projektu.*/
+
+/*Właściwości takie jak control, option, singleValue, i menu w obiekcie customStyles są używane przez bibliotekę react-select do nadpisywania domyślnych stylów komponentu. Oto dlaczego edytor ich nie oznacza jako nieużywane:
+1. **Specyficzne API:** Te właściwości są częścią specyficznego API react-select do dostosowywania wyglądu komponentu. react-select oczekuje, że obiekt stylów będzie zawierał te właściwości i używa ich wewnętrznie, gdy renderuje komponent.
+2. **Dynamiczne użycie:** Właściwości te są dynamicznie używane przez react-select w momencie, gdy komponent jest renderowany, nawet jeśli w kodzie nie widać bezpośrednich odniesień do nich.
+3. **Integracja z biblioteką:** Edytory kodu, takie jak Visual Studio Code, mogą nie oznaczać tych właściwości jako nieużywane, ponieważ są one częścią konwencji używanej przez zewnętrzną bibliotekę. Edytor rozpoznaje, że są one wykorzystywane w kontekście tej biblioteki.
+Podsumowując, właściwości te są używane zgodnie z oczekiwaniami react-select, mimo że nie są bezpośrednio wywoływane w Twoim kodzie. Dlatego edytor nie oznacza ich jako nieużywane.*/
