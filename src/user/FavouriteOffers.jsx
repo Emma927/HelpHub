@@ -1,9 +1,5 @@
 function FavoriteOffers() {
-    return (
-        <>
-
-        </>
-    );
+  return <></>;
 }
 
 export default FavoriteOffers;

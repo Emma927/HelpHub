@@ -4,7 +4,7 @@ Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomo
 obuwia, akcesoriów i żywności w Polsce. Rozwiązuje problem braku jednego miejsca do przeglądania i dodawania zbiórek
 przez różne organizacje pomocowe.
 
-## 🚀 Funkcje
+## 🚀 Funkcjonalności
 
 - Przeglądanie ogłoszeń
 - Filtrowanie ogłoszeń według wybranych kategorii
@@ -20,7 +20,7 @@ przez różne organizacje pomocowe.
 - React
 - Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
 - React Router
-- JSON server (używany jako baza danych dla ogłoszeń, umożliwiając symulowanie działania API)
+- JSON server (używany jako baza danych dla ogłoszeń i użytkowników)
 - Bootstrap
 - React-Bootstrap
 - React-Icons
@@ -82,8 +82,9 @@ przez różne organizacje pomocowe.
 
 ## 📊 Możliwości rozwoju aplikacji HelpHub
 
+- Licznik ulubionych ofert w nagłówku strony (header), widoczny po zalogowaniu
 - Rejestracja i logowanie dla organizacji pomocowych
-- Dodawanie ogłoszeń przez organizacje pomocowe
+- Indywidualne dodawanie ogłoszeń przez organizacje pomocowe
 - Filtrowanie ogłoszeń po dodatkowych kategoriach
 - Formularz płatności
 - Możliwość wyboru języka polski / angielski itd.

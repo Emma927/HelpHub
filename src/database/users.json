@@ -1,5 +1,16 @@
 {
   "users": [
-
+    {
+      "id": 1,
+      "username": "john_doe",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "jane_doe",
+      "password": "securepass",
+      "role": "user"
+    }
   ]
 }

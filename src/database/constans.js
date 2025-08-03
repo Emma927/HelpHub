@@ -1,4 +1,27 @@
-export const voivodeships = [
+export const navSites = [
+  {
+    name: 'Strona główna',
+    path: '/',
+  },
+  {
+    name: 'Ogłoszenia',
+    path: 'announcements',
+  },
+  {
+    name: 'Nowości',
+    path: 'news',
+  },
+  {
+    name: 'Inicjatywy',
+    path: 'initiatives',
+  },
+  {
+    name: 'O nas',
+    path: 'about',
+  },
+];
+
+export const constans = [
   {
     value: 'all',
     label: 'Wybierz województwo',
