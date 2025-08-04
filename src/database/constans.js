@@ -40,6 +40,27 @@ export const socialMediaSites = [
   },
 ];
 
+export const cards = [
+  {
+    title: 'Odzież i obuwie',
+    description:
+      'Zbiórka odzieży i obuwie w dobrym stanie, aby pomóc osobom w trudnej sytuacji życiowej. Każda para spodni, bluzka czy buty mogą znacząco poprawić komfort życia potrzebujących. Przyjmujemy zarówno letnie, jak i zimowe ubrania dla dorosłych i dzieci.',
+    image: 'src/assets/clothes.jpg',
+  },
+  {
+    title: 'Akcesoria',
+    description:
+      'Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: torby, plecaki, biżuterię, czapki, szaliki i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.',
+    image: 'src/assets/accessories.jpg',
+  },
+  {
+    title: 'Pilność',
+    description:
+      'Zbiórka dotyczy pilnych potrzeb, takich jak żywność, środki higieny osobistej, koce czy leki. Szybka pomoc jest kluczowa w sytuacjach kryzysowych, dlatego każda darowizna ma ogromne znaczenie. Wspólnie możemy pomóc tym, którzy potrzebują natychmiastowego wsparcia.',
+    image: 'src/assets/food.jpg',
+  },
+];
+
 export const navSites = [
   {
     name: 'Strona główna',
