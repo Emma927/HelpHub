@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-
-const faq = [
-  {
-    question: 'Kim jesteśmy?',
-    answer:
-      'HelpHub– to centralna aplikacja ogłoszeniowa, która łączy użytkowników ze wszystkimi organizacjami, instytucjami, schroniskami, prywatnymi działalnościami przeprowadzającymi zbiórki ubrań i akcesoriów w jednym miejscu. Umożliwia przeglądanie ogłoszeń o organizowanych zbiórkach przez wszystkie organizacje pomocowe w Polsce.',
-    number: 1,
-  },
-  {
-    question: 'Czy sami oragnizujemy zbiórki?',
-    answer: 'Nie, my tworzy jeden punkt ogłoszeń dla zbiórek.',
-    number: 2,
-  },
-  {
-    question: 'Czy aplikacja jest bezpłatna?',
-    answer: 'Tak. Nie pobieramy płatności za korzystanie z aplikacji',
-    number: 3,
-  },
-  {
-    question:
-      'Kiedy pojawi się nowa wersja aplikacji z możliwością dodawania ogłoszeń?',
-    answer: 'Najnowsze informacje będziemy publikowali w Nowościach',
-    number: 4,
-  },
-];
+import { faq } from '@/database/constans';
 
 function About() {
   const [showInfo, setShowInfo] = useState(false);
