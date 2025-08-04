@@ -3,8 +3,6 @@
 @import 'settings/variables';
 // Nadpisane zmienne bootstrap (build overrides)
 @import 'settings/variables-overrides';
-// Nadpisane zmienne Bootstrap CSS (runtime overrides)
-@import 'settings/variables-runtime';
 // Import Bootstrap, aby wygenerować wszystkie klasy Bootstrapa w dist CSS. Ten import generuje pełny build Bootstrapa - wczytuje zmienne, a potem generuje klasy już z nowymi / nadpisanymi wartościami.
 @import "bootstrap/scss/bootstrap";
 

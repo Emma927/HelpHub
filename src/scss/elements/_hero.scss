@@ -204,37 +204,6 @@ main {
     }
   }
 
-
-  // Initiatives
-  .initiatives {
-    .carousel--before {
-      position: absolute;
-      top: 150px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
-      z-index: 10;
-      color: $primary;
-    }
-
-    h3 {
-      font-size: 16px;
-
-      @include sm {
-        font-size: 18px;
-      }
-
-      @include md {
-        font-size: 20px;
-      }
-
-      @include lg {
-        font-size: 22px;
-      }
-    }
-  }
-
   // About
   .about {
     .faq {
@@ -254,10 +223,6 @@ main {
 
         .logo-chev--resp {
           color: $secondary;
-          //transition: transform 0.3s ease; /* Czy dodam transition dla płynnej animacji ?*/
-          //&.rotate {
-          //  transform: rotate(180deg);
-          //}
         }
       }
 

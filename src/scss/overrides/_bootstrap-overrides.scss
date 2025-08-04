@@ -80,63 +80,6 @@
   }
 }
 
-.carousel {
-  &-item {
-    width: 580px;
-    height: auto;
-    transition: transform 0.4s ease-in-out;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: $transparent;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  &-caption {
-    position: absolute; // caption jest absolutnie pozycjonowany względem .carousel
-    bottom: 0; // ustawienie na dole obrazu
-    left: 50%; // połowa szerokości rodzica
-    transform: translateX(-50%); // przesunięcie o połowę własnej szerokości w lewo, aby wycentrować
-    color: #d8d0d0;
-
-    text-align: center;
-    width: 100%;
-    padding-bottom: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; // teksty na dole
-
-    h3, p {
-      margin: 0;
-
-      @include sm {
-        font-size: 18px;
-      }
-
-      @include md {
-        font-size: 20px;
-      }
-
-      @include lg {
-        font-size: 22px;
-      }
-    }
-  }
-}
-
 .alert-success {
   background-color: rgba(188, 180, 180, 0.9);
   color: $primary;
