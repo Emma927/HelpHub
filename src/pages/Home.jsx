@@ -1,33 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import { BsCaretRightFill } from 'react-icons/bs';
 import { Card } from 'react-bootstrap';
+import { cards } from '@/database/constans';
 
 function Home() {
-  const cards = [
-    {
-      title: 'Odzież i obuwie',
-      description:
-        'Zbiórka odzieży i obuwie w dobrym stanie, aby pomóc osobom w trudnej sytuacji życiowej. Każda para spodni, bluzka czy buty mogą znacząco poprawić komfort życia potrzebujących. Przyjmujemy zarówno letnie, jak i zimowe ubrania dla dorosłych i dzieci.',
-      image: 'src/assets/clothes.jpg',
-    },
-    {
-      title: 'Akcesoria',
-      description:
-        'Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: torby, plecaki, biżuterię, czapki, szaliki i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.',
-      image: 'src/assets/accessories.jpg',
-    },
-    {
-      title: 'Pilność',
-      description:
-        'Zbiórka dotyczy pilnych potrzeb, takich jak żywność, środki higieny osobistej, koce czy leki. Szybka pomoc jest kluczowa w sytuacjach kryzysowych, dlatego każda darowizna ma ogromne znaczenie. Wspólnie możemy pomóc tym, którzy potrzebują natychmiastowego wsparcia.',
-      image: 'src/assets/food.jpg',
-    },
-  ];
-
   return (
     <section className="section__home">
       {/* Container z treścią */}
-      <div className="h-100 align-items-center text-primary">
+      <div className="h-100 d-flex flex-column justify-content-center align-items-center text-primary">
         <h1 className="text-uppercase fw-bold text-center mb-0">
           Twoje centrum dobra
         </h1>
@@ -48,7 +28,7 @@ function Home() {
           </NavLink>
         </div>
       </div>
-      <div className="container mb-5 my-2">
+      <div className="container  mb-5 mt-2 my-2">
         <div className="row g-3">
           {cards.map(({ title, description, image }, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4">
