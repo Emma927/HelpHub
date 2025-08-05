@@ -80,7 +80,7 @@ przez różne organizacje pomocowe.
 - do publikacji ogłoszenia potrzebna jest rejestracja organizacji i logowanie,
 - po założeniu konta można dodawać ogłoszenia.
 
-## 📊 Możliwości rozwoju aplikacji HelpHub z podziałem funkcji według MoSCoW
+## 📊 Możliwości rozwoju aplikacji z podziałem funkcji według MoSCoW
 
 ✅ **Must Have**
 
