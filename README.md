@@ -101,7 +101,7 @@ przez różne organizacje pomocowe.
 
 🌟 **Should Have**
 
-- Licznik ulubionych ofert w nagłówku strony, widoczny po zalogowaniu
+- Licznik ulubionych zbiórek w nagłówku strony, widoczny po zalogowaniu
 - Rejestracja i logowanie dla organizacji pomocowych
 - Indywidualne dodawanie ogłoszeń przez organizacje pomocowe
 
