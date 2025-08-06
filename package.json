@@ -8,12 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "json-server --watch db.json --port $PORT"
+    "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.14.4",
     "bootstrap": "^5.3.7",
-    "express": "^5.1.0",
     "json-server": "^0.17.4",
     "node-fetch": "^3.3.2",
     "react": "^19.1.0",
