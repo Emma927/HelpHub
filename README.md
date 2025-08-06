@@ -57,10 +57,14 @@ przez różne organizacje pomocowe.
 5. **Skonfiguruj zmienne środowiskowe**
 
    `.env` — plik dołączony do repozytorium z domyślnym adresem backendu (np. produkcyjnym):
+
    `VITE_API_URL=https://help-hub-2sac.onrender.com`
+
    `.env.local` — plik lokalny (ignorowany przez Git), w którym możesz nadpisać adres backendu, np. do lokalnego
    testowania:
+
    `VITE_API_URL=http://localhost:3020`
+
    Jeśli `.env.local` nie istnieje, aplikacja użyje ustawień z `.env`
 
 6. **Uruchom aplikację w trybie developerskim**
