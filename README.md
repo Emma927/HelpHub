@@ -72,7 +72,7 @@ przez różne organizacje pomocowe.
 
    `npm run dev`
 
-7. **(Opcjonalnie) Buduj aplikację do produkcji**
+7. **Buduj aplikację do produkcji (opcjonalnie) **
 
    Przygotuj aplikację do wdrożenia w środowisku produkcyjnym:
 
