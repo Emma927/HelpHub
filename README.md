@@ -9,10 +9,10 @@ przez różne organizacje pomocowe.
 - Przeglądanie ogłoszeń
 - Filtrowanie ogłoszeń według wybranych kategorii
 - Responsywny interfejs
+- Paginacja stron z ogłoszeniami
 - Rejestracja i logowanie użytkownika
 - Dodawanie / usuwanie ogłoszeń z ulubionych
 - Routing React Router
-- Paginacja stron z ogłoszeniami
 
 ## 🛠️ Technologie
 
@@ -20,7 +20,7 @@ przez różne organizacje pomocowe.
 - React
 - Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
 - React Router
-- JSON server (używany jako baza danych dla ogłoszeń i użytkowników)
+- JSON server (używany do lokalnych testów/developmentu)
 - Bootstrap
 - React-Bootstrap
 - React-Icons
@@ -40,7 +40,7 @@ przez różne organizacje pomocowe.
 
    Użyj polecenia `git clone`, aby pobrać repozytorium:
 
-   `git clone https://github.com/Emma927/HelpHub.git`
+   `git clone https://github.com/Twoje-konto/HelpHub.git`
 
 3. **Przejdź do głównego folderu w terminalu**
 
@@ -54,17 +54,54 @@ przez różne organizacje pomocowe.
 
    `npm install`
 
-5. **Uruchom aplikację w trybie developerskim**
+5. **Skonfiguruj zmienne środowiskowe**
 
+   `.env` — plik dołączony do repozytorium z domyślnym adresem backendu (np. produkcyjnym):
+   `VITE_API_URL=https://help-hub-2sac.onrender.com`
+   `.env.local` — plik lokalny (ignorowany przez Git), w którym możesz nadpisać adres backendu, np. do lokalnego
+   testowania:
+   `VITE_API_URL=http://localhost:3020`
+   Jeśli `.env.local` nie istnieje, aplikacja użyje ustawień z `.env`
+
+6. **Uruchom aplikację w trybie developerskim**
    Aby uruchomić aplikację w trybie developerskim, użyj:
 
    `npm run dev`
 
-6. **Buduj aplikację do produkcji**
+7. **(Opcjonalnie) Buduj aplikację do produkcji**
 
    Przygotuj aplikację do wdrożenia w środowisku produkcyjnym:
 
    `npm run build`
+
+## 🖥️ Backend i hosting
+
+Backend aplikacji w środowisku produkcyjnym jest hostowany na platformie Render pod adresem:
+`https://help-hub-2sac.onrender.com`
+
+Do lokalnego testowania backendu wykorzystujemy json-server — serwer REST API oparty na pliku db.json.
+
+Instrukcja uruchomienia lokalnego backendu:
+
+- Zainstaluj json-server globalnie:
+
+  `npm install -g json-server`
+
+- Albo uruchom bez instalacji- upewnij się, że plik db.json znajduje się w katalogu głównym projektu (tam, gdzie
+  package.json). Uruchom json-server komendą:
+
+  `npx json-server --watch db.json --port 3020`
+
+- W pliku `.env.local` ustaw adres API na lokalny backend (do zapytań fetch):
+
+  `VITE_API_URL=http://localhost:3020`
+
+### 🆓 Render – darmowy hosting backendu
+
+- Backend hostowany jest na Render w darmowym planie, który usypia aplikację po 15 minutach braku aktywności.
+- Aby zapobiec uśpieniu i utrzymać szybkie odpowiedzi, wykorzystujemy narzędzie Uptime Robot.
+- Uptime Robot co 5 minut wysyła żądanie GET na główny adres `https://help-hub-2sac.onrender.com`, dzięki czemu backend
+  pozostaje aktywny
 
 ## 🧾 Instrukcje użycia
 
@@ -109,10 +146,10 @@ przez różne organizacje pomocowe.
 
 - Modal z potwierdzeniem dodania przez użytkownika ogłoszenia do ulubionych
 - Modal z potwierdzeniem dodania ogłoszenia przez organizację
+- Filtrowanie ogłoszeń po dodatkowych kategoriach
 
 ❌ **Won't Have**
 
-- Filtrowanie ogłoszeń po dodatkowych kategoriach
 - Formularz płatności
 - Możliwość wyboru języka polski / angielski itd.
 - Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach
