@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 /**
  * Path to help-chain folder
  */
-const helpPath = "";
+const helpPath = '';
 
 // https://vite.dev/config/
 /**
@@ -20,7 +20,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'), //  Alias @ w resolve.alias pozwala używać skróconej ścieżki do katalogu src, co upraszcza importy.
     },
   },
-})
+});
