@@ -1,26 +1,12 @@
 import React, { useContext } from 'react';
 import { FiltersContext } from '@/context/FiltersContext'; //@ - zastępuje cały folder src, żeby nie musieć pisać ścieżek z dokłądną lokalizacją "./, ../../" itd.
-
-const filterButtons = [
-  {
-    cat: 'clothesAndShoes',
-    label: 'Odzież i obuwie',
-  },
-  {
-    cat: 'accessories',
-    label: 'Akcesoria',
-  },
-  {
-    cat: 'urgent',
-    label: 'Pilne',
-  },
-];
+import { filterButtons } from '@/constans.js';
 
 function Filters() {
   const { selectedCategories, setSelectedCategories } =
     useContext(FiltersContext);
 
-  // toggleCategory – przełącza obecność kategorii w liście selectedCategories. Dodaje lub usuwa kategorię z aktywnych filtrów -  jeśli kategoria jest już na liście, zostaje usunięta, a jeśli jej nie ma, zostaje dodana.
+  // toggleCategory – przełącza obecność kategorii w liście selectedCategories. Dodaje lub usuwa kategorię z aktywnych filtrów. Jeśli kategoria jest już na liście, zostaje usunięta, a jeśli jej nie ma, zostaje dodana.
   // cat - kategoria, którą chcę przełączyć (dodać lub usunąć z listy)
   // setSelectedCategories - to funkcja, która aktualizuje stan selectedCategories
   // prev reprezentuje poprzedni stan selectedCategories.

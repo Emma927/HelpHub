@@ -1,47 +1,7 @@
-import {
-  BsTwitterX,
-  BsFacebook,
-  BsInstagram,
-  BsYoutube,
-  BsWhatsapp,
-  BsTiktok,
-} from 'react-icons/bs';
 import { MdDeviceHub } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import React from 'react';
-
-const socialMediaSites = [
-  {
-    icon: BsFacebook,
-    address: 'https://www.facebook.com/helpchain',
-    label: 'Facebook naszej firmy',
-  },
-  {
-    icon: BsTwitterX,
-    address: 'https://www.x.com/helpchain',
-    label: 'X naszej firmy',
-  },
-  {
-    icon: BsInstagram,
-    address: 'https://www.instagram.com/helpchain',
-    label: 'Instagram naszej firmy',
-  },
-  {
-    icon: BsYoutube,
-    address: 'https://www.youtube.com/helpchain',
-    label: 'Youtube naszej firmy',
-  },
-  {
-    icon: BsWhatsapp,
-    address: 'https://www.whatsapp.com/helpchain',
-    label: 'Whatsapp naszej firmy',
-  },
-  {
-    icon: BsTiktok,
-    address: 'https://www.tiktok.com/helpchain',
-    label: 'TikTok naszej firmy',
-  },
-];
+import { socialMediaSites } from '@/constans.js';
 
 function Footer() {
   return (
@@ -59,7 +19,7 @@ function Footer() {
           </p>
         </div>
         <div className="d-flex gap-3">
-          {/* przypisanie wartości icon do zmiennej Icon */}
+          {/* Przypisanie wartości icon do zmiennej Icon */}
           {socialMediaSites.map(({ icon: Icon, address, label }) => (
             <a
               key={address}

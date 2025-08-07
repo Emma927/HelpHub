@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Select from 'react-select';
 import { FiltersContext } from '@/context/FiltersContext';
-import { voivodeships, customStyles } from '@/database/voivodeships';
+import { voivodeships, customStyles } from '@/constans.js';
 
 function SelectBar() {
   //  selectedVoivodeship - Aktualnie wybrana wartość, przekazywana z komponentu nadrzędnego FiltersContext
@@ -9,7 +9,7 @@ function SelectBar() {
   const { selectedVoivodeship, setSelectedVoivodeship } =
     useContext(FiltersContext);
 
-  // defaultOption - Ustala domyślną opcję na podstawie wartości selectedVoivodeship, która jest przekazywana z FiltersContext. Jeśli selectedVoivodeship nie odpowiada żadnej opcji, wybiera pierwszą opcję z listy voivodeships.
+  // defaultOption - Ustala domyślną opcję na podstawie wartości selectedVoivodeship, która jest przekazywana z FiltersContext. Jeśli selectedVoivodeship nie odpowiada żadnej opcji, wybiera pierwszą opcję z listy constans.
   const defaultOption =
     voivodeships.find((opt) => opt.value === selectedVoivodeship) ||
     voivodeships[0];

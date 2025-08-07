@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Collapse, Navbar, Nav, Container } from 'react-bootstrap';
 import { MdDeviceHub } from 'react-icons/md';
 import {
@@ -8,43 +8,21 @@ import {
   BsChevronUp,
   BsChevronDown,
   BsBagHeartFill,
-  BsCardHeading,
 } from 'react-icons/bs';
-
-export const navSites = [
-  {
-    name: 'Strona główna',
-    path: '/',
-  },
-  {
-    name: 'Ogłoszenia',
-    path: 'announcements',
-  },
-  {
-    name: 'Nowości',
-    path: 'news',
-  },
-  {
-    name: 'Inicjatywy',
-    path: 'initiatives',
-  },
-  {
-    name: 'O nas',
-    path: 'about',
-  },
-];
+import { UserContext } from '@/context/UserContext';
+import { navSites } from '@/constans.js';
 
 function Header() {
-  const [isFavourite, setIsFavourite] = useState(false); //Ten sdtsn jest na razie nieużywany
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const openNav = () => setIsNavOpen(true);
   const closeNav = () => setIsNavOpen(false);
-  const openFavourites = () => setIsFavourite((prev) => !prev);
+  const { user, logout } = useContext(UserContext);
 
-  // RESET menu po zmianie strony - // Zamykanie menu przy zmianie ścieżki - jako dodatkowe zabezpieczenie automatycznego zamykania nawigacji po zmianie ścieżki przez użytkownika, bez useEffect też działa open/close ale wymaga interakcji użytownika
+  // RESET menu po zmianie strony- zamykanie menu po zmianie ścieżki przez użytkownika jako dodatkowe, automatyczne zabezpieczenie zamykania nawigacji. Bez useEffect też działa open/close ale wymaga interakcji użytkownika.
   useEffect(() => {
-    setIsNavOpen(false); // zamyka nawigację przy zmianie strony
+    setIsNavOpen(false); // Zamyka nawigację przy zmianie strony
   }, [location.pathname]);
 
   return (
@@ -64,7 +42,6 @@ function Header() {
             onMouseEnter={openNav}
             className="btn pl-2 border-0 text-primary"
             aria-controls="navbar-collapse"
-            //aria-controls = wskazuje, który element jest kontrolowany (kodowo)
             aria-expanded={isNavOpen}
             aria-label={
               isNavOpen ? 'Zamknij menu nawigacji' : 'Otwórz menu nawigacji'
@@ -79,23 +56,58 @@ function Header() {
         </div>
 
         <nav className="d-flex align-items-center gap-4">
-          <button onClick={openFavourites} className="fav__heart">
+          {/*user ? '/favourites' : '/auth/user/login' - ten warunek sprawdza stan użytkownika w momencie kliknięcia przycisku i decyduje, dokąd użytkownik powinien zostać przekierowany*/}
+          <button
+            className="fav__heart"
+            onClick={() => navigate(user ? '/favourites' : '/auth/user/login')}
+          >
             <BsHeartFill />
           </button>
 
-          <button className="btn btn-primary btn--rounded">
-            <BsPersonFill size={17} className="text-secondary" />
-            <span className="font--resp text-secondary mx-1 btn--text">
-              Zaloguj się
-            </span>
-          </button>
+          {user ? (
+            <>
+              <button
+                className="btn btn-primary btn--rounded"
+                onClick={() => navigate('/favourites')}
+              >
+                <BsPersonFill size={17} className="text-secondary" />
+                <span className="font--resp text-secondary mx-1 btn--text">
+                  Zalogowany
+                </span>
+              </button>
+              <button
+                className="btn btn-danger btn--rounded"
+                onClick={() => {
+                  logout();
+                  navigate('/');
+                }}
+              >
+                <BsPersonFill size={17} className="text-secondary" />
+                <span className="font--resp text-secondary mx-1 btn--text">
+                  Wyloguj się
+                </span>
+              </button>
+            </>
+          ) : (
+            <button
+              className="btn btn-primary btn--rounded"
+              onClick={() => navigate('/auth/user/login')}
+            >
+              <BsPersonFill size={17} className="text-secondary" />
+              <span className="font--resp text-secondary mx-1 btn--text">
+                Zaloguj się
+              </span>
+            </button>
+          )}
 
-          <button className="btn btn-primary btn--rounded" disabled>
-            <BsBagHeartFill size={17} className="text-secondary" />
-            <span className="font--resp text-secondary mx-1 btn--text">
-              Zaloguj się
-            </span>
-          </button>
+          {!user && (
+            <button className="btn btn-primary btn--rounded" disabled>
+              <BsBagHeartFill size={17} className="text-secondary" />
+              <span className="font--resp text-secondary mx-1 btn--text">
+                Zaloguj się
+              </span>
+            </button>
+          )}
         </nav>
       </div>
 
@@ -107,13 +119,13 @@ function Header() {
         <div id="navbar-collapse">
           <Navbar className="font--resp" expand="md">
             <Container className>
-              {/* Gdy użytkownik kliknie na NavLink, React Router zmienia aktualną ścieżkę URL na tę określoną w atrybucie to.*/}
+              {/* Gdy użytkownik kliknie na NavLink, React Router zmienia aktualną ścieżkę URL na tę określoną w atrybucie "to".*/}
               <Nav className="gap-3">
                 {navSites.map(({ name, path }) => (
                   <NavLink
                     key={path}
-                    //NavLink zmienia podstronę bez przeładowania
-                    // Sprawdza, czy path jest "/", jeśli tak, używa tylko "/", w przeciwnym razie dodaje "/"
+                    // NavLink zmienia podstronę bez przeładowania
+                    // Sprawdza, czy path jest "/", jeśli tak, używa tylko "/", w przeciwnym razie dodaje nazwę ścieżki path
                     to={path === '/' ? path : `/${path}`}
                     className={({ isActive }) =>
                       `nav-link ${isActive ? 'active' : ''}`
@@ -122,6 +134,7 @@ function Header() {
                     {name}
                   </NavLink>
                 ))}
+                {/*isActive Jest to parametr przekazywany do funkcji className w NavLink, który informuje, czy dany link jest aktualnie aktywny (czy jego ścieżka pasuje do bieżącej lokalizacji).*/}
               </Nav>
             </Container>
           </Navbar>

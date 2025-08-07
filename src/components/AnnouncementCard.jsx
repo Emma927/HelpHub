@@ -1,40 +1,47 @@
-// components/AnnouncementCard.jsx
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { BsHeartFill, BsCaretRightFill } from 'react-icons/bs';
+import { useFavourite } from '@/hook/useFavourite';
 
-function AnnouncementCard({ announcement, numberOfCards }) {
+function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
   const {
     id,
     title,
     voivodeship,
-    category: { clothesAndShoes, accessories, urgent },
+    category: { clothesAndShoes, accessories, urgent }, // Destrukturyzacja wewnętrzna
     deadline,
     datePosted,
     imageUrl,
     imageAlt,
   } = announcement;
 
-  // Dodanie klasy zależnie od liczby kart
-  const additionalClass =
-    numberOfCards === 1 ? 'only-card' : numberOfCards === 2 ? 'two-cards' : '';
+  // Przekazanie zmiennej id do hooka useFavourite, która reprezentuje identyfikator ogłoszenia, to wartość, a nie nazwa zmiennej, id identyfikuje, które ogłoszenie jest obsługiwane
+  const { isFaved, toggleFav } = useFavourite(id);
 
-  //albo:
   // Dodanie klasy zależnie od liczby kart
-  /*let additionalClass = '';
+  let additionalClass = ''; // Na początek brak dodatkowej klasy
   if (numberOfCards === 1) {
-      additionalClass = 'only-card';
+    additionalClass = 'only-card';
   } else if (numberOfCards === 2) {
-      additionalClass = 'two-cards';
-  }*/
+    additionalClass = 'two-cards';
+  }
+
+  // handleToggle- wywoływana po kliknięciu, celem tej funkcji jest zsynchronizowanie zmian stanu ulubionych ogłoszeń zarówno lokalnie, jak i z komponentem nadrzędnym.
+  function handleToggle() {
+    // Funkcja handleToggle nie potrzebuje bezpośrednio id jako argumentu, ponieważ toggleFav wewnątrz hooka useFavourite już wie, które ogłoszenie jest obsługiwane dzięki przekazanemu wcześniej id.
+    toggleFav(); // Zmienia stan ulubionego ogłoszenia w localStorage i aktualizuje lokalny stan isFaved w hooku useFavourite
+    if (onToggleFav) {
+      onToggleFav(); // Jest funkcją przekazywaną jako prop do AnnouncementCard z FavouriteAnnouncements. Jej celem jest powiadomienie komponentu nadrzędnego FavouriteAnnouncements, że stan ulubionego ogłoszenia się zmienił. Komponent nadrzędny musi zareagować na tę zmianę, przez aktualizację listy ulubionych ogłoszeń za pomocą funkcji updateFavs().
+    }
+  }
 
   return (
     <div
       key={id}
       className={`col-12 col-md-6 col-lg-4 card-custom ${additionalClass}`}
     >
-      <Card className="shadow border-0 font--resp">
+      <Card className="shadow border-0 font--resp card__announcement">
         <div className="card-img-container">
           <Card.Img variant="top" src={imageUrl} alt={imageAlt} />
         </div>
@@ -44,8 +51,8 @@ function AnnouncementCard({ announcement, numberOfCards }) {
               Data dodania: <span>{datePosted}</span>
             </p>
             <button
-              // onClick={openFavourites}
-              className="fav__heart"
+              className={`fav__heart ${isFaved ? 'fav__heart--active' : ''}`}
+              onClick={handleToggle}
             >
               <BsHeartFill />
             </button>
@@ -65,13 +72,13 @@ function AnnouncementCard({ announcement, numberOfCards }) {
               ]
                 .filter(Boolean) // usuwa wartości false/null
                 .map((category) => ` ${category}`) // dodaje spację przed każdą nazwą
+                // join- dodaje przecinek, jeśli będzie dołączona kolejna kategoria
                 .join(', ')}
             </span>
           </p>
           <p>
             Koniec zbiórki: <span>{deadline}</span>
           </p>
-
           {/*Dzięki mapowaniu tworzone są NavLinki dla każdego ogłoszenia z przypisanym id*/}
           <NavLink
             to={`/announcements/${id}`}
