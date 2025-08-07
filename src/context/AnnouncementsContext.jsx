@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
+import { API } from '@/constans.js';
 
 /*### Rola createContext():
 - **Tworzenie struktury:**
@@ -10,8 +11,6 @@ Twoje wyjaśnienie jest poprawne, ale dodanie kontekstu, dlaczego opakowujemy Pr
 
 // Tworzenie kontekstu dla ogłoszeń
 export const AnnouncementsContext = createContext();
-
-const API = 'http://localhost:3010';
 
 // AnnouncementsProvider - Jest to komponent, który może zawierać dodatkową logikę, taką jak zarządzanie stanem, efekty uboczne (np. pobieranie danych z API), czy inne operacje, które są potrzebne do przygotowania danych przed ich przekazaniem do Provider.
 
@@ -31,6 +30,7 @@ export function AnnouncementsProvider({ children }) {
       })
       .then((data) => {
         console.log(data);
+        console.log(import.meta.env.VITE_API_URL); // Sprawdzenie wartości zmiennej środowiskowej w konsoli przeglądarki
         setAnnouncements(data); // funkcja setAnnouncements aktualizuje stan announcements, który zostaje przekazany do komponentów podrzędnych Announcements i AnnouncementsDetails
       })
       .catch((error) => {
@@ -41,7 +41,7 @@ export function AnnouncementsProvider({ children }) {
 
   return (
     // AnnouncementsContext.Provider - Jest odpowiedzialny tylko za dostarczanie danych do komponentów podrzędnych. Jest to rzeczywisty komponent Provider stworzony przez createContext().
-    //Dostarczenie danych do komponentów podrzędnych, za pomocą właściwości value, a children określa, które z tych komponentów podrzędnych będą miały dostęp do tych przekazanych danych.
+    // Dostarczenie danych do komponentów podrzędnych, za pomocą właściwości value, a children określa, które z tych komponentów podrzędnych będą miały dostęp do tych przekazanych danych.
     <AnnouncementsContext.Provider value={{ announcements, error }}>
       {children}
     </AnnouncementsContext.Provider>

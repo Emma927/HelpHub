@@ -6,7 +6,7 @@ export const FiltersContext = createContext();
 export function FiltersProvider({ children }) {
   // selectedVoivodeship – przechowuje aktualnie wybrane województwo (dla SelectBar)
   // setSelectedVoivodeship – aktualizuje stan województwa
-  const [selectedVoivodeship, setSelectedVoivodeship] = useState('all'); //Wartość value, którą przekazuje SelectBar, jest aktualizowana(odbierana) i przechowywana w stanie komponentu nadrzędnego FiltersContext.
+  const [selectedVoivodeship, setSelectedVoivodeship] = useState('all'); // Wartość value, którą przekazuje SelectBar, jest aktualizowana(odbierana) i przechowywana w stanie komponentu nadrzędnego FiltersContext.
   // selectedCategories – przechowuje listę aktywnych kategorii filtrowania (dla Filters)
   // setSelectedCategories – umożliwia dodanie lub usunięcie kategorii z listy
   const [selectedCategories, setSelectedCategories] = useState([]); // Pusta Tablica: Inicjalizuje stan bez wybranych kategorii
