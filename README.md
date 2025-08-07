@@ -63,7 +63,7 @@ przez różne organizacje pomocowe.
    `.env.local` — plik lokalny (ignorowany przez Git), w którym możesz nadpisać adres backendu, np. do lokalnego
    testowania:
 
-   `VITE_API_URL=http://localhost:3020`
+   `VITE_API_URL=http://localhost:10000`
 
    Jeśli `.env.local` nie istnieje, aplikacja użyje ustawień z `.env`
 
@@ -98,7 +98,7 @@ Instrukcja uruchomienia lokalnego backendu:
 
 - W pliku `.env.local` ustaw adres API na lokalny backend (do zapytań fetch):
 
-  `VITE_API_URL=http://localhost:3020`
+  `VITE_API_URL=http://localhost:10000`
 
 ### 🆓 Render – darmowy hosting backendu
 
