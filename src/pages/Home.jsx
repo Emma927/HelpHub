@@ -1,12 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { BsCaretRightFill } from 'react-icons/bs';
 import { Card } from 'react-bootstrap';
-import { cards } from '@/database/constans';
+import { cards } from '@/constans.js';
 
 function Home() {
   return (
     <section className="section__home">
-      {/* Container z treścią */}
       <div className="h-100 d-flex flex-column justify-content-center align-items-center text-primary">
         <h1 className="text-uppercase fw-bold text-center mb-0">
           Twoje centrum dobra
@@ -17,7 +16,6 @@ function Home() {
         <p className="text-center font--resp my-1 fw-bold">
           Wpieraj. Pomagaj. Łącz się.
         </p>
-        {/* SelectBar ponad napisem */}
         <div className="w-100 d-flex justify-content-center pt-2 pb-4">
           <NavLink
             to="/announcements"

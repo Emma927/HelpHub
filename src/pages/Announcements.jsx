@@ -4,11 +4,10 @@ import { AnnouncementsContext } from '@/context/AnnouncementsContext';
 import SelectBar from '@/components/SelectBar';
 import Filters from '@/components/Filters';
 import AnnouncementCard from '@/components/AnnouncementCard';
-import AnnouncementsPagination from '@/components/AnnouncementsPagination';
+import PaginationComponent from '@/components/PaginationComponent';
 
 function Announcements() {
-  // Dostęp do globalnych ogłoszeń i błędu z Context API
-  const { announcements, error } = useContext(AnnouncementsContext);
+  const { announcements, error } = useContext(AnnouncementsContext); // Dostęp do globalnych ogłoszeń i błędu z Context API
 
   const {
     selectedVoivodeship,
@@ -17,69 +16,95 @@ function Announcements() {
     setSelectedCategories,
     currentPage,
     setCurrentPage,
-  } = useContext(FiltersContext);
+  } = useContext(FiltersContext); // Globalny stan FiltersContext przechowuje stan filtrów na poziomie aplikacji, co oznacza, że jest on dostępny i zachowany niezależnie od tego, na której stronie aktualnie się znajduję.
 
-  //const topRef = useRef(null); tworzy odniesienie, które najpierw jest puste (null). Po zamontowaniu komponentu to odniesienie wskazuje na element <section>, do którego zostało przypisane. Dzięki temu można bezpośrednio manipulować tym elementem, przewijać stronę do góry przy zmianie strony w paginacji.
-  const topRef = useRef(null); // useRef(null) oznacza, że początkowa wartość current w obiekcie zwracanym przez useRef jest null. To dlatego, że na etapie inicjalizacji komponentu element DOM, do którego referencja będzie przypisana, jeszcze nie istnieje. Po zamontowaniu komponentu, current w obiekcie zwróconym przez useRef przechowuje odniesienie do elementu DOM, do którego ref został przypisany. W tym przypadku, current przechowuje odniesienie do elementu <section>, co pozwala na bezpośrednią manipulację tym elementem, na przykład przewijanie do niego strony.
+  // topRef- tworzy referencję, która jest przypisana do konkretnego elementu DOM, a useRef pozwala na bezpośredni dostęp do elementów DOM
+  const topRef = useRef(null); // Na etapie inicjalizacji komponentu element DOM, do którego referencja będzie przypisana, jeszcze nie istnieje, po zamontowaniu komponentu, właściwość current w obiekcie zwróconym przez useRef przechowuje odniesienie do elementu DOM, do którego ref został przypisany (<section>)
 
   // filteredAnnouncements – zawiera listę ogłoszeń po przefiltrowaniu
   // setFilteredAnnouncements – ustawia wynik działania filtrów
-  const [filteredAnnouncements, setFilteredAnnouncements] = useState([]); // Pusta Tablica: Inicjalizuje stan bez wybranych kategorii.
-  // Liczba ogłoszeń na stronie
-  const announcementsPerPage = 24;
+  const [filteredAnnouncements, setFilteredAnnouncements] = useState([]); // Pusta tablica inicjalizuje stan bez wybranych kategorii.
+  const announcementsPerPage = 24; // Liczba ogłoszeń na stronę
 
-  // topRef.current.scrollIntoView({ behavior: "smooth" }) przewija stronę do elementu <section>, do którego przypisana jest referencja topRef. Jest to używane do przewijania strony do góry, gdy zmienia się strona w paginacji (currentPage).
-  // useEffect z tablicą zależności [currentPage] oznacza, że przewijanie do góry nastąpi za każdym razem, gdy zmieni się currentPage. To zapewnia, że użytkownik widzi początek listy ogłoszeń, gdy przełącza się między stronami.
-  // Przewijanie do góry listy ogłoszeń po zmianie strony
+  // useRef pozwala na przechowywanie wartości, które można zmieniać bez wpływu na cykl życia komponentu
+  // useRef tworzy obiekt, który przechowuje poprzednie wartości wybranego województwa i kategorii, aby śledzić te wartości pomiędzy renderowaniami bez wywoływania ponownego renderowania komponentu.
+  const prevFilters = useRef({
+    // Bez useRef- gdyby użyć zwykłego stanu useState do przechowywania tych wartości, każda aktualizacja stanu spowodowałaby ponowne renderowanie komponentu, co nie zawsze jest pożądane, szczególnie jeśli chce się tylko śledzić zmiany, a nie reagować na nie bezpośrednio w interfejsie.
+
+    voivodeship: selectedVoivodeship,
+    categories: selectedCategories,
+  });
+
+  // Płynne 'smooth' przewijanie listy ogłoszeń do góry po zmianie strony currentPage zapewnia, że użytkownik widzi początek listy ogłoszeń, gdy przełącza się między stronami.
   useEffect(() => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentPage]);
 
-  // useEffect reaguje na zmianę danych(ogłoszeń) lub filtrów z tablicy zależności, aby uruchomić filtrowanie
+  // Za każdym razem, gdy nowe ogłoszenia są dostępne lub użytkownik zmienia filtr, ten kod w useEffect się wykona.
   useEffect(() => {
     if (announcements) {
-      applyFilters();
+      const filtersChanged = // Ta funkcja ustala, czy filtry zostały zmienione w porównaniu do poprzedniego stanu. Porównuje bieżące województwo i kategorie z tymi zapisanymi w prevFilters.current.
+        prevFilters.current.voivodeship !== selectedVoivodeship || // current jest właściwością obiektu zwracanego przez useRef, która służy do przechowywania wartości, które chcę śledzić między renderowaniami komponentu, bez wpływu na cykl renderowania. Jest to bardzo przydatne, gdy potrzebujesz zachować stan lub referencję, która nie powinna wpływać na ponowne renderowanie komponentu.
+        JSON.stringify(prevFilters.current.categories) !== //JSON.stringify konwertuje obiekt lub tablicę do reprezentacji tekstowej. Dzięki temu możemy porównać zawartość dwóch tablic lub obiektów, porównując ich reprezentacje tekstowe. Pozwala na porównanie rzeczywistej zawartości tablic lub obiektów, a nie tylko ich odniesień w pamięci jak przez operator porównania. Dzięki temu możemy sprawdzić, czy dane w tablicach są takie same, nawet jeśli są to różne instancje tablic.
+          JSON.stringify(selectedCategories);
+
+      applyFilters(); // Wywołuje funkcję applyFilters, która filtruje ogłoszenia na podstawie wybranych filtrów. To kluczowy krok, który zapewnia, że wyświetlane są tylko te ogłoszenia, które spełniają kryteria filtrów.
+
+      if (filtersChanged) {
+        // Sprawdza, czy filtry faktycznie się zmieniły. Jeśli tak, wykonuje się blok kodu wewnątrz.
+        setCurrentPage(1); // Resetowanie strony paginacji do 1 po zmianie filtra. Po zmianie filtrów chcemy, aby użytkownik widział wyniki od początku, a nie np. od 24 strony. Użytkownik może być na przykład na 24 stronie i tam zmienić filter, aby nie pojawiła się strona 24 z nowego filtra tylko 1 potrzebne jest ustawienie strony na 1.
+        prevFilters.current = {
+          // Służy do aktualizacji wartości referencji po tym, jak sprawdzimy, czy filtry się zmieniły
+          // Aktualizuje prevFilters.current o nowe wartości filtrów. Dzięki temu przy następnym uruchomieniu useEffect można porównać, czy filtry się zmieniły.
+
+          voivodeship: selectedVoivodeship,
+          categories: selectedCategories,
+        };
+      }
     }
   }, [announcements, selectedVoivodeship, selectedCategories]);
 
-  // applyFilters – filtruje dane po województwie i kategoriach, umożliwia dynamiczne filtrowanie danych w oparciu o wybory użytkownika
+  // Funckja applyFilters – filtruje dane po województwie i kategoriach, umożliwia dynamiczne filtrowanie danych w oparciu o wybory użytkownika
   function applyFilters() {
-    let result = [...announcements];
+    let result = [...announcements]; // results tworzy płytką kopię tablicy announcements, dzięki temu oryginalna tablica nie jest modyfikowana, a wszystkie operacje filtrowania są wykonywane na kopii.
 
+    // Funkcja ma na celu przefiltrowanie ogłoszeń, aby wyświetlić tylko te, które pasują do wybranego województwa, chyba że użytkownik chce zobaczyć wszystkie ogłoszenia, to wybiera domyślną opcję.
     if (selectedVoivodeship !== 'all') {
+      // Metoda filter tworzy nową tablicę zawierającą tylko te elementy, które spełniają określony warunek. Sprawdza, czy użytkownik wybrał konkretne województwo, a nie opcję "wszystkie" ('all')-czyli "Wybierz wojewódżtwo". Jeśli wybrano konkretne województwo, filtrujemy ogłoszenia.
       result = result.filter(
-        (item) => item.voivodeship === selectedVoivodeship,
+        (item) => item.voivodeship === selectedVoivodeship, // Wynik filtrowania tablicy result zostawia tylko te ogłoszenia, których właściwość voivodeship jest równa selectedVoivodeship, czyli te, które są przypisane do wybranego województwa.
       );
     }
 
-    // Sprawdza, czy użytkownik wybrał jakieś kategorie do filtrowania, jeśli nie, kod nic nie filtruje.
-    // Ogłoszenie zostaje uwzględnione w wynikach, jeśli ma choć jedną kategorię, którą użytkownik zaznaczył i która jest aktywna (true) w danych ogłoszenia.
+    // Warunek sprawdza, czy istnieje przynajmniej jedna kategoria, która jest napisana w ogłoszeniu i jednocześnie została wybrana przez użytkownika- jeśli tak, ogłoszenie zostaje uwzględnione w przefiltrowanych wynikach, a jeśli nie, kod nic nie filtruje.
+
+    // Ogłoszenie zostaje uwzględnione w wynikach, jeśli ma chociaż jedną kategorię, którą użytkownik zaznaczył i która jest napisana (true) w danych ogłoszenia, to pozwala na dynamiczne filtrowanie danych w zależności od wyboru użytkownika.
     // item to jedno ogłoszenie
     // item.category to jego obiekt kategorii
-    // .some(...) sprawdza, czy ogłoszenie ma przynajmniej jedną z kategorii zaznaczoną przez użytkownika i aktywną
+    // .some(...) sprawdza, czy chociaż jedna para [key, val] spełnia warunek, że kategoria jest zapisana na ogłoszeniu i użytkownik ją wybrał. Jeśli tak, ogłoszenie zostaje w wynikach filtrowania
     if (selectedCategories.length > 0) {
+      //Sprawdza, czy użytkownik wybrał jakieś kategorie (selectedCategories.length > 0).
       result = result.filter((item) =>
         // item.category to obiekt z database json : category = {clothesAndShoes: true, accessories: false, urgent: true}
-        // Object.entries(...) przekształca to w tablicę par [klucz, wartość]
+        // Object.entries- zamienia obiekt kategorii na tablicę par, np.: ["clothesAndShoes", true]
         Object.entries(item.category).some(
           ([key, val]) =>
             //.some(([key, val]) => val && selectedCategories.includes(key))
             // Dla każdej pary [key, val] sprawdza:
-            // Czy val === true → czyli ta kategoria jest zaznaczona w ogłoszeniu.
-            // Czy key znajduje się w selectedCategories → czyli czy użytkownik ją wybrał.
+            // Czy val === true, czyli ta kategoria jest zaznaczona w ogłoszeniu, to oznacza, że w obiekcie JSON dla tego ogłoszenia, wartość dla tej kategorii jest ustawiona na true.
+            // Czy key znajduje się w selectedCategories → czyli czy użytkownik ją wybrał z filtrów. Jeśli tak, to oznacza, że użytkownik wybrał tę kategorię w filtrach. selectedCategories to tablica zawierająca nazwy kategorii, które użytkownik chce zobaczyć.
             // .some(...) zwraca true, jeśli chociaż jedna taka kategoria pasuje.
-            val && selectedCategories.includes(key), // Resetuje aktualną stronę do 1 po każdej zmianie filtrów, aby użytkownik zawsze widział wyniki od początku po zastosowaniu nowych filtrów
+            val && selectedCategories.includes(key),
         ),
       );
     }
 
     setFilteredAnnouncements(result); // Ustawia przefiltrowane ogłoszenia jako nowy stan
-    setCurrentPage(1); // Resetuje stronę po każdej zmianie filtrów
   }
 
-  // Posortowanie ogłoszenia według daty dodania malejąco - płytka kopia za pomocą spread operator [...] wystarczy, ponieważ zmieniana jest tylko kolejność ogłoszeń. Chodzi tylko o zmianę kolejności elementów w tablicy, a nie ich zawartości więc płytka kopia tutaj pasuje, gdyby była zmieniana zawartość elementów tabicy potrzebna byłaby kopia głeboka.
+  // Posortowanie ogłoszenia według daty dodania malejąco- płytka kopia za pomocą spread operator [...] wystarczy, ponieważ zmieniana jest tylko kolejność ogłoszeń. Chodzi tylko o zmianę kolejności elementów w tablicy, a nie ich zawartości więc płytka kopia tutaj pasuje, gdyby była zmieniana zawartość elementów tabicy potrzebna byłaby kopia głeboka.
   const sortedAnnouncements = [...filteredAnnouncements].sort(
     (a, b) => new Date(b.datePosted) - new Date(a.datePosted),
   );
@@ -94,7 +119,7 @@ function Announcements() {
   );
   // IndexOfLast - Wylicza indeks ostatniego ogłoszenia na bieżącej stronie.
   const indexOfLast = currentPage * announcementsPerPage;
-  // IndexOdFirst - Wylicza pierwszy indeks ogłoszenia na tej stronie.
+  // IndexOfFirst - Wylicza pierwszy indeks ogłoszenia na tej stronie.
   const indexOfFirst = indexOfLast - announcementsPerPage;
   // currentAnnouncements - Wyciąga fragment tablicy, czyli ogłoszenia od indexOfFirst do indexOfLast
   const currentAnnouncements = sortedAnnouncements.slice(
@@ -136,9 +161,8 @@ function Announcements() {
           Wyczyść
         </button>
       </div>
-      {/*container może być ale nie musi w section w divie z klasą announcements - została do sprawdzenia!!!*/}
       {/* Renderowanie kart ogłoszeń */}
-      <div className="row g-3  align-items-start">
+      <div className="row g-3 align-items-start">
         {currentAnnouncements.map((announcement) => (
           <AnnouncementCard
             key={announcement.id}
@@ -147,8 +171,11 @@ function Announcements() {
           />
         ))}
       </div>
-      {/*Paginacja (jeśli więcej niż 1 strona) */}
-      {totalPages > 1 && <AnnouncementsPagination totalPages={totalPages} />}
+      <PaginationComponent
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </section>
   );
 }

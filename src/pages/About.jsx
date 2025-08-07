@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { faq } from '@/database/constans';
+import { faq } from '@/constans.js';
 
 function About() {
   const [showInfo, setShowInfo] = useState(false);
 
+  // To funkcja, która przełącza stan showInfo na numer pytania (number), które ma być aktualnie „otwarte”, aby pokazać odpowiedź
   function openAnswer(number) {
     setShowInfo((prev) => (prev === number ? null : number));
   }
