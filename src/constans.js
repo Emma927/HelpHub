@@ -7,6 +7,11 @@ import {
   BsTiktok,
 } from 'react-icons/bs';
 
+export const API =
+  import.meta.env.VITE_API_URL || 'https://help-hub-2sac.onrender.com'; // fallback — czyli wartość domyślna na wypadek, gdyby zmienna środowiskowa REACT_APP_API_URL nie była ustawiona
+//.env - to zmienna środowiskowa w projekcie Vite, która przechowuje adres URL API, umożliwiając aplikacji frontendowej komunikację z serwerem backendowym.
+//.envlocal - to zmienna środowiskowa w projekcie Vite, wskazująca lokalny adres URL API, z którym aplikacja frontendowa może się komunikować podczas rozwoju.
+
 export const socialMediaSites = [
   {
     icon: BsFacebook,
@@ -202,6 +207,7 @@ export const possibilities = [
   'Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach Polski.',
 ];
 
+//control, option, singleValue, menu- wyświetlane jako property unused, ponieważ edytory kodu interpretują użycie kodu, a nie z faktycznego działania aplikacji.
 export const customStyles = {
   control: (provided, state) => ({
     ...provided,
@@ -217,7 +223,7 @@ export const customStyles = {
     backgroundColor: state.isSelected
       ? '#8A7369' // kolor tła dla wybranej opcji
       : state.isFocused
-        ? '#baa595' // kolor tła dla najechanej opcji, pochodzi tylko z klawiatury. Opcja aktualnie wybrana przez klawiaturę. Fokus występuje, gdy element jest aktywny i gotowy do interakcji, np. gdy użytkownik przechodzi między opcjami za pomocą klawiatury (np. klawiszem Tab lub strzałkami).
+        ? '#baa595' // kolor tła dla najechanej opcji, pochodzi tylko z klawiatury
         : null,
     color: state.isSelected || state.isFocused ? 'white' : '#8A7369', // kolor tekstu
     '&:hover': {
@@ -232,34 +238,15 @@ export const customStyles = {
   }),
   menu: (provided) => ({
     ...provided,
-    zIndex: 9999, // w razie problemów z dropdownem
+    zIndex: 9999, // w razie problemów z dropdownem, aby był widoczny
   }),
 };
 
 
-//option - wyświetlany jako property unused, ponieważ edytory kodu interpretują użycie kodu, a nie z faktycznego działania aplikacji.To klucz w obiekcie styles przekazywanym do react-select, który jest przypisany do funkcji definiującej style dla opcji. Funkcja ta przyjmuje dwa argumenty: provided (domyślne style) i state (stan opcji). Edytory kodu mogą oznaczać go jako "unused" z powodu ograniczeń w analizie statycznej.
-//provided - domyślne style, zawiera domyślne style dla opcji, które można rozszerzyć lub nadpisać.
-//state - stan opcji, obiekt w funkcji stylizującej react-select zawiera informacje o bieżącym stanie opcji
-/*1. **control**:
-- **Opis**: Funkcja stylizująca dla głównego kontenera selektora (czyli miejsca, gdzie użytkownik klika, aby otworzyć menu rozwijane).
-- **Argumenty**: provided (domyślne style) i state (stan selektora, np. czy jest skupiony).
-- **Dlaczego**: Pozwala dostosować wygląd kontenera, np. zmieniać kolor obramowania, gdy selektor jest skupiony.
-2. **option**:
-- **Opis**: Funkcja stylizująca dla poszczególnych opcji w menu rozwijanym.
-- **Argumenty**: provided i state (zawiera informacje o tym, czy opcja jest zaznaczona, skupiona itp.).
-- **Dlaczego**: Umożliwia dostosowanie wyglądu opcji, np. zmieniając tło i kolor tekstu w zależności od interakcji użytkownika.
-3. **singleValue**:
-- **Opis**: Funkcja stylizująca dla wybranej wartości, która jest wyświetlana w control po dokonaniu wyboru.
-- **Argumenty**: provided.
-- **Dlaczego**: Pozwala na dostosowanie wyglądu tekstu wybranej opcji, np. zmieniając jego kolor.
-4. **menu**:
-- **Opis**: Funkcja stylizująca dla całego menu rozwijanego, które pojawia się po kliknięciu w control.
-- **Argumenty**: provided.
-- **Dlaczego**: Umożliwia dostosowanie wyglądu menu, np. ustawiając zIndex, aby menu nie było zasłonięte przez inne elementy strony.
-Każda z tych funkcji pozwala na rozszerzenie lub nadpisanie domyślnych stylów dostarczanych przez react-select, co daje dużą elastyczność w dostosowywaniu wyglądu komponentu do specyficznych potrzeb projektu.*/
-
-/*Właściwości takie jak control, option, singleValue, i menu w obiekcie customStyles są używane przez bibliotekę react-select do nadpisywania domyślnych stylów komponentu. Oto dlaczego edytor ich nie oznacza jako nieużywane:
-1. **Specyficzne API:** Te właściwości są częścią specyficznego API react-select do dostosowywania wyglądu komponentu. react-select oczekuje, że obiekt stylów będzie zawierał te właściwości i używa ich wewnętrznie, gdy renderuje komponent.
-2. **Dynamiczne użycie:** Właściwości te są dynamicznie używane przez react-select w momencie, gdy komponent jest renderowany, nawet jeśli w kodzie nie widać bezpośrednich odniesień do nich.
-3. **Integracja z biblioteką:** Edytory kodu, takie jak Visual Studio Code, mogą nie oznaczać tych właściwości jako nieużywane, ponieważ są one częścią konwencji używanej przez zewnętrzną bibliotekę. Edytor rozpoznaje, że są one wykorzystywane w kontekście tej biblioteki.
-Podsumowując, właściwości te są używane zgodnie z oczekiwaniami react-select, mimo że nie są bezpośrednio wywoływane w Twoim kodzie. Dlatego edytor nie oznacza ich jako nieużywane.*/
+// provided - domyślne style, zawiera domyślne style dla opcji, które można rozszerzyć lub nadpisać.
+// state - stan opcji, obiekt w funkcji stylizującej react-select zawiera informacje o bieżącym stanie opcji
+// control- funkcja stylizująca dla głównego kontenera selektora (czyli miejsca, gdzie użytkownik klika, aby otworzyć menu rozwijane).
+// option - funkcja stylizująca dla poszczególnych opcji w menu rozwijanym.
+// singleValue - funkcja stylizująca dla wybranej wartości, która jest wyświetlana w control po dokonaniu wyboru.
+// menu - funkcja stylizująca dla całego menu rozwijanego, które pojawia się po kliknięciu w control.
+// Każda z tych funkcji pozwala na rozszerzenie lub nadpisanie domyślnych stylów dostarczanych przez react-select, co daje dużą elastyczność w dostosowywaniu wyglądu komponentu do specyficznych potrzeb projektu.
