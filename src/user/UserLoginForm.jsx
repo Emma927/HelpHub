@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from '@/context/UserContext';
 import { useNavigate, NavLink } from 'react-router-dom';
 import imageLogin from '@/assets/login.jpg';
+import { API } from '@/constans.js';
 
 function UserLoginForm() {
   const { login, user } = useContext(UserContext);
@@ -18,10 +19,9 @@ function UserLoginForm() {
       return;
     }
 
-    //data[0] odnosi się do pierwszego użytkownika w tablicy data, która została zwrócona przez serwer w odpowiedzi na zapytanie o użytkowników z danym adresem email. Adresy e-mail typowo są unikalne, więc powinien zostać zwrócony 1 użytkownik.
-    //Weryfikacja użytkownika-kod sprawdza, czy istnieje użytkownik (u) i czy jego hasło zgadza się z podanym hasłem. Jeśli tak, użytkownik jest logowany, w przeciwnym razie wyświetlany jest komunikat o błędzie.
-    //fetch wysyła żądanie do serwera z poszukiwaniem użytkownika na podstawie adresu e-mail, przy czym wartość e-mail jest odpowiednio zakodowana, aby uniknąć problemów z interpretacją URL. encodeURIComponent-koduje znaki specjalne, takie jak spacje, znaki interpunkcyjne, itp., które mogłyby zakłócić prawidłowe przetwarzanie adresu URL.
-    fetch(`http://localhost:3020/users?email=${encodeURIComponent(email)}`)
+    // encodeURIComponent-koduje znaki specjalne, takie jak spacje, znaki interpunkcyjne, itp., które mogłyby zakłócić prawidłowe przetwarzanie adresu URL. Jest używany do przekształcenia takich znaków w bezpieczne sekwencje znaków, które są poprawnie interpretowane przez przeglądarki i serwery. Dzięki temu URL jest zawsze poprawny i nie powoduje błędów podczas przesyłania żądania.
+    fetch(`${API}/users?email=${encodeURIComponent(email)}`)
+      // To jest żądanie typu GET – pobiera dane użytkownika, który ma podany e-mail
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -29,18 +29,19 @@ function UserLoginForm() {
         throw new Error('Błąd sieciowy lub serwera');
       })
       .then((data) => {
-        const u = data[0];
+        const u = data[0]; // data[0] odnosi się do pierwszego użytkownika w tablicy data, która została zwrócona przez serwer w odpowiedzi na zapytanie o użytkowników z danym adresem email. Adresy e-mail typowo są unikalne, więc powinien zostać zwrócony 1 użytkownik, dlatego należy się spodziewać data[0].
         if (!u || u.password !== password) {
+          // Weryfikacja użytkownika-kod sprawdza, czy istnieje użytkownik (u) i czy jego hasło zgadza się z podanym hasłem. Jeśli tak, użytkownik jest logowany, w przeciwnym razie wyświetlany jest komunikat o błędzie.
           setError('Nieprawidłowe dane');
         } else {
-          login({ id: u.id, name: u.name, surname: u.surname, email: u.email });
+          login({ id: u.id, name: u.name, surname: u.surname, email: u.email }); // Logowanie zapisane do localStorage
           navigate('/'); // Zmiana na stronę główną po zalogowaniu
         }
       })
       .catch((error) => setError(error.message));
   };
 
-  // Zablokowanie możliwości zalogowania kolejnego użytkownika przed renderowaniem formularza, aby uniknąć migotania UI. Zapobieganie migotaniu UI: if (user) return null; działa jako szybkie sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
+  // Warunek, który chroni przed przypadkowym mrugnięciem formularza logowania, gdy użytkownik jest już zalogowany, ale jego stan jeszcze nie został przetworzony przez komponent. Zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
   if (user) return null;
 
   return (

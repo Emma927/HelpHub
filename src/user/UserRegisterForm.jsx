@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from '@/context/UserContext';
 import { NavLink, useNavigate } from 'react-router-dom';
 import imageRegister from '@/assets/register.jpg';
+import { API } from '@/constans.js';
 
 function UserRegisterForm() {
   const { login, user } = useContext(UserContext);
@@ -16,22 +17,28 @@ function UserRegisterForm() {
 
   const validate = () => {
     const errs = [];
+
+    if (name.length < 3) {
+      errs.push('Imię min. 3 znaki');
+    }
+
+    if (surname.length < 3) {
+      errs.push('Nazwisko min. 3 znaki');
+    }
+
     if (!email.includes('@')) {
       errs.push('Email musi zawierać @');
     }
     if (password.length < 7) {
       errs.push('Hasło min. 7 znaków');
     }
-    /*Wyrażenie regularne -regex /[A-Z]/:
-    - Sprawdza, czy w ciągu znaków znajduje się przynajmniej jedna wielka litera (od A do Z).
-    - !/[A-Z]/.test(password) zwraca true, jeśli w haśle nie ma żadnej wielkiej litery, a false, jeśli przynajmniej jedna wielka litera jest obecna.
-    -test() zwraca true, gdy znajdzie dopasowanie, a ! odwraca ten wynik, aby dodać błąd, gdy dopasowania brakuje.*/
+    // Wyrażenie regularne -regex /[A-Z]/, sprawdza, czy w ciągu znaków znajduje się przynajmniej jedna wielka litera (od A do Z)
+    // test() zwraca true, jeśli w haśle nie ma żadnej wielkiej litery, a false, jeśli przynajmniej jedna wielka litera jest obecna
     if (!/[A-Z]/.test(password)) {
       errs.push('Hasło musi zawierać wielką literę');
     }
-    /*Wyrażenie regularne -regex /[0-9!@#$]/:
-   - To wyrażenie regularne sprawdza, czy w ciągu znaków znajduje się przynajmniej jedna cyfra (od 0 do 9) lub jeden z wymienionych symboli (!, @, #, $).
-   - !/[0-9!@#$]/.test(password) zwraca true, jeśli nie ma żadnej cyfry ani symbolu w haśle, a false, jeśli przynajmniej jeden z tych znaków jest obecny.*/
+    // Wyrażenie regularne -regex /[0-9!@#$]/, sprawdza, czy w ciągu znaków znajduje się przynajmniej jedna cyfra (od 0 do 9) lub jeden z wymienionych symboli (!, @, #, $).
+    // test() zwraca true, jeśli nie ma żadnej cyfry ani symbolu w haśle, a false, jeśli przynajmniej jeden z tych znaków jest obecny.*/
     if (!/[0-9!@#$]/.test(password)) {
       errs.push('Hasło musi zawierać cyfrę lub symbol');
     }
@@ -41,23 +48,22 @@ function UserRegisterForm() {
     return errs;
   };
 
-  // obsługa zdarzenia przesyłania formularza, która ma miejsce, gdy użytkownik kliknie przycisk "Zarejestruj się".
+  // Obsługa zdarzenia przesyłania formularza, która ma miejsce, gdy użytkownik kliknie przycisk "Zarejestruj się".
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    const errs = validate();
-    if (errs.length) {
-      setErrors(errs);
+    const validationErrors = validate(); // Zmienna, która przechowuje błędy walidacji
+    if (validationErrors.length) {
+      setErrors(validationErrors);
       return;
     }
 
-    /*W tym przypadku dane są wysłane tylko wtedy, gdy użytkownik wypełni formularz i kliknie przycisk, więc wywołanie fetch w handleRegisterSubmit wystarczy nie potrzebuje useEffect. useEffect Jest używany do efektów ubocznych, które są wywoływane w momencie załadowania komponentu lub zmiany jego stanu/propsów. Przykłady to pobieranie danych z serwera przy ładowaniu strony lub subskrypcje.*/
-
-    fetch('http://localhost:3020/users', {
+    // Dane są wysłane tylko wtedy, gdy użytkownik wypełni formularz i kliknie przycisk
+    fetch(`${API}/users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, surname, email, password }), // To metoda, która konwertuje obiekt JavaScript na format JSON (JavaScript Object Notation). W tym przypadku, obiekt { name, surname, email, password } jest przekształcany w ciąg znaków w formacie JSON, który może być przesłany w żądaniu HTTP.
+      body: JSON.stringify({ name, surname, email, password }), //  metoda, która konwertuje obiekt JavaScript na format tekstowy JSON (JavaScript Object Notation), jest on przekształcany w ciąg znaków w formacie JSON, który może być przesłany w żądaniu HTTP. Bez przekształcenia będzie błąd
     })
       .then((response) => {
         if (response.ok) {
@@ -66,14 +72,14 @@ function UserRegisterForm() {
         throw new Error('Rejestracja nie powiodła się');
       })
       .then((saved) => {
-        //Server sam przypisuje id
-        login({ id: saved.id, name, surname, email });
-        navigate('/');
+        // udanym fetch, czyli zapisaniu nowego użytkownika na serwerze, aplikacja automatycznie loguje użytkownika, wywołując funkcję login z danymi użytkownika (w tym przypisanym przez serwer id).
+        login({ id: saved.id, name, surname, email }); //Dane z fetch są przetwarzane, a następnie przekazywane do login jako userData, co pozwala na zarządzanie stanem użytkownika i jego sesją w aplikacji. Zapis do localStorage: Funkcja login zapisuje dane użytkownika po konwersji na tekst w localStorage, co umożliwia ich dostępność po odświeżeniu strony. Zapisuje je jako ciąg JSON, co pozwala na ich łatwe przekształcenie z powrotem na obiekt JavaScript.
+        navigate('/'); // Użytkownik się właśnie zarejestrował – przekieruj po fetchu na stronę główną
       })
-      .catch((err) => setErrors([err.message]));
+      .catch((err) => setErrors([err.message])); // Tablica, bo errors.map w renderze oczekuje tablicy
   };
 
-  // Zapobieganie migotaniu UI: if (user) return null; działa jako szybkie sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza rejestracji.
+  // Warunek, który chroni przed przypadkowym mrugnięciem formularza rejestracji, gdy użytkownik jest już zalogowany, ale jego stan jeszcze nie został przetworzony przez komponent. Zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza rejestracji.
   if (user) return null;
 
   return (
