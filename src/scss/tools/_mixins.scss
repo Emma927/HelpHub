@@ -1,9 +1,4 @@
 // XS >= 0px - taki breakpoint nie będzie potrzebny - Bootstrap daje podejście Mobile-First
-/*@mixin xs {
-  @media (min-width: 0) {
-    @content;
-  }
-}*/
 
 // SM >= 576px
 @mixin sm {

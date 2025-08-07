@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth; // sprawia, że przewijanie strony do kotwic (anchor links) staje się płynne, zamiast natychmiastowego przeskoku.
+}
+
+body {
+  background-color: $secondary;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.font--resp {
+  font-size: 12px;
+
+  @include md {
+    font-size: 14px;
+  }
+
+  @include lg {
+    font-size: 15px;
+  }
+}
+
+.logo-font--resp {
+  font-size: 25px;
+
+  @include md {
+    font-size: 30px;
+  }
+
+  @include lg {
+    font-size: 32px;
+  }
+}
+
+.fav {
+  &__heart {
+    transition: color 0.3s;
+    color: $primary;
+    border: none;
+    background-color: inherit; // dziedziczy kolor od swojego rodzica
+    font-size: 20px;
+
+    &:hover {
+      color: $danger;
+    }
+
+    @include md {
+      font-size: 25px;
+    }
+
+    @include lg {
+      font-size: 30px;
+    }
+
+    &--active {
+      color: red;
+    }
+  }
+}
+
+.custom-select option {
+  color: #212529;
+  font-weight: 400;
+  text-align: center;
+
+  &:hover {
+    background-color: #e6f6f5;
+  }
+}

@@ -1,5 +1,4 @@
 footer {
-  //background-color: $primary;
   height: 65px;
   position: relative;
   z-index: 2;
@@ -16,7 +15,7 @@ footer {
   &::after {
     content: '';
     position: absolute;
-    top: 2px; // Odstęp między liniami
+    top: 2px; // Odstęp między liniami krawędzi footer
     left: 0;
     right: 0;
     border-top: 1px solid $primary;
