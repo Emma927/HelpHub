@@ -113,6 +113,11 @@ Backend działa na Render pod adresem:
 - Uptime Robot co 5 minut wysyła żądanie GET na główny adres `https://help-hub-2sac.onrender.com`, dzięki czemu backend
   pozostaje aktywny
 
+**Ważne:**
+W darmowym planie Render dane przesłane przez metody POST, PUT, DELETE nie są trwałe — backend działa jak tymczasowa
+baza danych i po uśpieniu lub restarcie aplikacji zmiany mogą zostać utracone. Do trwałego przechowywania danych
+potrzebny jest dedykowany serwer bazy danych lub plan płatny.
+
 ## 🧾 Instrukcje użycia
 
 ➡️ Dla każdego użytkownika:
