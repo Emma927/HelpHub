@@ -49,7 +49,7 @@ function AnnouncementDetails() {
   } = announcement;
 
   return (
-    <section className="announcement__details font--resp my-2 text-primary">
+    <section className="announcement__details mx-5 font--resp my-2 text-primary">
       <div className="announcements__info d-flex flex-column">
         <h2>Szczegóły ogłoszenia:</h2>
         <p>

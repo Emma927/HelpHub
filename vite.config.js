@@ -14,6 +14,7 @@ const helpPath = '';
  */
 export default defineConfig({
   root: helpPath,
+  base: '/',
   server: {
     port: 3000,
     open: true,
