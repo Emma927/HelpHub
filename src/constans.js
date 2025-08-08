@@ -17,32 +17,32 @@ export const API =
 export const socialMediaSites = [
   {
     icon: BsFacebook,
-    address: 'https://www.facebook.com/helpchain',
+    address: 'https://www.facebook.com/helphub',
     label: 'Facebook naszej firmy',
   },
   {
     icon: BsTwitterX,
-    address: 'https://www.x.com/helpchain',
+    address: 'https://www.x.com/helphub',
     label: 'X naszej firmy',
   },
   {
     icon: BsInstagram,
-    address: 'https://www.instagram.com/helpchain',
+    address: 'https://www.instagram.com/helphub',
     label: 'Instagram naszej firmy',
   },
   {
     icon: BsYoutube,
-    address: 'https://www.youtube.com/helpchain',
+    address: 'https://www.youtube.com/helphub',
     label: 'Youtube naszej firmy',
   },
   {
     icon: BsWhatsapp,
-    address: 'https://www.whatsapp.com/helpchain',
+    address: 'https://www.whatsapp.com/helphub',
     label: 'Whatsapp naszej firmy',
   },
   {
     icon: BsTiktok,
-    address: 'https://www.tiktok.com/helpchain',
+    address: 'https://www.tiktok.com/helphub',
     label: 'TikTok naszej firmy',
   },
 ];

@@ -38,7 +38,7 @@ function UserLoginForm() {
           navigate('/'); // Zmiana na stronę główną po zalogowaniu
         }
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => setError('Nie ma takiego użytkownika'));
   };
 
   // Warunek, jeśli użytkownik jest już zalogowany, nie renderuj formularza logowania- zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
