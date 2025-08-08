@@ -36,6 +36,7 @@ main {
     }
 
     &__info {
+      max-width: 95%;
 
       p {
         font-weight: bold;
@@ -138,8 +139,6 @@ main {
   // AnnouncementDetails
   .announcement {
     &__details {
-      max-width: 95%;
-
       &-img {
         max-width: 385px;
         height: auto;
