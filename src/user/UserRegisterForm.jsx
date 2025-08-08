@@ -63,7 +63,7 @@ function UserRegisterForm() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, surname, email, password }), //  metoda, która konwertuje obiekt JavaScript na format tekstowy JSON (JavaScript Object Notation), jest on przekształcany w ciąg znaków w formacie JSON, który może być przesłany w żądaniu HTTP. Bez przekształcenia będzie błąd
+      body: JSON.stringify({ name, surname, email, password }), // Konwertuje obiekt na JSON do przesłania w żądaniu HTTP.
     })
       .then((response) => {
         if (response.ok) {
@@ -72,14 +72,14 @@ function UserRegisterForm() {
         throw new Error('Rejestracja nie powiodła się');
       })
       .then((saved) => {
-        // udanym fetch, czyli zapisaniu nowego użytkownika na serwerze, aplikacja automatycznie loguje użytkownika, wywołując funkcję login z danymi użytkownika (w tym przypisanym przez serwer id).
-        login({ id: saved.id, name, surname, email }); //Dane z fetch są przetwarzane, a następnie przekazywane do login jako userData, co pozwala na zarządzanie stanem użytkownika i jego sesją w aplikacji. Zapis do localStorage: Funkcja login zapisuje dane użytkownika po konwersji na tekst w localStorage, co umożliwia ich dostępność po odświeżeniu strony. Zapisuje je jako ciąg JSON, co pozwala na ich łatwe przekształcenie z powrotem na obiekt JavaScript.
-        navigate('/'); // Użytkownik się właśnie zarejestrował – przekieruj po fetchu na stronę główną
+        // Po zapisaniu użytkownika automatycznie zaloguj go, używając danych z serwera, w tym przypisanym przez serwer id.
+        login({ id: saved.id, name, surname, email }); // Przekaż dane użytkownika do funkcji login, aby zaktualizować stan i zapisać je w localStorage.
+        navigate('/'); // Użytkownik się właśnie zarejestrował – przekierowanie po fetchu na stronę główną
       })
       .catch((err) => setErrors([err.message])); // Tablica, bo errors.map w renderze oczekuje tablicy
   };
 
-  // Warunek, który chroni przed przypadkowym mrugnięciem formularza rejestracji, gdy użytkownik jest już zalogowany, ale jego stan jeszcze nie został przetworzony przez komponent. Zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza rejestracji.
+  // Warunek, jeśli użytkownik jest już zalogowany, nie renderuj formularza rejestracji- zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza rejestracji.
   if (user) return null;
 
   return (
@@ -116,6 +116,7 @@ function UserRegisterForm() {
           <label htmlFor="email" className="form-label">
             Email
           </label>
+          {/*Dzięki ustawieniu w lablelu htmlFor i id w input - kliknięcie na tekst "Email"/"Password" spowoduje, że fokus zostanie przeniesiony do pola tekstowego o id="email"/"password". Dzięki temu użytkownicy mogą łatwiej wypełniać formularze, a czytniki ekranu mogą poprawnie odczytywać etykiety w kontekście odpowiednich pól.*/}
           <input
             id="email"
             className="form-control"
@@ -139,7 +140,7 @@ function UserRegisterForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {/*Atrybut autoComplete="new-password" jest używany w formularzach HTML, aby podpowiedzieć przeglądarce, jakiego rodzaju dane powinny być automatycznie uzupełniane w polu.*/}
+          {/*Użyj autoComplete="new-password" w formularzu, aby kontrolować autouzupełnianie przeglądarki*/}
           <label htmlFor="passwordRepeat" className="form-label">
             Powtórz hasło
           </label>
@@ -169,7 +170,7 @@ function UserRegisterForm() {
         </NavLink>
       </div>
       <div className="img-container img-container--register">
-        <img src={imageRegister} alt="login" />
+        <img src={imageRegister} alt="login" loading="lazy" />
         <div className="text text-register">
           <h3>Czekamy na Ciebie!</h3>
           <h4>Zarejestruj się, aby korzystać z pełni możliwości HelpHub!</h4>

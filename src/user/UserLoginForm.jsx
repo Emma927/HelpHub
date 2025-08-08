@@ -19,7 +19,7 @@ function UserLoginForm() {
       return;
     }
 
-    // encodeURIComponent-koduje znaki specjalne, takie jak spacje, znaki interpunkcyjne, itp., które mogłyby zakłócić prawidłowe przetwarzanie adresu URL. Jest używany do przekształcenia takich znaków w bezpieczne sekwencje znaków, które są poprawnie interpretowane przez przeglądarki i serwery. Dzięki temu URL jest zawsze poprawny i nie powoduje błędów podczas przesyłania żądania.
+    // encodeURIComponent-koduje znaki specjalne, spacje, znaki interpunkcyjne, itp., które mogłyby zakłócić prawidłowe przetwarzanie adresu URL. Przekształca takie znaki w bezpieczne sekwencje znaków, które są poprawnie interpretowane przez przeglądarki i serwery. Dzięki temu URL jest zawsze poprawny i nie powoduje błędów podczas przesyłania żądania.
     fetch(`${API}/users?email=${encodeURIComponent(email)}`)
       // To jest żądanie typu GET – pobiera dane użytkownika, który ma podany e-mail
       .then((response) => {
@@ -41,13 +41,13 @@ function UserLoginForm() {
       .catch((error) => setError(error.message));
   };
 
-  // Warunek, który chroni przed przypadkowym mrugnięciem formularza logowania, gdy użytkownik jest już zalogowany, ale jego stan jeszcze nie został przetworzony przez komponent. Zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
+  // Warunek, jeśli użytkownik jest już zalogowany, nie renderuj formularza logowania- zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
   if (user) return null;
 
   return (
     <section className="user__login">
       <div className="img-container">
-        <img src={imageLogin} alt="login" />
+        <img src={imageLogin} alt="login" loading="lazy" />
         <div className="text">
           <h3>Hej!</h3>
           <h4>Dobrze Cię widzieć!</h4>

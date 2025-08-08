@@ -4,20 +4,14 @@ import { BsCaretRightFill, BsHeartFill } from 'react-icons/bs';
 import { AnnouncementsContext } from '@/context/AnnouncementsContext'; // To, że filtry się nie resetują po powrocie z AnnouncementDetails, wynika z faktu, że cały stan FiltersContext jest trzymany globalnie, w providerze, który otacza całą aplikację (czyli App w main.jsx)
 import { useFavourite } from '@/hook/useFavourite';
 
-// - TO NIE JEST POTRZEBNE: FiltersContext może być dostępny w komponencie AnnouncementDetails, nawet jeśli nie został bezpośrednio zaimportowany, pod warunkiem, że komponent AnnouncementDetails znajduje się w drzewie komponentów otoczonym przez FiltersContext.Provider.
 function AnnouncementDetails() {
   const { announcements, error } = useContext(AnnouncementsContext);
   const { id } = useParams();
-  /*const announcement = announcements && announcements.find(item => item.id === id);
-W tym przypadku, jeśli announcements jest null lub undefined, wyrażenie po && nie zostanie wykonane, a announcement będzie miało wartość undefined. Jeśli announcements jest prawdziwe, wykona się metoda find, a announcement przyjmie wartość znalezionego elementu lub undefined, jeśli żaden element nie spełnia warunku*/
-  // 1. Ustawienie URL - NavLink w komponencie Announcements ustawia parametry w URL, w tym id.
-  // 2. Pobieranie parametrów - W AnnouncementDetails, useParams pobiera te parametry URL, w tym id.
-  // 3. Wyszukiwanie ogłoszenia - Jeśli announcements istnieje, metoda find przeszukuje tablicę, aby znaleźć pierwszy element, którego id jest równe pobranemu id.
-  // 4. Wynik find - Jeśli znajdzie pasujący element, można dokonać destrukturyzacji jego właściwości, a jeśli nie znajdzie, find zwróci undefined.
+  // Wyrażenie funkcyjne za pomocą find- sprawdza warunek: jeśli id elementu jest równe temu z adresu URL (useParams()), to jest to szukane ogłoszenie. Jeśli znajdzie pasujący element, można dokonać destrukturyzacji jego właściwości, a jeśli nie znajdzie, find zwróci undefined.
   const announcement =
-    announcements && announcements.find((item) => item.id === id); // Jeśli announcements nie istnieje, announcement będzie undefined. Jeśli istnieje, announcement będzie obiektem ogłoszenia, które odpowiada danemu id.
+    announcements && announcements.find((item) => item.id === id);
 
-  const { isFaved, toggleFav } = useFavourite(id);
+  const { isFaved, toggleFav } = useFavourite(id); // Sprawdza, czy ogłoszenie o danym id jest ulubione (isFaved), oraz do przełączania tego stanu (toggleFav). Przkeazane jest id klikniętego ogłoszenia
 
   if (error) {
     return <div>Błąd ładowania</div>;

@@ -32,7 +32,7 @@ function App() {
             </Route>
           </Route>
 
-          {/*Przekazywane jest redirectTo w Route tylko wtedy, gdy potrzeba zmienić domyślne przekierowanie w komponencie ProtectedRoute*/}
+          {/*Przekazywane jest prosp-redirectTo w Route tylko wtedy, gdy potrzeba zmienić domyślne przekierowanie w komponencie ProtectedRoute*/}
           <Route element={<ProtectedRoute />}>
             <Route path="favourites" element={<FavouriteAnnouncements />} />
           </Route>

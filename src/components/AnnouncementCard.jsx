@@ -31,7 +31,8 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
   function handleToggle() {
     // Funkcja handleToggle nie potrzebuje bezpośrednio id jako argumentu, ponieważ toggleFav wewnątrz hooka useFavourite już wie, które ogłoszenie jest obsługiwane dzięki przekazanemu wcześniej id.
     toggleFav(); // Zmienia stan ulubionego ogłoszenia w localStorage i aktualizuje lokalny stan isFaved w hooku useFavourite
-    if (onToggleFav) {
+    if (typeof onToggleFav === 'function') {
+      // Sprawdzenie, czy callback jest przekazany
       onToggleFav(); // Jest funkcją przekazywaną jako prop do AnnouncementCard z FavouriteAnnouncements. Jej celem jest powiadomienie komponentu nadrzędnego FavouriteAnnouncements, że stan ulubionego ogłoszenia się zmienił. Komponent nadrzędny musi zareagować na tę zmianę, przez aktualizację listy ulubionych ogłoszeń za pomocą funkcji updateFavs().
     }
   }
@@ -43,7 +44,12 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
     >
       <Card className="shadow border-0 font--resp card__announcement">
         <div className="card-img-container">
-          <Card.Img variant="top" src={imageUrl} alt={imageAlt} />
+          <Card.Img
+            variant="top"
+            src={imageUrl}
+            alt={imageAlt}
+            loading="lazy"
+          />
         </div>
         <Card.Body className="announcements__info d-flex flex-column mt-2">
           <div className="d-flex justify-content-between align-items-center">

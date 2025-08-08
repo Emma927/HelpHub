@@ -20,7 +20,7 @@ function Header() {
   const closeNav = () => setIsNavOpen(false);
   const { user, logout } = useContext(UserContext);
 
-  // RESET menu po zmianie strony- zamykanie menu po zmianie ścieżki przez użytkownika jako dodatkowe, automatyczne zabezpieczenie zamykania nawigacji. Bez useEffect też działa open/close ale wymaga interakcji użytkownika.
+  // Reset menu po zmianie strony- zamykanie menu po zmianie ścieżki przez użytkownika jako dodatkowe, automatyczne zabezpieczenie zamykania nawigacji. Bez useEffect też działa open/close ale wymaga interakcji użytkownika.
   useEffect(() => {
     setIsNavOpen(false); // Zamyka nawigację przy zmianie strony
   }, [location.pathname]);

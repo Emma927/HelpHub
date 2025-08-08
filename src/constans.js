@@ -1,3 +1,7 @@
+import image1 from '@/assets/clothes.jpg';
+import image2 from '@/assets/accessories.jpg';
+import image3 from '@/assets/food.jpg';
+
 import {
   BsTwitterX,
   BsFacebook,
@@ -9,8 +13,6 @@ import {
 
 export const API =
   import.meta.env.VITE_API_URL || 'https://help-hub-2sac.onrender.com'; // fallback — czyli wartość domyślna na wypadek, gdyby zmienna środowiskowa REACT_APP_API_URL nie była ustawiona
-//.env - to zmienna środowiskowa w projekcie Vite, która przechowuje adres URL API, umożliwiając aplikacji frontendowej komunikację z serwerem backendowym.
-//.envlocal - to zmienna środowiskowa w projekcie Vite, wskazująca lokalny adres URL API, z którym aplikacja frontendowa może się komunikować podczas rozwoju.
 
 export const socialMediaSites = [
   {
@@ -50,19 +52,19 @@ export const cards = [
     title: 'Odzież i obuwie',
     description:
       'Zbiórka odzieży i obuwie w dobrym stanie, aby pomóc osobom w trudnej sytuacji życiowej. Każda para spodni, bluzka czy buty mogą znacząco poprawić komfort życia potrzebujących. Przyjmujemy zarówno letnie, jak i zimowe ubrania dla dorosłych i dzieci.',
-    image: 'src/assets/clothes.jpg',
+    image: image1,
   },
   {
     title: 'Akcesoria',
     description:
       'Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: torby, plecaki, biżuterię, czapki, szaliki i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.',
-    image: 'src/assets/accessories.jpg',
+    image: image2,
   },
   {
     title: 'Pilność',
     description:
       'Zbiórka dotyczy pilnych potrzeb, takich jak żywność, środki higieny osobistej, koce czy leki. Szybka pomoc jest kluczowa w sytuacjach kryzysowych, dlatego każda darowizna ma ogromne znaczenie. Wspólnie możemy pomóc tym, którzy potrzebują natychmiastowego wsparcia.',
-    image: 'src/assets/food.jpg',
+    image: image3,
   },
 ];
 
@@ -241,12 +243,3 @@ export const customStyles = {
     zIndex: 9999, // w razie problemów z dropdownem, aby był widoczny
   }),
 };
-
-
-// provided - domyślne style, zawiera domyślne style dla opcji, które można rozszerzyć lub nadpisać.
-// state - stan opcji, obiekt w funkcji stylizującej react-select zawiera informacje o bieżącym stanie opcji
-// control- funkcja stylizująca dla głównego kontenera selektora (czyli miejsca, gdzie użytkownik klika, aby otworzyć menu rozwijane).
-// option - funkcja stylizująca dla poszczególnych opcji w menu rozwijanym.
-// singleValue - funkcja stylizująca dla wybranej wartości, która jest wyświetlana w control po dokonaniu wyboru.
-// menu - funkcja stylizująca dla całego menu rozwijanego, które pojawia się po kliknięciu w control.
-// Każda z tych funkcji pozwala na rozszerzenie lub nadpisanie domyślnych stylów dostarczanych przez react-select, co daje dużą elastyczność w dostosowywaniu wyglądu komponentu do specyficznych potrzeb projektu.

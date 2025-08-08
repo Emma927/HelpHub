@@ -32,7 +32,7 @@ function Home() {
             <div key={index} className="col-12 col-md-6 col-lg-4">
               <Card className="shadow border-0 font--resp">
                 <div className="card-img-container">
-                  <Card.Img variant="top" src={image} />
+                  <Card.Img variant="top" src={image} loading="lazy" />
                 </div>
                 <Card.Body className="d-flex flex-column mt-2">
                   <Card.Title>{title}</Card.Title>

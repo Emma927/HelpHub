@@ -1,20 +1,10 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { API } from '@/constans.js';
 
-/*### Rola createContext():
-- **Tworzenie struktury:**
-  - createContext() tworzy obiekt kontekstu, który zawiera Provider i Consumer (lub useContext hook). Działa jak szablon, definiując mechanizm, dzięki któremu dane mogą być przekazywane przez drzewo komponentów.
-- **Provider i Consumer:**
-  - **Provider:** Jest komponentem, który dostarcza dane do komponentów podrzędnych. W przypadku AnnouncementsContext, rzeczywistym komponentem jest AnnouncementsContext.Provider, ale często opakowujemy go w funkcję lub komponent o nazwie AnnouncementsProvider, aby ułatwić jego użycie i zarządzanie stanem.
-  - **Consumer (lub useContext hook):** Jest używany przez komponenty do uzyskiwania dostępu do danych z kontekstu. Consumer jest komponentem, który używa render prop do przekazywania danych, natomiast useContext jest hookiem, który bezpośrednio zwraca wartości kontekstu w komponentach funkcyjnych.
-Twoje wyjaśnienie jest poprawne, ale dodanie kontekstu, dlaczego opakowujemy Provider oraz różnice w użyciu Consumer i useContext, może uczynić je bardziej kompletnym.*/
-
 // Tworzenie kontekstu dla ogłoszeń
-export const AnnouncementsContext = createContext();
+export const AnnouncementsContext = createContext(); // Tworzy obiekt kontekstu, który zawiera Provider i Consumer (lub useContext hook-useContext(AnnouncementsContext) – hook do pobrania tych danych w komponentach, które są wewnątrz AnnouncementsProvider). Działa jak szablon, definiując mechanizm, dzięki któremu dane mogą być przekazywane przez drzewo komponentów.
 
-// AnnouncementsProvider - Jest to komponent, który może zawierać dodatkową logikę, taką jak zarządzanie stanem, efekty uboczne (np. pobieranie danych z API), czy inne operacje, które są potrzebne do przygotowania danych przed ich przekazaniem do Provider.
-
-// AnnouncementsProvider - Zarządza stanem i efektami ubocznymi, przygotowując dane dla AnnouncementsContext.Provider
+// AnnouncementsProvider - komponent, który pobiera dane z API i udostępnia je przez AnnouncementsContext.Provider. Zarządza stanem i efektami ubocznymi, przygotowując dane dla AnnouncementsContext.Provider
 export function AnnouncementsProvider({ children }) {
   const [announcements, setAnnouncements] = useState(null);
   const [error, setError] = useState(null);
@@ -40,8 +30,7 @@ export function AnnouncementsProvider({ children }) {
   }, []);
 
   return (
-    // AnnouncementsContext.Provider - Jest odpowiedzialny tylko za dostarczanie danych do komponentów podrzędnych. Jest to rzeczywisty komponent Provider stworzony przez createContext().
-    // Dostarczenie danych do komponentów podrzędnych, za pomocą właściwości value, a children określa, które z tych komponentów podrzędnych będą miały dostęp do tych przekazanych danych.
+    // AnnouncementsContext.Provider - Jest odpowiedzialny za dostarczanie danych do komponentów podrzędnych, za pomocą właściwości value, a children określa, które z tych komponentów podrzędnych będą miały dostęp do tych przekazanych danych.
     <AnnouncementsContext.Provider value={{ announcements, error }}>
       {children}
     </AnnouncementsContext.Provider>

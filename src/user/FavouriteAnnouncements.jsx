@@ -3,12 +3,13 @@ import { UserContext } from '@/context/UserContext';
 import { AnnouncementsContext } from '@/context/AnnouncementsContext';
 import AnnouncementCard from '@/components/AnnouncementCard';
 import PaginationComponent from '@/components/PaginationComponent';
+import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage'; // Pobiera i zwraca ulubione ogłoszenia użytkownika z localStorage jako tablicę, używa pustej tablicy, jeśli brak danych.
 
 // Komponent, który renderuje ulubione ogłoszenia użytkownika
 function FavouriteAnnouncements() {
   const { user } = useContext(UserContext); // Pobiera dane o użytkowniku z kontekstu
   const { announcements } = useContext(AnnouncementsContext); // Pobiera dane ogłoszeń z kontekstu
-  const [favs, setFavs] = useState([]);
+  const [favs, setFavs] = useState([]); // Stan ulubionych ogłoszeń
   const announcementsPerPage = 24; // Liczba ogłoszeń przypadająca na 1 stronę paginacji
   const [currentPage, setCurrentPage] = useState(1); // Ustawia początkową stronę paginacji na 1
   const topRef = useRef(null); // Tworzy referencję, która będzie używana do przewijania do góry strony
@@ -17,12 +18,12 @@ function FavouriteAnnouncements() {
   // localStorage do przechowywania i pobierania ulubionych ogłoszeń użytkownika, używa localStorage.getItem(key) do pobrania danych i JSON.parse do ich przekształcenia w obiekt JavaScript.
   useEffect(() => {
     if (!user) return; // Jeśli użytkownik nie jest zalogowany, żadne ulubione ogłoszenia nie zostają pobrane
-    const stored = JSON.parse(localStorage.getItem(`favs_${user.id}`) || '[]'); // stored próbuje pobrać wartość z localStorage pod kluczem, który jest dynamicznie tworzony na podstawie identyfikatora użytkownika (user.id). Dzięki użyciu operatora ||, JSON.parse zawsze otrzyma wartość, którą może poprawnie przetworzyć. W przypadku braku danych w localStorage, zamiast null, zostanie użyty ciąg '[]', co po parsowaniu daje pustą tablicę. To sprawia, że ten zapis jest bezpieczny i nie powoduje błędów parsowania.
-    setFavs(stored); // Aktualizuje stan ulubionych, po przekształceniu na obiekt lub tablicę, można łatwo iterować po elementach, uzyskiwać do nich dostęp za pomocą indeksów lub kluczy, i wykonywać na nich operacje, co nie byłoby możliwe, gdyby dane były tylko ciągiem tekstowym.
+    const stored = parseFavsFromLocalStorage(user.id); // Pobierz i sparsuj favs z localStorage dla użytkownika; ustaw jako pustą tablicę, jeśli brak danych.
+    setFavs(stored); // Aktualizuje stan ulubionych, umożliwiając operacje na danych.
   }, [user]);
 
   // Drugi useEffect- Uruchamia się, gdy zmienia się bieżąca strona, wtedy przewija stronę do góry do elementu z topRef.
-  // current jest właściwością obiektu referencji utworzonego za pomocą hooka useRef. Referencja ref={topRef} jest przypisana do section, current będzie się odnosić do tego elementu DOM po zamontowaniu komponentu.
+  // current jest właściwością obiektu referencji utworzonego za pomocą hooka useRef. Referencja ref={topRef} jest przypisana do <section>, current będzie się odnosić do tego elementu DOM po zamontowaniu komponentu.
   useEffect(() => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -31,10 +32,9 @@ function FavouriteAnnouncements() {
 
   // updateFavs- aktualizuje stan favs na podstawie ulubionych ogłoszeń zapisanych w localStorage, gdy w trakcie działania aplikacji (np. po dodaniu lub usunięciu ulubionego ogłoszenia) trzeba ręcznie zaktualizować stan favs na podstawie aktualnych danych z localStorage.
   const updateFavs = () => {
-    // stored- to zmienna, która przechowuje dane pobrane z localStorage, ale jest używana w funkcji updateFavs do ustawienia stanu ulubionych ogłoszeń w aplikacji.
-    // JSON.parse przekształca dane z powrotem do ich oryginalnej postaci, jest to konieczne, ponieważ localStorage przechowuje dane w formie ciągów tekstowych.
-    const stored = JSON.parse(localStorage.getItem(`favs_${user.id}`) || '[]'); // stored próbuje pobrać wartość z localStorage pod kluczem, który jest dynamicznie tworzony na podstawie identyfikatora użytkownika (user.id). Dzięki użyciu operatora ||, JSON.parse zawsze otrzyma wartość, którą może poprawnie przetworzyć. W przypadku braku danych w localStorage, zamiast null, zostanie użyty ciąg '[]', co po parsowaniu daje pustą tablicę. To sprawia, że ten zapis jest bezpieczny i nie powoduje błędów parsowania.
-    setFavs(stored); // setFavs(stored); ustawia stan ulubionych ogłoszeń w aplikacji na wartość stored. setFavs jest funkcją, która prawdopodobnie pochodzi z hooka stanu, takiego jak useState, i jest używana do aktualizacji stanu komponentu.
+    // stored- zmienna, która przechowuje dane pobrane z localStorage, jest używana w funkcji updateFavs do ustawienia stanu ulubionych ogłoszeń w aplikacji.
+    const stored = parseFavsFromLocalStorage(user.id); // stored pobiera favs z localStorage dla użytkownika; używa pustej tablicy, jeśli brak danych.
+    setFavs(stored); // setFavs(stored); ustawia stan ulubionych ogłoszeń w aplikacji na wartość stored. setFavs jest funkcją, która pochodzi z hooka-useState i jest używana do aktualizacji stanu komponentu.
   };
 
   // Sprawdza, czy user i announcements istnieją. Jeśli nie, nie renderuje nic
@@ -85,7 +85,7 @@ function FavouriteAnnouncements() {
           ))}
         </div>
       )}
-      {/*FavouriteAnnouncements przekazuje komponentowi paginacji PaginationComponent propsy: bieżącą stronę paginacji; całkowitą liczbę stron, które są potrzebne do wyświetlenia wszystkich ulubionych ogłoszeń; funkcję setCurrentPage jako props onPageChange. Ta funkcja jest używana do aktualizacji stanu currentPage, co pozwala na zmianę bieżącej strony, gdy użytkownik przełącza się między stronami w paginacji*/}
+      {/*PaginationComponent otrzymuje bieżącą stronę, całkowitą liczbę stron i funkcję zmiany strony. Ta funkcja jest używana do aktualizacji stanu currentPage, co pozwala na zmianę bieżącej strony, gdy użytkownik przełącza się między stronami w paginacji*/}
       <PaginationComponent
         currentPage={currentPage}
         totalPages={totalPages}

@@ -20,7 +20,7 @@ przez różne organizacje pomocowe.
 - React
 - Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
 - React Router
-- JSON server (używany do lokalnych testów/developmentu)
+- JSON server
 - Bootstrap
 - React-Bootstrap
 - React-Icons
