@@ -9,7 +9,7 @@ function AnnouncementDetails() {
   const { announcements, error } = useContext(AnnouncementsContext);
   const { id } = useParams();
   // Wyrażenie funkcyjne za pomocą find- sprawdza warunek: jeśli id elementu jest równe temu z adresu URL (useParams()), to jest to szukane ogłoszenie. Jeśli znajdzie pasujący element, można dokonać destrukturyzacji jego właściwości, a jeśli nie znajdzie, find zwróci undefined.
-  const { user } = useContext(UserContext); // <--- pobierz user
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
   const announcement =
@@ -17,7 +17,7 @@ function AnnouncementDetails() {
 
   const { isFaved, toggleFav } = useFavourite(id); // Sprawdza, czy ogłoszenie o danym id jest ulubione (isFaved), oraz do przełączania tego stanu (toggleFav). Przkeazane jest id klikniętego ogłoszenia
 
-  // Nowa funkcja obsługująca kliknięcie ulubionych
+  // Funkcja obsługująca kliknięcie ulubionych
   function handleToggleFav() {
     if (!user) {
       navigate('/auth/user/login');
