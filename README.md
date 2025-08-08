@@ -71,11 +71,12 @@ przez różne organizacje pomocowe.
    Jeśli `.env.local` nie istnieje, aplikacja użyje ustawień z `.env`
 
 6. **Uruchom aplikację w trybie developerskim**
+
    Aby uruchomić aplikację w trybie developerskim, użyj:
 
    `npm run dev`
 
-7. **Buduj aplikację do produkcji (opcjonalnie) **
+7. **Buduj aplikację do produkcji (opcjonalnie)**
 
    Przygotuj aplikację do wdrożenia w środowisku produkcyjnym:
 
@@ -97,13 +98,17 @@ Instrukcja uruchomienia lokalnego backendu:
 - Albo uruchom bez instalacji- upewnij się, że plik db.json znajduje się w katalogu głównym projektu (tam, gdzie
   package.json). Uruchom json-server komendą:
 
-  `npx json-server --watch db.json --port 3020`
+  `npx json-server --watch db.json --port 10000`
 
-- W pliku `.env.local` ustaw adres API na lokalny backend (do zapytań fetch):
+**Uwaga:** Port 10000 jest przykładowy — możesz wybrać dowolny dostępny port, ale pamiętaj, żeby ustawić go także w
+.env.local.
+
+- Skonfiguruj plik .env.local (który jest ignorowany przez Git, więc jest lokalny dla Twojego środowiska), aby aplikacja
+  korzystała z lokalnego backendu:
 
   `VITE_API_URL=http://localhost:10000`
 
-Backend działa na Render pod adresem:  
+Backend produkcyjny działa na Render pod adresem:  
 [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
 
 ### 🆓 Render – darmowy hosting backendu
