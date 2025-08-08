@@ -138,8 +138,10 @@ main {
   // AnnouncementDetails
   .announcement {
     &__details {
+      max-width: 95%;
+
       &-img {
-        max-width: 460px;
+        max-width: 385px;
         height: auto;
         object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
 
