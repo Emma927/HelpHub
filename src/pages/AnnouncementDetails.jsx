@@ -1,17 +1,30 @@
 import React, { useContext } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, NavLink, useNavigate } from 'react-router-dom';
 import { BsCaretRightFill, BsHeartFill } from 'react-icons/bs';
 import { AnnouncementsContext } from '@/context/AnnouncementsContext'; // To, że filtry się nie resetują po powrocie z AnnouncementDetails, wynika z faktu, że cały stan FiltersContext jest trzymany globalnie, w providerze, który otacza całą aplikację (czyli App w main.jsx)
+import { UserContext } from '@/context/UserContext';
 import { useFavourite } from '@/hook/useFavourite';
 
 function AnnouncementDetails() {
   const { announcements, error } = useContext(AnnouncementsContext);
   const { id } = useParams();
   // Wyrażenie funkcyjne za pomocą find- sprawdza warunek: jeśli id elementu jest równe temu z adresu URL (useParams()), to jest to szukane ogłoszenie. Jeśli znajdzie pasujący element, można dokonać destrukturyzacji jego właściwości, a jeśli nie znajdzie, find zwróci undefined.
+  const { user } = useContext(UserContext); // <--- pobierz user
+  const navigate = useNavigate();
+
   const announcement =
     announcements && announcements.find((item) => item.id === id);
 
   const { isFaved, toggleFav } = useFavourite(id); // Sprawdza, czy ogłoszenie o danym id jest ulubione (isFaved), oraz do przełączania tego stanu (toggleFav). Przkeazane jest id klikniętego ogłoszenia
+
+  // Nowa funkcja obsługująca kliknięcie ulubionych
+  function handleToggleFav() {
+    if (!user) {
+      navigate('/auth/user/login');
+      return; // zatrzymaj wykonanie jeśli nie zalogowany
+    }
+    toggleFav();
+  }
 
   if (error) {
     return <div>Błąd ładowania</div>;
@@ -82,7 +95,7 @@ function AnnouncementDetails() {
           </p>
           <button
             className={`fav__heart ${isFaved ? 'fav__heart--active' : ''}`}
-            onClick={toggleFav}
+            onClick={handleToggleFav}
           >
             <BsHeartFill />
           </button>
