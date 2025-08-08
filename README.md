@@ -4,6 +4,9 @@ Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomo
 obuwia, akcesoriów i żywności w Polsce. Rozwiązuje problem braku jednego miejsca do przeglądania i dodawania zbiórek
 przez różne organizacje pomocowe.
 
+**Dostępna online pod adresem:**  
+[https://help-hub-render.netlify.app/](https://help-hub-render.netlify.app/)
+
 ## 🚀 Funkcjonalności
 
 - Przeglądanie ogłoszeń
@@ -99,6 +102,9 @@ Instrukcja uruchomienia lokalnego backendu:
 - W pliku `.env.local` ustaw adres API na lokalny backend (do zapytań fetch):
 
   `VITE_API_URL=http://localhost:10000`
+
+Backend działa na Render pod adresem:  
+[https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
 
 ### 🆓 Render – darmowy hosting backendu
 
