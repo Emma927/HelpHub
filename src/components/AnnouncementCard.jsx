@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BsHeartFill, BsCaretRightFill } from 'react-icons/bs';
 import { useFavourite } from '@/hook/useFavourite';
+import { UserContext } from '@/context/UserContext';
 
 function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
   const {
@@ -18,6 +19,8 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
 
   // Przekazanie zmiennej id do hooka useFavourite, która reprezentuje identyfikator ogłoszenia, to wartość, a nie nazwa zmiennej, id identyfikuje, które ogłoszenie jest obsługiwane
   const { isFaved, toggleFav } = useFavourite(id);
+  const { user } = useContext(UserContext);
+  const navigate = useNavigate();
 
   // Dodanie klasy zależnie od liczby kart
   let additionalClass = ''; // Na początek brak dodatkowej klasy
@@ -29,6 +32,10 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
 
   // handleToggle- wywoływana po kliknięciu, celem tej funkcji jest zsynchronizowanie zmian stanu ulubionych ogłoszeń zarówno lokalnie, jak i z komponentem nadrzędnym.
   function handleToggle() {
+    if (!user) {
+      navigate('/auth/user/login');
+      return;
+    }
     // Funkcja handleToggle nie potrzebuje bezpośrednio id jako argumentu, ponieważ toggleFav wewnątrz hooka useFavourite już wie, które ogłoszenie jest obsługiwane dzięki przekazanemu wcześniej id.
     toggleFav(); // Zmienia stan ulubionego ogłoszenia w localStorage i aktualizuje lokalny stan isFaved w hooku useFavourite
     if (typeof onToggleFav === 'function') {
