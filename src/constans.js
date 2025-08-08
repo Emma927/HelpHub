@@ -72,7 +72,7 @@ export const faq = [
   {
     question: 'Kim jesteśmy?',
     answer:
-      'HelpHub– to centralna aplikacja ogłoszeniowa, która łączy użytkowników ze wszystkimi organizacjami, instytucjami, schroniskami, prywatnymi działalnościami przeprowadzającymi zbiórki ubrań i akcesoriów w jednym miejscu. Umożliwia przeglądanie ogłoszeń o organizowanych zbiórkach przez wszystkie organizacje pomocowe w Polsce.',
+      'HelpHub– to centralna aplikacja ogłoszeniowa, która łączy użytkowników ze wszystkimi organizacjami, instytucjami, schroniskami, prywatnymi działalnościami przeprowadzającymi zbiórki ubrań, akcesoriów i żywności w jednym miejscu. Umożliwia przeglądanie ogłoszeń o organizowanych zbiórkach przez wszystkie organizacje pomocowe w Polsce.',
     number: 1,
   },
   {
