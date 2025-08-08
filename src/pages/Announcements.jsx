@@ -46,7 +46,9 @@ function Announcements() {
   useEffect(() => {
     if (announcements) {
       const filtersChanged = // Ta funkcja ustala, czy filtry zostały zmienione w porównaniu do poprzedniego stanu. Porównuje bieżące województwo i kategorie z tymi zapisanymi w prevFilters.current.
-        prevFilters.current.voivodeship !== selectedVoivodeship || // Pozwala śledzić zmiany między renderowaniami bez wpływu na cykl renderowania. Przydatne, gdy potrzeba zachować stan lub referencję, która nie powinna wpływać na ponowne renderowanie komponentu.
+        // JSON.stringify(prevFilters.current.voidodeship)- porównuje, czy nazwa województwa (string) się zmieniła
+        prevFilters.current.voivodeship !== selectedVoivodeship || // właściwość current, pochodzi z obiektu zwróconego przez useRef - pozwala śledzić zmiany między renderowaniami bez wpływu na cykl renderowania. Przydatne, gdy potrzeba zachować stan lub referencję, która nie powinna wpływać na ponowne renderowanie komponentu.
+        // JSON.stringify(prevFilters.current.categories) będzie porównywał pełną zawartość obiektu kategorii — czyli wszystkie jego klucze i przypisane do nich wartości true/false.
         JSON.stringify(prevFilters.current.categories) !== // JSON.stringify konwertuje obiekty lub tablice na tekst, co umożliwia porównanie ich zawartości.
           JSON.stringify(selectedCategories);
 
