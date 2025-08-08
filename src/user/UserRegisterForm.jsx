@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '@/context/UserContext';
 import { NavLink, useNavigate } from 'react-router-dom';
-import imageRegister from '@/assets/register.jpg';
+import imageRegister from '../../public/register.jpg';
 import { API } from '@/constans.js';
 
 function UserRegisterForm() {

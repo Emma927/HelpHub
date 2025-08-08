@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '@/context/UserContext';
 import { useNavigate, NavLink } from 'react-router-dom';
-import imageLogin from '@/assets/login.jpg';
+import imageLogin from '../../public/login.jpg';
 import { API } from '@/constans.js';
 
 function UserLoginForm() {
