@@ -49,7 +49,7 @@ przez różne organizacje pomocowe.
 
    Przejdź do katalogu projektu, aby móc uruchamiać polecenia npm:
 
-   `cd help-hub`
+   `cd HelpHub`
 
 4. **Zainstaluj aplikację**
 
