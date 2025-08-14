@@ -27,7 +27,7 @@ przez różne organizacje pomocowe.
 - Bootstrap
 - React-Bootstrap
 - React-Icons
-- Responsive Web Design
+- Responsive Web Design (Mobile First)
 - Context Api
 - localStorage
 - dotlottie-react
