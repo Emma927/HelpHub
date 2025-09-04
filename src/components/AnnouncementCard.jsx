@@ -5,7 +5,27 @@ import { BsHeartFill, BsCaretRightFill } from 'react-icons/bs';
 import { useFavourite } from '@/hook/useFavourite';
 import { UserContext } from '@/context/UserContext';
 
-function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
+/**
+ * Komponent `AnnouncementCard` wyświetla pojedyncze ogłoszenie.
+ * - Prezentuje tytuł, daty, województwo, kategorie i obrazek.
+ * - Obsługuje dodawanie/odejmowanie ogłoszenia z ulubionych
+ *   (zależnie od zalogowania użytkownika).
+ * - Pozwala przejść do szczegółów ogłoszenia przez `NavLink`.
+ *
+ * Props:
+ * - `announcement` – dane ogłoszenia,
+ * - `numberOfCards` – do zmiany układu karty,
+ * - `onToggleFav` – callback informujący komponent nadrzędny o zmianie ulubionych,
+ * - `currentPage` – numer strony (dodawany do linku),
+ * - `listType` – typ listy (wszystkie / ulubione).
+ */
+function AnnouncementCard({
+  announcement,
+  numberOfCards,
+  onToggleFav,
+  currentPage,
+  listType = 'all',
+}) {
   const {
     id,
     title,
@@ -17,7 +37,6 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
     imageAlt,
   } = announcement;
 
-  // Przekazanie zmiennej id do hooka useFavourite, która reprezentuje identyfikator ogłoszenia, to wartość, a nie nazwa zmiennej, id identyfikuje, które ogłoszenie jest obsługiwane
   const { isFaved, toggleFav } = useFavourite(id);
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -30,25 +49,20 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
     additionalClass = 'two-cards';
   }
 
-  // handleToggle- wywoływana po kliknięciu, celem tej funkcji jest zsynchronizowanie zmian stanu ulubionych ogłoszeń zarówno lokalnie, jak i z komponentem nadrzędnym.
   function handleToggle() {
     if (!user) {
-      navigate('/auth/user/login');
+      navigate('/login');
       return;
     }
-    // Funkcja handleToggle nie potrzebuje bezpośrednio id jako argumentu, ponieważ toggleFav wewnątrz hooka useFavourite już wie, które ogłoszenie jest obsługiwane dzięki przekazanemu wcześniej id.
+
     toggleFav(); // Zmienia stan ulubionego ogłoszenia w localStorage i aktualizuje lokalny stan isFaved w hooku useFavourite
     if (typeof onToggleFav === 'function') {
-      // Sprawdzenie, czy callback jest przekazany
-      onToggleFav(); // Jest funkcją przekazywaną jako prop do AnnouncementCard z FavouriteAnnouncements. Jej celem jest powiadomienie komponentu nadrzędnego FavouriteAnnouncements, że stan ulubionego ogłoszenia się zmienił. Komponent nadrzędny musi zareagować na tę zmianę, przez aktualizację listy ulubionych ogłoszeń za pomocą funkcji updateFavs().
+      onToggleFav();
     }
   }
 
   return (
-    <div
-      key={id}
-      className={`col-12 col-md-6 col-lg-4 card-custom ${additionalClass}`}
-    >
+    <div className={`col-12 col-md-6 col-lg-4 card-custom ${additionalClass}`}>
       <Card className="shadow border-0 font--resp card__announcement">
         <div className="card-img-container">
           <Card.Img
@@ -76,15 +90,15 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
           <h5 className="font__card-resp">{title}</h5>
           <p>
             Kategoria zbiórki:
-            {/*operator && zwraca wartość po prawej stronie, jeśli wartość po lewej jest prawdziwa*/}
+            {/*Operator && zwraca wartość po prawej stronie, jeśli wartość po lewej jest prawdziwa*/}
             <span>
               {[
                 clothesAndShoes && 'Odzież i obuwie',
                 accessories && 'Akcesoria',
                 urgent && 'Pilne',
               ]
-                .filter(Boolean) // usuwa wartości false/null
-                .map((category) => ` ${category}`) // dodaje spację przed każdą nazwą
+                .filter(Boolean) // Usuwa wartości false/null
+                .map((category) => ` ${category}`) // Dodaje spację przed każdą nazwą
                 // join- dodaje przecinek, jeśli będzie dołączona kolejna kategoria
                 .join(', ')}
             </span>
@@ -94,10 +108,10 @@ function AnnouncementCard({ announcement, numberOfCards, onToggleFav }) {
           </p>
           {/*Dzięki mapowaniu tworzone są NavLinki dla każdego ogłoszenia z przypisanym id*/}
           <NavLink
-            to={`/announcements/${id}`}
+            to={`/${listType === 'favourites' ? 'favourites' : 'announcements'}/${id}${currentPage ? `?page=${currentPage}` : ''}`}
             className="btn--welcome d-flex justify-content-center align-items-center font--resp mt-auto text-decoration-none"
           >
-            {/*mt-auto - zmusza element, żeby przesunął się na dół kontenera, jeśli reszta przestrzeni jest wolna. Ale uwaga – działa tylko w kontekście flexboxa w kolumnie. mt-auto mówi: "zajmij całe wolne miejsce między mną a poprzednim elementem"*/}
+            {/*mt-auto - zmusza element, żeby przesunął się na dół kontenera, jeśli reszta przestrzeni jest wolna.*/}
             <BsCaretRightFill size={25} className="arrow" />
             Czytaj więcej
           </NavLink>

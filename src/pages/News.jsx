@@ -1,6 +1,12 @@
 import { Alert } from 'react-bootstrap';
-import { possibilities } from '@/constans.js';
+import { possibilities } from '@/constants.js';
 
+/**
+ * Komponent News wyświetlający aktualności lub ogłoszenia systemowe.
+ * - Informuje użytkowników o planowanych zmianach i nowych funkcjach aplikacji.
+ * - Wykorzystuje komponent Alert z react-bootstrap do wyróżnienia komunikatu.
+ * - Renderuje listę nadchodzących możliwości z danych importowanych z `possibilities`.
+ */
 function News() {
   return (
     <section className="d-flex justify-content-center align-items-center">

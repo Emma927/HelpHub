@@ -1,8 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import { BsCaretRightFill } from 'react-icons/bs';
 import { Card } from 'react-bootstrap';
-import { cards } from '@/constans.js';
+import { cards } from '@/constants.js';
 
+/**
+ * Komponent strony głównej.
+ * - Wyświetla nagłówki i hasła motywacyjne.
+ * - Zawiera przycisk prowadzący do strony ogłoszeń.
+ * - Renderuje zestaw kart informacyjnych z danych z `cards`.
+ */
 function Home() {
   return (
     <section className="section__home">

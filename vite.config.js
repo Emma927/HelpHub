@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import { imagetools } from 'vite-imagetools'; // Wtyczka pozwala na automatyczną optymalizację obrazów, co może zmniejszyć ich rozmiar bez utraty jakości. Dzięki temu aplikacja ładuje się szybciej.
+import { imagetools } from 'vite-imagetools';
 
 /**
- * Path to help-chain folder
+ * Path to helpHub folder
  */
-const helpPath = '';
+const helpPath = '.';
 
-// https://vite.dev/config/
 /**
  * Don't change those lines below
  */
@@ -31,7 +30,7 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // wszystko z node_modules do vendor.js
+            return 'vendor';
           }
         },
       },

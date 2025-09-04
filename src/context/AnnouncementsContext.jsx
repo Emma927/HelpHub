@@ -1,36 +1,44 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { API } from '@/constans.js';
+import { API } from '@/constants.js';
 
-// Tworzenie kontekstu dla ogłoszeń
-export const AnnouncementsContext = createContext(); // Tworzy obiekt kontekstu, który zawiera Provider i Consumer (lub useContext hook-useContext(AnnouncementsContext) – hook do pobrania tych danych w komponentach, które są wewnątrz AnnouncementsProvider). Działa jak szablon, definiując mechanizm, dzięki któremu dane mogą być przekazywane przez drzewo komponentów.
+export const AnnouncementsContext = createContext();
 
-// AnnouncementsProvider - komponent, który pobiera dane z API i udostępnia je przez AnnouncementsContext.Provider. Zarządza stanem i efektami ubocznymi, przygotowując dane dla AnnouncementsContext.Provider
+/**
+ * Provider `AnnouncementsProvider` zarządza stanem ogłoszeń.
+ * - Pobiera dane z API przy pierwszym montowaniu komponentu.
+ * - Udostępnia wszystkim komponentom potomnym:
+ *    - `announcements` – listę ogłoszeń z backendu,
+ *    - `error` – błąd pobierania, jeśli wystąpił.
+ * - Dane są dostępne w całej aplikacji dzięki kontekstowi `AnnouncementsContext`.
+ */
 export function AnnouncementsProvider({ children }) {
   const [announcements, setAnnouncements] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${API}/announcements`)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+    const fetchAnnouncements = async () => {
+      try {
+        const response = await fetch(`${API}/announcements`);
+        if (!response.ok) {
+          throw new Error('Cannot GET the announcements');
         }
-
-        throw new Error('Cannot GET the announcements');
-      })
-      .then((data) => {
+        const data = await response.json();
         console.log(data);
         console.log(import.meta.env.VITE_API_URL); // Sprawdzenie wartości zmiennej środowiskowej w konsoli przeglądarki
         setAnnouncements(data); // funkcja setAnnouncements aktualizuje stan announcements, który zostaje przekazany do komponentów podrzędnych Announcements i AnnouncementsDetails
-      })
-      .catch((error) => {
+      } catch (error) {
         console.log(error);
-        setError(error); // funkcja setErrors aktualizuje stan error, który zostaje przekazany do komponentów podrzędnych Announcements i AnnouncementsDetails
-      });
+        setError(error); // Funkcja setError aktualizuje stan error, który zostaje przekazany do komponentów podrzędnych Announcements i AnnouncementsDetails
+      }
+    };
+
+    // Wywołanie fetchAnnouncements służy tylko do uruchomienia pobierania danych, gdy komponent się montuje.
+    fetchAnnouncements()
+      // Dodatkowa obsługa błędów, jeśli coś poszło nie tak
+      .catch((error) => console.error(error));
   }, []);
 
   return (
-    // AnnouncementsContext.Provider - Jest odpowiedzialny za dostarczanie danych do komponentów podrzędnych, za pomocą właściwości value, a children określa, które z tych komponentów podrzędnych będą miały dostęp do tych przekazanych danych.
     <AnnouncementsContext.Provider value={{ announcements, error }}>
       {children}
     </AnnouncementsContext.Provider>

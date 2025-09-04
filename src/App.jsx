@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // Pages
 import Layout from '@/layout/Layout';
 import Home from '@/pages/Home';
@@ -16,31 +16,29 @@ import FavouriteAnnouncements from '@/user/FavouriteAnnouncements';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="announcements" element={<Announcements />} />
-          <Route path="announcements/:id" element={<AnnouncementDetails />} />
-          <Route path="news" element={<News />} />
-          <Route path="about" element={<About />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="announcements" element={<Announcements />} />
+        <Route path="announcements/:id" element={<AnnouncementDetails />} />
+        <Route path="news" element={<News />} />
+        <Route path="about" element={<About />} />
 
-          <Route path="auth">
-            <Route path="user">
-              <Route path="login" element={<UserLoginForm />} />
-              <Route path="register" element={<UserRegisterForm />} />
-            </Route>
-          </Route>
+        <Route path="login" element={<UserLoginForm />} />
+        <Route path="register" element={<UserRegisterForm />} />
 
-          {/*Przekazywane jest prosp-redirectTo w Route tylko wtedy, gdy potrzeba zmienić domyślne przekierowanie w komponencie ProtectedRoute*/}
-          <Route element={<ProtectedRoute />}>
-            <Route path="favourites" element={<FavouriteAnnouncements />} />
-          </Route>
-
-          <Route path="*" element={<NotFound />} />
+        {/*Przekazywane jest prosp-redirectTo w Route tylko wtedy, gdy potrzeba zmienić domyślne przekierowanie w komponencie ProtectedRoute*/}
+        <Route element={<ProtectedRoute />}>
+          <Route path="favourites" element={<FavouriteAnnouncements />} />
+          <Route
+            path="favourites/:id"
+            element={<AnnouncementDetails listType="favourites" />}
+          />
         </Route>
-      </Routes>
-    </Router>
+
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 

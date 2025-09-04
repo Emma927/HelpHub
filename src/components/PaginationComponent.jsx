@@ -1,22 +1,32 @@
 import { Pagination } from 'react-bootstrap';
 
+/**
+ * Komponent `PaginationComponent`
+ * - Wyświetla paginację dla listy ogłoszeń.
+ * - Otrzymuje propsy:
+ *    - `currentPage` – bieżąca strona,
+ *    - `totalPages` – liczba wszystkich stron,
+ *    - `onPageChange` – callback do zmiany strony.
+ * - Obsługuje:
+ *    - Przejście do poprzedniej/następnej strony,
+ *    - Kliknięcie konkretnego numeru strony,
+ *    - Wyświetlanie skróconych zakresów z '...' dla dużej liczby stron.
+ * - Nie renderuje się, jeśli `totalPages <= 1`.
+ */
 function PaginationComponent({ currentPage, totalPages, onPageChange }) {
-  if (totalPages <= 1) return null; // Jeśli liczba stron jest mniejsza lub równa 1, komponent nie renderuje się, ponieważ paginacja nie jest potrzebna
+  if (totalPages <= 1) return null;
 
-  // Definiuje funkcję goToNextPage, która zmienia stronę na następną, ale nie przekracza liczby totalPages
   const goToNextPage = () =>
     onPageChange(Math.min(currentPage + 1, totalPages));
-  // Definiuje funkcję goToPrevPage, która zmienia stronę na poprzednią, ale nie schodzi poniżej strony 1.
   const goToPrevPage = () => onPageChange(Math.max(currentPage - 1, 1));
-  // Definiuje funkcję goToPage, która zmienia stronę na określoną przez użytkownika.
   const goToPage = (page) => onPageChange(page);
 
-  const pageNumbers = []; // Inicjalizuje pustą tablicę pageNumbers, która będzie przechowywać numery stron do wyświetlenia
+  const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {
     if (
       i === 1 ||
       i === totalPages ||
-      (i >= currentPage - 2 && i <= currentPage + 2) //  Sprawdza, czy numer strony jest pierwszą stroną, ostatnią stroną, lub jest w pobliżu bieżącej strony (w zakresie dwóch stron przed i po)
+      (i >= currentPage - 2 && i <= currentPage + 2)
     ) {
       pageNumbers.push(i);
     } else if (i === currentPage - 3 || i === currentPage + 3) {
@@ -24,12 +34,15 @@ function PaginationComponent({ currentPage, totalPages, onPageChange }) {
     }
   }
 
+  /** Ważne: Przeglądarka zarządza fokusem klawiatury według swojej logiki, która zazwyczaj opiera się na kolejności elementów w DOM i ich interaktywności. Fokus przeskakuje do następnego dostępnego elementu, który może przyjąć fokus (czyli jest interaktywny i nie ma atrybutu disabled).
+   * - Kliknięty numer strony staje się active, ale fokus może naturalnie przeskoczyć na inny dostępny element (np. o 1 lub 2 numery dalej), w zależności od kolejności w DOM i stanu dostępności, który zna tylko przeglądarka.
+   *  - Elementy '…' są nieklikalne i nie przyjmują fokusu, więc przeglądarka pomija go przy obsłudze klawiatury
+   */
+
   return (
     <Pagination className="d-flex justify-content-center mt-5">
-      {/*Tworzy przycisk do przechodzenia do poprzedniej strony, który jest wyłączony, jeśli jesteśmy na pierwszej stronie.*/}
       <Pagination.Prev onClick={goToPrevPage} disabled={currentPage === 1} />
       {pageNumbers.map((page, index) => (
-        // Tworzy element Pagination.Item dla każdego numeru strony. Ustawia active jeśli jest to bieżąca strona, onClick wywołuje goToPage tylko dla numerów stron, a disabled dla '...'.
         <Pagination.Item
           key={index}
           active={page === currentPage}

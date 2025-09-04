@@ -1,35 +1,57 @@
 import React, { useContext } from 'react';
-import { useParams, NavLink, useNavigate } from 'react-router-dom';
+import {
+  useParams,
+  useSearchParams,
+  NavLink,
+  useNavigate,
+} from 'react-router-dom';
 import { BsCaretRightFill, BsHeartFill } from 'react-icons/bs';
-import { AnnouncementsContext } from '@/context/AnnouncementsContext'; // To, że filtry się nie resetują po powrocie z AnnouncementDetails, wynika z faktu, że cały stan FiltersContext jest trzymany globalnie, w providerze, który otacza całą aplikację (czyli App w main.jsx)
+import { AnnouncementsContext } from '@/context/AnnouncementsContext'; // Kontekst przechowujący dane ogłoszeń (lista, błędy, stan ładowania). Dzięki temu komponenty w aplikacji mają dostęp do tych samych danych bez przekazywania propsów.
 import { UserContext } from '@/context/UserContext';
 import { useFavourite } from '@/hook/useFavourite';
 
-function AnnouncementDetails() {
+/**
+ * Komponent wyświetlający szczegóły pojedynczego ogłoszenia.
+ * - Pobiera identyfikator ogłoszenia z adresu URL i wyszukuje je w kontekście `AnnouncementsContext`.
+ * - Prezentuje wszystkie informacje o ogłoszeniu: organizację, opis, lokalizację, dane kontaktowe, daty i zdjęcie.
+ * - Pozwala użytkownikowi dodać lub usunąć ogłoszenie z ulubionych (tylko po zalogowaniu).
+ * - Obsługuje brak danych (ładowanie, błędy, brak ogłoszenia).
+ * - Umożliwia powrót do listy ogłoszeń lub ulubionych (z zachowaniem numeru strony w paginacji).
+ */
+function AnnouncementDetails({ listType = 'all' }) {
   const { announcements, error } = useContext(AnnouncementsContext);
   const { id } = useParams();
-  // Wyrażenie funkcyjne za pomocą find- sprawdza warunek: jeśli id elementu jest równe temu z adresu URL (useParams()), to jest to szukane ogłoszenie. Jeśli znajdzie pasujący element, można dokonać destrukturyzacji jego właściwości, a jeśli nie znajdzie, find zwróci undefined.
+  const [searchParams] = useSearchParams();
+  const page = searchParams.get('page') || 1; // odczyt strony
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
+  // Szuka w tablicy ogłoszeń elementu, którego id zgadza się z parametrem URL
   const announcement =
     announcements && announcements.find((item) => item.id === id);
 
-  const { isFaved, toggleFav } = useFavourite(id); // Sprawdza, czy ogłoszenie o danym id jest ulubione (isFaved), oraz do przełączania tego stanu (toggleFav). Przkeazane jest id klikniętego ogłoszenia
+  // Hook obsługujący ulubione – sprawdza, czy ogłoszenie jest już dodane do ulubionych(isFaved), i umożliwia zmianę tego stanu(toggleFav)
+  const { isFaved, toggleFav } = useFavourite(id);
 
-  // Funkcja obsługująca kliknięcie ulubionych
+  /**
+   * Obsługuje kliknięcie ikony "serca":
+   * - jeśli użytkownik nie jest zalogowany → przenosi do strony logowania,
+   * - w przeciwnym razie przełącza stan ulubionych dla tego ogłoszenia.
+   */
   function handleToggleFav() {
     if (!user) {
-      navigate('/auth/user/login');
-      return; // zatrzymaj wykonanie jeśli nie zalogowany
+      navigate('/login');
+      return; // Wykonanie funkcji zatrzyma się, jeśli użytkownik nie jest zalogowany
     }
     toggleFav();
   }
 
+  // Jeśli podczas pobierania danych z kontekstu wystąpił błąd → pokaż komunikat o błędzie
   if (error) {
     return <div>Błąd ładowania</div>;
   }
 
+  // Jeśli dane ogłoszeń jeszcze nie zostały pobrane → wyświetl informację o trwającym ładowaniu
   if (!announcements) {
     return (
       <div className="text-primary logo-font--resp">
@@ -37,6 +59,8 @@ function AnnouncementDetails() {
       </div>
     );
   }
+
+  // Jeśli żadne ogłoszenie nie pasuje do id z URL → poinformuj użytkownika, że ogłoszenie nie zostało znalezione
   if (!announcement) {
     return (
       <div className="text-primary logo-font--resp text-danger">
@@ -45,7 +69,7 @@ function AnnouncementDetails() {
     );
   }
 
-  // Destrukturyzacja danych dla pojedynczego ogłoszenia
+  // Destrukturyzacja danych pojedynczego ogłoszenia – dla czytelności i łatwiejszego użycia w JSX
   const {
     title,
     organizationName,
@@ -85,7 +109,8 @@ function AnnouncementDetails() {
             Telefon: <span>{phone}</span>
           </p>
           <p>
-            E-mail: <a href={email}>{email}</a>
+            {/*mailto: – pozwala otworzyć klienta pocztowego po kliknięciu w adres*/}
+            E-mail: <a href={`mailto:${email}`}>{email}</a>
           </p>
           <p>
             Strona internetowa: <a href={website}>{website}</a>
@@ -110,7 +135,7 @@ function AnnouncementDetails() {
         <h3 className="mt-3">{title}</h3>
       </div>
       <p className="mb-3">{description}</p>
-      {/*Jeśli jest jakakolwiek szansa, że faq może być undefined, null, albo API nie zwróci tego pola — jest zabezpieczenie: (faq && ...), dopóki nie mam pewności, że dane istnieją.*/}
+      {/* Jeśli jest jakakolwiek szansa, że faq może być undefined, null, albo API nie zwróci tego pola — jest zabezpieczenie: (faq && ...), dopóki nie mam pewności, że dane istnieją.*/}
       {faq &&
         faq.map(({ question, answer }, index) => (
           <div key={index} className="mb-4">
@@ -119,8 +144,14 @@ function AnnouncementDetails() {
           </div>
         ))}
       <div className="d-flex justify-content-center">
+        {/* Link powrotny – kieruje użytkownika do listy ogłoszeń lub ulubionych,
+    zachowując numer strony przekazany w parametrze URL */}
         <NavLink
-          to="/announcements"
+          to={{
+            pathname:
+              listType === 'favourites' ? '/favourites' : '/announcements',
+            search: page ? `?page=${page}` : '',
+          }}
           className="btn--welcome fw-normal text-secondary mb-3 font--back text-decoration-none"
         >
           <BsCaretRightFill size={25} className="arrow" />

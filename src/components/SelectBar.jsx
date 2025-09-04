@@ -1,28 +1,29 @@
 import React, { useContext } from 'react';
 import Select from 'react-select';
 import { FiltersContext } from '@/context/FiltersContext';
-import { voivodeships, customStyles } from '@/constans.js';
+import { voivodeships, customStyles } from '@/constants.js';
 
+/**
+ * SelectBar - komponent wyboru województwa.
+ * - Pobiera aktualną wartość selectedVoivodeship oraz funkcję setSelectedVoivodeship z FiltersContext.
+ * - Ustawia domyślną opcję na podstawie wartości w stanie kontekstu lub pierwszej opcji z listy.
+ * - Aktualizuje stan w FiltersContext przy zmianie wyboru przez użytkownika.
+ */
 function SelectBar() {
-  //  selectedVoivodeship - Aktualnie wybrana wartość, przekazywana z komponentu nadrzędnego FiltersContext
-  //  setSelectedVoivodeship - Funkcja do aktualizacji stanu w komponencie nadrzędnym FiltersContext
   const { selectedVoivodeship, setSelectedVoivodeship } =
     useContext(FiltersContext);
 
-  // defaultOption - Ustala domyślną opcję na podstawie wartości selectedVoivodeship, która jest przekazywana z FiltersContext. Jeśli selectedVoivodeship nie odpowiada żadnej opcji, wybiera pierwszą opcję z listy constans.
+  // defaultOption - ustala domyślną opcję na podstawie wartości selectedVoivodeship, która jest przekazywana z FiltersContext. Jeśli selectedVoivodeship nie odpowiada żadnej opcji, wybiera pierwszą opcję z listy constants.
   const defaultOption =
     voivodeships.find((opt) => opt.value === selectedVoivodeship) ||
     voivodeships[0];
 
-  // handleSelectChange - Funkcja, która jest wywoływana, gdy użytkownik dokonuje wyboru w komponencie SelectBar
+  // handleSelectChange - funkcja, która jest wywoływana, gdy użytkownik dokonuje wyboru w komponencie SelectBar
   const handleSelectChange = (option) => {
-    // Parametr option - Funkcja onChange w react-select przyjmuje jako argument obiekt reprezentujący wybraną opcję. Ten obiekt zawiera zazwyczaj klucze value i label, które odpowiadają wartości i etykiecie wybranej opcji.
     const { value } = option;
     setSelectedVoivodeship(value);
   };
 
-  // Komponent Select - Używa defaultValue do ustawienia początkowej wartości wyboru.
-  // onChange jest ustawione na handleSelectChange, aby reagować na zmiany wyboru
   return (
     <Select
       className="basic-single text-primary w-100"

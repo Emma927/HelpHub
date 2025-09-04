@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { faq } from '@/constans.js';
+import { faq } from '@/constants';
 
+/**
+ * Komponent sekcji "O nas" z najczęściej zadawanymi pytaniami (FAQ).
+ * - Renderuje listę pytań i odpowiedzi pobranych z `faq`.
+ * - Pozwala użytkownikowi rozwijać i zwijać odpowiedzi, klikając ikonę.
+ * - Jednocześnie rozwinięte może być tylko jedno pytanie (przechowywane w stanie `showInfo`).
+ */
 function About() {
   const [showInfo, setShowInfo] = useState(false);
 
-  // To funkcja, która przełącza stan showInfo na numer pytania (number), które ma być aktualnie „otwarte”, aby pokazać odpowiedź
+  /**
+   * Funkcja przełączająca rozwinięcie odpowiedzi:
+   * - jeśli kliknięte pytanie jest już otwarte → zamyka je (ustawia `null`),
+   * - w przeciwnym razie otwiera wybrane pytanie.
+   */
   function openAnswer(number) {
     setShowInfo((prev) => (prev === number ? null : number));
   }

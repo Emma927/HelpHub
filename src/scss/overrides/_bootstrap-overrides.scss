@@ -31,29 +31,28 @@
 .card {
   color: $primary;
   min-height: 320px;
-  margin: 0 auto; // wycentrowanie w kolumnie, jeśli będzie mniejsza
-  overflow: hidden;
+  margin: 0 auto; // Wycentrowanie w kolumnie, jeśli będzie mniejsza
 
-  @include md {
+  @include respond(md) {
     min-height: 410px;
   }
 
-  @include lg {
+  @include respond(lg) {
     min-height: 460px;
   }
 
-  @include xl {
+  @include respond(xl) {
     min-height: 400px;
   }
 
   &-img-container {
-    overflow: hidden; // dodanie img-containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+    overflow: hidden; // Dodanie img-containera, który ogranicza ruch obrazka tylko do obszaru kontenera
   }
 
   &-img-top {
     width: 100%;
     max-height: 170px;
-    object-fit: cover;
+    object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
     transition: transform 0.2s ease-out;
   }
 

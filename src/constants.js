@@ -1,6 +1,6 @@
-import image1 from '@/assets/clothes.jpg';
-import image2 from '@/assets/accessories.jpg';
-import image3 from '@/assets/food.jpg';
+import image1 from '@/assets/clothes.webp';
+import image2 from '@/assets/accessories.webp';
+import image3 from '@/assets/food.webp';
 
 import {
   BsTwitterX,
@@ -220,7 +220,7 @@ export const customStyles = {
     },
   }),
   option: (provided, state) => ({
-    //option - funkcja stylizująca, używana w bibliotece react-select
+    // option - funkcja stylizująca, używana w bibliotece react-select
     ...provided,
     backgroundColor: state.isSelected
       ? '#8A7369' // kolor tła dla wybranej opcji

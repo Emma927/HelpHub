@@ -1,176 +1,188 @@
-# HelpHub
+# 🛟 HelpHub
 
-Centralna aplikacja ogłoszeniowa łącząca użytkowników z organizacjami pomocowymi przeprowadzającymi zbiórki ubrań,
-obuwia, akcesoriów i żywności w Polsce. Rozwiązuje problem braku jednego miejsca do przeglądania i dodawania zbiórek
-przez różne organizacje pomocowe.
+A central announcement app connecting users with aid organizations conducting collections of clothes, footwear,
+accessories, and food in Poland. It solves the problem of the lack of a single place to browse and add collections by
+various aid organizations.
 
-**Dostępna online pod adresem:**  
+**Available online at:**  
 [https://help-hub-render.netlify.app/](https://help-hub-render.netlify.app/)
 
-## 🚀 Funkcjonalności
+## 🚀 Features
 
-- Przeglądanie ogłoszeń
-- Filtrowanie ogłoszeń według wybranych kategorii
-- Responsywny interfejs
-- Paginacja stron z ogłoszeniami
-- Rejestracja i logowanie użytkownika
-- Dodawanie / usuwanie ogłoszeń z ulubionych
-- Routing React Router
+- Browse announcements
+- Filter announcements by selected categories
+- Responsive interface
+- Pagination of announcements pages
+- User registration and login
+- Adding/removing announcements from favorites
+- React Router routing
 
-## 🛠️ Technologie
+## 📸 Screenshots
+
+Below are example screenshots of the CarSharing app on desktop and mobile devices.
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-bottom: 40px">
+  <img src="src/screenshots/desktop-view1.png" alt="Desktop view" style="margin-right: 10px;">
+  <img src="src/screenshots/mobile-view1.png" alt="Mobile view">
+</div>
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-bottom: 40px">
+  <img src="src/screenshots/desktop-view2.png" alt="Desktop view" style="margin-right: 10px;">
+  <img src="src/screenshots/mobile-view2.png" alt="Mobile view">
+</div>
+
+## 🛠️ Technologies
 
 - Vite
 - React
-- Sass (w kodzie został zastosowany @import ze względu na zgodność z biblioteką Bootstrap)
+- Sass (using @import due to compatibility with Bootstrap)
 - React Router
-- JSON server
+- REST API (powered by JSON Server for local development)
 - Bootstrap
 - React-Bootstrap
 - React-Icons
 - Responsive Web Design (Mobile First)
-- Context Api
+- Context API
 - localStorage
 - dotlottie-react
 - React-Select
 
-## 🔧 Instalacja lokalna
+## 🔧 Local Installation
 
-1. **Utwórz na swoim urządzeniu lokalny folder o nazwie `help-hub`**
+1. **Create a local folder named `help-hub` on your device**
 
-   To będzie miejsce, gdzie skopiujesz repozytorium.
+   This will be the place to copy the repository.
 
-2. **Skopiuj aplikację do utworzonego folderu**
+2. **Clone the application into the created folder**
 
-   Użyj polecenia `git clone`, aby pobrać repozytorium:
+   Use the command `git clone` to download the repository:
 
-   `git clone https://github.com/Twoje-konto/HelpHub.git`
+   `git clone https://github.com/Your-Account/HelpHub.git`
 
-3. **Przejdź do głównego folderu w terminalu**
+3. **Navigate to the main folder in the terminal**
 
-   Przejdź do katalogu projektu, aby móc uruchamiać polecenia npm:
+   Go to the project directory to be able to run npm commands:
 
    `cd HelpHub`
 
-4. **Zainstaluj aplikację**
+4. **Install the application**
 
-   Zainstaluj wszystkie potrzebne zależności:
+   Install all required dependencies:
 
    `npm install`
 
-5. **Skonfiguruj zmienne środowiskowe**
+5. **Configure environment variables**
 
-   `.env` — plik dołączony do repozytorium z domyślnym adresem backendu (np. produkcyjnym):
+   `.env` — file included in the repo with the default backend URL (e.g., production):
 
    `VITE_API_URL=https://help-hub-2sac.onrender.com`
 
-   `.env.local` — plik lokalny (ignorowany przez Git), w którym możesz nadpisać adres backendu, np. do lokalnego
-   testowania:
+   `.env.local` — local file (ignored by Git), where you can override the backend address for local testing:
 
    `VITE_API_URL=http://localhost:10000`
 
-   Jeśli `.env.local` nie istnieje, aplikacja użyje ustawień z `.env`
+   If `.env.local` does not exist, the app uses the settings from `.env`
 
-6. **Uruchom aplikację w trybie developerskim**
+6. **Run the app in development mode**
 
-   Aby uruchomić aplikację w trybie developerskim, użyj:
+   To run the app in dev mode, use:
 
    `npm run dev`
 
-7. **Buduj aplikację do produkcji (opcjonalnie)**
+7. **Build the app for production (optional)**
 
-   Przygotuj aplikację do wdrożenia w środowisku produkcyjnym:
+   Prepare the app for deployment in production:
 
    `npm run build`
 
-## 🖥️ Backend i hosting
+## 🖥️ Backend and Hosting
 
-Backend aplikacji w środowisku produkcyjnym jest hostowany na platformie Render pod adresem:
+The backend for production is hosted on Render at:  
 `https://help-hub-2sac.onrender.com`
 
-Do lokalnego testowania backendu wykorzystujemy json-server — serwer REST API oparty na pliku db.json.
+**Note for reviewers:**  
+The backend runs on Render's free plan, which may put the app to sleep after 15 minutes of inactivity.  
+When the app is asleep, the first request might take a few seconds to respond.  
+For local testing, using JSON server provides instant responses.
 
-Instrukcja uruchomienia lokalnego backendu:
+For local backend testing, JSON server is used — a REST API server based on the `db.json` file.
 
-- Zainstaluj json-server globalnie:
+Local backend startup instructions:
+
+- Install json-server globally:
 
   `npm install -g json-server`
 
-- Albo uruchom bez instalacji- upewnij się, że plik db.json znajduje się w katalogu głównym projektu (tam, gdzie
-  package.json). Uruchom json-server komendą:
+- Or run without installation — ensure `db.json` is in the project root (where `package.json` is). Run json-server with:
 
   `npx json-server --watch db.json --port 10000`
 
-**Uwaga:** Port 10000 jest przykładowy — możesz wybrać dowolny dostępny port, ale pamiętaj, żeby ustawić go także w
-.env.local.
+**Note:** Port 10000 is an example — you can choose any available port but remember to set it in `.env.local`.
 
-- Skonfiguruj plik .env.local (który jest ignorowany przez Git, więc jest lokalny dla Twojego środowiska), aby aplikacja
-  korzystała z lokalnego backendu:
+- Configure `.env.local` (ignored by Git) so the app uses the local backend:
 
   `VITE_API_URL=http://localhost:10000`
 
-Backend produkcyjny działa na Render pod adresem:  
+Production backend runs on Render at:  
 [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
 
-### 🆓 Render – darmowy hosting backendu
+### 🆓 Render — free backend hosting
 
-- Backend hostowany jest na Render w darmowym planie, który usypia aplikację po 15 minutach braku aktywności.
-- Aby zapobiec uśpieniu i utrzymać szybkie odpowiedzi, wykorzystujemy narzędzie Uptime Robot.
-- Uptime Robot co 5 minut wysyła żądanie GET na główny adres `https://help-hub-2sac.onrender.com`, dzięki czemu backend
-  pozostaje aktywny
+- Backend is hosted on Render’s free plan, which puts the app to sleep after 15 minutes of inactivity.
+- To prevent sleeping and keep fast responses, Uptime Robot is used.
+- Uptime Robot sends a GET request every 5 minutes to `https://help-hub-2sac.onrender.com` to keep the backend awake.
 
-**Ważne:**
-W darmowym planie Render dane przesłane przez metody POST, PUT, DELETE nie są trwałe — backend działa jak tymczasowa
-baza danych i po uśpieniu lub restarcie aplikacji zmiany mogą zostać utracone. Do trwałego przechowywania danych
-potrzebny jest dedykowany serwer bazy danych lub plan płatny.
+**Important:**  
+In the free Render plan, data sent via POST, PUT, DELETE methods is not persistent — the backend works as a temporary
+database, and after sleeping or restarting, changes may be lost. For persistent data storage, a dedicated database
+server or a paid plan is needed.
 
-## 🧾 Instrukcje użycia
+## 🧾 Usage Instructions
 
-➡️ Dla każdego użytkownika:
+➡️ For every user:
 
-- kliknij przycisk na stronie głównej, aby przenieść się do publicznych ogłoszeń,
-- użyj filtrów na stronie do wyszukiwania zbiórek w określonych kategoriach,
-- do zapisania zbiórek w ulubionych potrzebna jest rejestracja konta i zalogowanie,
-- po założeniu konta można zapisać ogłoszenia do ulubionych.
+- Click the button on the homepage to go to public announcements,
+- Use filters on the page to search collections by specific categories,
+- To save collections to favorites you need to register and log in,
+- After creating an account, you can save announcements to favorites.
 
-➡️ Dla organizacji pomocowych (w planach):
+➡️ For aid organizations (planned features):
 
-- do publikacji ogłoszenia potrzebna jest rejestracja organizacji i logowanie,
-- po założeniu konta można dodawać ogłoszenia.
+- To publish announcements registration and login for organizations will be required,
+- After creating an account, organizations can add announcements.
 
-## 📊 Możliwości rozwoju aplikacji z podziałem funkcji według MoSCoW
+## 📊 App development possibilities with MoSCoW priority
 
 ✅ **Must Have**
 
-- Filtrowanie ogłoszeń
-    - Wojewódźtwo: Filtrowanie ogłoszeń według województwa
-    - Odzież i obuwie: Filtrowanie ogłoszeń według zbiórek z odzieżą i obuwiem
-    - Akcesoria: Filtrowanie ogłoszeń według zbiórek z akcesoriami
-    - Pilność: Filtrowanie według pilności (żywność, środki higieny osobistej, koce, leki. ).
+- Filtering announcements
+    - Voivodeship: filter announcements by region
+    - Clothes and Shoes: filter by collections with clothes and footwear
+    - Accessories: filter by collections with accessories
+    - Urgent: filter by urgency (food, hygiene products, blankets, medicine)
 
-- Rejestracja i logowanie użytkownika
-    - Możliwość założenia konta przez użytkownika
-    - Logowanie do istniejącego konta
+- User registration and login
+    - Ability to create an account
+    - Login to existing account
 
-- Po zalogowaniu użytkownik ma możliwość zarządzanie ulubionymi zbiórkami – czyli dodawanie / usuwanie zbiórek do
-  ulubionych
+- After login, user can manage favorite collections — add/remove collections to/from favorites
 
-- Możliwość przeglądania listy ogłoszeń w formie paginacji
+- Ability to browse announcements list with pagination
 
 🌟 **Should Have**
 
-- Licznik ulubionych zbiórek w nagłówku strony, widoczny po zalogowaniu
-- Rejestracja i logowanie dla organizacji pomocowych
-- Indywidualne dodawanie ogłoszeń przez organizacje pomocowe
+- Favorite collections counter in the header, visible after login
+- Registration and login for aid organizations
+- Individual announcement adding by aid organizations
 
 💡 **Could Have**
 
-- Modal z potwierdzeniem dodania przez użytkownika ogłoszenia do ulubionych
-- Modal z potwierdzeniem dodania ogłoszenia przez organizację
-- Filtrowanie ogłoszeń po dodatkowych kategoriach
+- Modal confirming addition of a collection to favorites by user
+- Modal confirming announcement addition by organization
+- Filtering announcements by additional categories
 
 ❌ **Won't Have**
 
-- Formularz płatności
-- Możliwość wyboru języka polski / angielski itd.
-- Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach
-  Polski 
+- Payment form
+- Language selection (Polish/English etc.)
+- HelpHub_v2.0 version — app supporting animal collections and browsing adoption announcements across Poland

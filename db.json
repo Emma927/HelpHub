@@ -34113,27 +34113,6 @@
       "surname": "Kwiatkowska",
       "email": "malwina.k@gmail.com",
       "password": "Kwiatkowska01"
-    },
-    {
-      "id": "4646",
-      "name": "Mikołaj",
-      "surname": "Nowak",
-      "email": "miko.nowak@gmail.com",
-      "password": "Miko!nowak"
-    },
-    {
-      "id": "989a",
-      "name": "Janina",
-      "surname": "Janowska",
-      "email": "j.janowska@gmail.com",
-      "password": "Jjanowska#2"
-    },
-    {
-      "name": "Antonina",
-      "surname": "Nowak",
-      "email": "antonina@gmail.com",
-      "password": "Antonina!Nowak",
-      "id": "LvFSSD2"
     }
   ]
 }

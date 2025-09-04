@@ -5,7 +5,15 @@ import SelectBar from '@/components/SelectBar';
 import Filters from '@/components/Filters';
 import AnnouncementCard from '@/components/AnnouncementCard';
 import PaginationComponent from '@/components/PaginationComponent';
+import { useSearchParams } from 'react-router-dom';
 
+/**
+ * Komponent wyświetlający listę ogłoszeń z filtrowaniem, sortowaniem i paginacją.
+ * - Pobiera ogłoszenia z AnnouncementsContext.
+ * - Filtruje po województwie i kategoriach (FiltersContext).
+ * - Sortuje po dacie dodania.
+ * - Obsługuje paginację i synchronizuje numer strony z URL.
+ */
 function Announcements() {
   const { announcements, error } = useContext(AnnouncementsContext); // Dostęp do globalnych ogłoszeń i błędu z Context API
 
@@ -18,116 +26,150 @@ function Announcements() {
     setCurrentPage,
   } = useContext(FiltersContext); // Globalny stan FiltersContext przechowuje stan filtrów na poziomie aplikacji, co oznacza, że jest on dostępny i zachowany niezależnie od tego, na której stronie aktualnie się znajduję.
 
-  // topRef- tworzy referencję, która jest przypisana do konkretnego elementu DOM, a useRef pozwala na bezpośredni dostęp do elementów DOM
-  const topRef = useRef(null); // useRef inicjalizuje referencję, która po zamontowaniu przechowuje odniesienie do elementu DOM (<section>)
+  const [searchParams, setSearchParams] = useSearchParams(); // Synchronizacja strony z URL
+  const topRef = useRef(null); // Referencja do góry listy ogłoszeń (<section>, scroll po zmianie strony)
+  const [filteredAnnouncements, setFilteredAnnouncements] = useState([]); // Lista ogłoszeń po zastosowaniu filtrów
+  const announcementsPerPage = 12;
 
-  // filteredAnnouncements – zawiera listę ogłoszeń po przefiltrowaniu
-  // setFilteredAnnouncements – ustawia wynik działania filtrów
-  const [filteredAnnouncements, setFilteredAnnouncements] = useState([]); // Pusta tablica inicjalizuje stan bez wybranych kategorii.
-  const announcementsPerPage = 24; // Liczba ogłoszeń na stronę
-
-  // useRef pozwala na przechowywanie wartości, które można zmieniać bez wpływu na cykl życia komponentu
-  // useRef tworzy obiekt, który przechowuje poprzednie wartości wybranego województwa i kategorii, aby śledzić te wartości pomiędzy renderowaniami bez wywoływania ponownego renderowania komponentu, w którym jest używany.
+  // Przechowuje poprzednie filtry do porównania, aby resetować paginację tylko przy zmianach filtrów
   const prevFilters = useRef({
-    // Gdyby użyć useState zamiast useRef do przechowywania prevFilters powoduje że, każda aktualizacja stanu spowodowałaby ponowne renderowanie komponentu.
-
     voivodeship: selectedVoivodeship,
-    categories: selectedCategories,
+    categories: [...selectedCategories],
   });
 
-  // Płynne 'smooth' przewijanie listy ogłoszeń do góry po zmianie strony currentPage zapewnia, że użytkownik widzi początek listy ogłoszeń, gdy przełącza się między stronami.
+  // Smooth scroll do góry listy po zmianie strony
   useEffect(() => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentPage]);
 
-  // Za każdym razem, gdy nowe ogłoszenia są dostępne lub użytkownik zmienia filtr, ten kod w useEffect się wykona.
+  /** Funkcja porównująca dwie tablice stringów
+   * Zwraca true tylko wtedy, gdy:
+   * - mają tę samą długość, ponieważ .every() sprawdza tylko elementy do długości pierwszej tablicy, a jeśli druga tablica jest dłuższa → dodatkowe elementy zostaną zignorowane
+   * - wszystkie elementy są identyczne w tej samej kolejności
+   * - el to alias dla a[i]
+   * Użycie w `filtersChanged`:
+   * !arraysEqual(prevFilters.current.categories, selectedCategories)
+   * - Zwraca `true`, jeśli tablice kategorii są różne (czyli filtry zostały zmienione)
+   */
+  function arraysEqual(a, b) {
+    return a.length === b.length && a.every((el, i) => el === b[i]);
+  }
+
+  // Aktualizacja listy ogłoszeń po zmianie filtrów lub nowych ogłoszeniach
   useEffect(() => {
-    if (announcements) {
-      const filtersChanged = // Ta funkcja ustala, czy filtry zostały zmienione w porównaniu do poprzedniego stanu. Porównuje bieżące województwo i kategorie z tymi zapisanymi w prevFilters.current.
-        // JSON.stringify(prevFilters.current.voidodeship)- porównuje, czy nazwa województwa (string) się zmieniła
-        prevFilters.current.voivodeship !== selectedVoivodeship || // właściwość current, pochodzi z obiektu zwróconego przez useRef - pozwala śledzić zmiany między renderowaniami bez wpływu na cykl renderowania. Przydatne, gdy potrzeba zachować stan lub referencję, która nie powinna wpływać na ponowne renderowanie komponentu.
-        // JSON.stringify(prevFilters.current.categories) będzie porównywał pełną zawartość obiektu kategorii — czyli wszystkie jego klucze i przypisane do nich wartości true/false.
-        JSON.stringify(prevFilters.current.categories) !== // JSON.stringify konwertuje obiekty lub tablice na tekst, co umożliwia porównanie ich zawartości.
-          JSON.stringify(selectedCategories);
+    if (!announcements) return; // Jeśli brak ogłoszeń, zakończ działanie
+    // Sprawdzenie, czy filtry się zmieniły w porównaniu do poprzedniego stanu
+    const filtersChanged =
+      prevFilters.current.voivodeship !== selectedVoivodeship || // Zmiana województwa
+      !arraysEqual(prevFilters.current.categories, selectedCategories); // Kategorie zostały zmienione, jeśli tablice prevFilters.current.categories i selectedCategories nie są identyczne w długości lub we wartościach elementów pod tymi samymi indeksami
 
-      applyFilters(); // Wywołuje funkcję applyFilters, która filtruje ogłoszenia na podstawie wybranych filtrów. To krok, który zapewnia, że wyświetlane są tylko te ogłoszenia, które spełniają kryteria filtrów.
+    // Filtrowanie ogłoszeń na podstawie bieżących filtrów
+    applyFilters();
 
-      if (filtersChanged) {
-        // Sprawdza, czy filtry faktycznie się zmieniły. Jeśli tak, wykonuje się blok kodu wewnątrz.
-        setCurrentPage(1); // Ustaw setCurrentPage(1) po zmianie filtra, aby zresetować widok do pierwszej strony
-        prevFilters.current = {
-          // Służy do aktualizacji wartości referencji po tym, jak sprawdzimy, czy filtry się zmieniły
-          // Aktualizuje prevFilters.current o nowe wartości filtrów. Dzięki temu przy następnym uruchomieniu useEffect można porównać, czy filtry się zmieniły.
-          voivodeship: selectedVoivodeship,
-          categories: selectedCategories,
-        };
-      }
+    // Jeśli filtry faktycznie się zmieniły:
+    if (filtersChanged) {
+      // Sprawdza, czy filtry faktycznie się zmieniły. Jeśli tak, wykonuje się blok kodu wewnątrz.
+      setCurrentPage(1); // Reset strony na pierwszą po zmianie filtrów
+      setSearchParams({ page: 1 }); // Po zmianie filtra wymusza, żeby w przeglądarce od razu pokazało się ?page=1.
+      prevFilters.current = {
+        // Aktualizacja prevFilters, aby przy kolejnej zmianie można było poprawnie wykryć zmianę
+        voivodeship: selectedVoivodeship,
+        categories: [...selectedCategories], // Tworzymy kopię tablicy, aby uniknąć mutowania oryginalnej tablicy
+      };
     }
   }, [announcements, selectedVoivodeship, selectedCategories]);
 
-  // Funckja applyFilters – filtruje dane po województwie i kategoriach, umożliwia dynamiczne filtrowanie danych w oparciu o wybory użytkownika
+  // Synchronizacja currentPage z parametrem w URL przy zmianie strony z klawiatury w pasku nawigacji
+  useEffect(() => {
+    const page = parseInt(searchParams.get('page')) || 1;
+    if (currentPage !== page) {
+      setCurrentPage(page);
+    }
+  }, [searchParams]);
+
+  // Filtruje ogłoszenia według wybranego przez użytkownika województwa i kategorii
   function applyFilters() {
-    let result = [...announcements]; // results tworzy płytką kopię tablicy announcements, dzięki temu oryginalna tablica nie jest modyfikowana, a wszystkie operacje filtrowania są wykonywane na kopii.
+    let result = [...announcements]; // Kopia wszystkich ogłoszeń
 
-    // Funkcja ma na celu przefiltrowanie ogłoszeń, aby wyświetlić tylko te, które pasują do wybranego województwa, chyba że użytkownik chce zobaczyć wszystkie ogłoszenia, to wybiera domyślną opcję.
+    // Filtruj po województwie (jeśli wybrano konkretne)
+    // Ten fragment kodu pozwala wyświetlać tylko te ogłoszenia, które mają województwo wybrane przez użytkownika.
     if (selectedVoivodeship !== 'all') {
-      // Metoda filter tworzy nową tablicę zawierającą tylko te elementy, które spełniają określony warunek. Sprawdza, czy użytkownik wybrał konkretne województwo, a nie opcję "wszystkie" ('all')-czyli "Wybierz wojewódźtwo". Jeśli wybrano konkretne województwo, filtrujemy ogłoszenia.
       result = result.filter(
-        (item) => item.voivodeship === selectedVoivodeship, // Wynik filtrowania tablicy result zostawia tylko te ogłoszenia, których właściwość voivodeship jest równa selectedVoivodeship, czyli te, które są przypisane do wybranego województwa.
-      );
-    }
-    //Sprawdza, czy użytkownik wybrał co najmniej jedną kategorię do filtrowania (selectedCategories.length > 0).
-    if (selectedCategories.length > 0) {
-      // Przefiltruje tablicę result, zostawiając tylko te ogłoszenia (item), które spełniają warunek w nawiasie.
-      result = result.filter((item) =>
-        // some() sprawdza, czy istnieje przynajmniej jedna kategoria, która jest napisana w ogłoszeniu i jednocześnie została wybrana przez użytkownika- jeśli tak, ogłoszenie zostaje uwzględnione w przefiltrowanych wynikach, a jeśli nie, kod nic nie filtruje.
-        // item.category to obiekt z database json : category = {clothesAndShoes: true, accessories: false, urgent: true}
-        // Object.entries- zamienia obiekt kategorii na tablicę par, np.: ["clothesAndShoes", true]
-        Object.entries(item.category).some(
-          ([key, val]) => val && selectedCategories.includes(key),
-        ),
+        (item) => item.voivodeship === selectedVoivodeship,
       );
     }
 
-    setFilteredAnnouncements(result); // Ustawia przefiltrowane ogłoszenia jako nowy stan
+    // Filtruj po wybranych kategoriach.
+    // Ten fragment kodu pozwala wyświetlać tylko te ogłoszenia, które mają przynajmniej jedną kategorię wybraną przez użytkownika.
+    if (selectedCategories.length > 0) {
+      // Sprawdza, czy użytkownik wybrał jakieś kategorie
+      result = result.filter(
+        // Przechodzi przez wszystkie ogłoszenia w tablicy `result`
+        (announcement) =>
+          selectedCategories.some(
+            // Sprawdza, czy przynajmniej jedna wybrana kategoria pasuje do ogłoszenia
+            (categoryName) => announcement.category[categoryName],
+            // Dla każdej kategorii z selectedCategories sprawdza wartość w obiekcie announcement.category
+            // Jeśli jest true → ogłoszenie pasuje do filtra
+          ),
+      );
+    }
+
+    setFilteredAnnouncements(result); // Zapisz przefiltrowane ogłoszenia jako nowy stan
   }
 
-  // Funkcja sortuje ogłoszenia według daty dodania malejąco- płytka kopia za pomocą spread operator [...] wystarczy, ponieważ zmieniana jest tylko kolejność ogłoszeń
+  // Funkcja sortuje ogłoszenia według daty dodania malejąco
+  // Płytka kopia za pomocą spread operator [...] wystarczy do obliczeń, ponieważ zmieniana jest tylko kolejność ogłoszeń, a nie ich zawartość
   const sortedAnnouncements = [...filteredAnnouncements].sort(
     (a, b) => new Date(b.datePosted) - new Date(a.datePosted),
   );
 
-  // Wyliczenia do paginacji - metoda dzielenia dużych zbiorów danych na podstrony, z kontrolą, które elementy się wyświetlają – zgodnie z aktualną stroną
-  // totalPages - ilość stron z podziału wszystkich ogłoszeń na 24 ogłoszenia na 1 stronie
-  // sortedAnnouncements.length to liczba ogłoszeń po filtracji i sortowaniu.
-  // announcementsPerPage to stała, aktualnie 24 ogłoszenia na 1 stronę.
-  // Math.ceil(...) zaokrągla w górę, bo jak jest np. 49 ogłoszeń i 24 na stronę, to potrzebuję 3 strony.
+  // Wyliczenia do paginacji
   const totalPages = Math.ceil(
     sortedAnnouncements.length / announcementsPerPage,
   );
-  // IndexOfLast - Wylicza indeks ostatniego ogłoszenia na bieżącej stronie, oznacza start kolejnej strony, a slice() sam dba, żeby go nie wziąć
   const indexOfLast = currentPage * announcementsPerPage;
-  // IndexOfFirst - Wylicza pierwszy indeks ogłoszenia na tej stronie.
   const indexOfFirst = indexOfLast - announcementsPerPage;
-  // currentAnnouncements - Wyciąga fragment tablicy, czyli ogłoszenia od indexOfFirst do indexOfLast
+  // Wyciągnięcie ogłoszeń do bieżącej strony, czyli ogłoszenia od indexOfFirst do indexOfLast, a metoda slice() w JS działa od 1 indeksu włącznie do ostatniego indeksu wyłącznie
   const currentAnnouncements = sortedAnnouncements.slice(
     indexOfFirst,
     indexOfLast, // Ostatni indeks oznacza start kolejnej strony, a slice() sam dba, żeby go nie wziąć
-  ); // slice w JS działa od 1 indeksu włącznie do ostatniego indeksu wyłącznie
+  );
 
-  // Obsługa błędu lub ładowania
+  // Korekta currentPage jeśli przekracza totalPages
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(totalPages);
+      setSearchParams({ page: totalPages });
+    }
+  }, [currentPage, totalPages]);
+
+  // Aktualizacja URL przy zmianie strony w paginacji
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    setSearchParams({ page });
+  };
+
+  // Obsługa błędu ze stanu przechowywanego w CotextAnnouncements
   if (error)
     return (
       <div className="text-danger logo-font--resp">Błąd ładowania danych</div>
     );
+  // Obsługa ładowania ogłoszeń ze stanu przechowywanego w CotextAnnouncements
   if (!announcements)
     return (
       <div className="text-primary logo-font--resp">
         Trwa ładowanie danych...
       </div>
     );
+
+  /** WAŻNE: currentPage synchronizuje się z parametrem `page` w URL.
+   * Ręczna zmiana strony w pasku adresu nie zachowuje filtrów, bo URL ich nie przechowuje.
+   * To normalne zachowanie. Filtry można też zapisywać w URL, aby przy ręcznej zmianie strony były zachowane.
+   * Przydatne w większych aplikacjach, gdy użytkownicy mają kopiować linki ze wszystkimi filtrami.
+   */
 
   return (
     <section className="announcements" ref={topRef}>
@@ -158,13 +200,15 @@ function Announcements() {
             key={announcement.id}
             announcement={announcement}
             numberOfCards={currentAnnouncements.length}
+            currentPage={currentPage}
+            listType="all"
           />
         ))}
       </div>
       <PaginationComponent
         currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={setCurrentPage}
+        onPageChange={handlePageChange}
       />
     </section>
   );

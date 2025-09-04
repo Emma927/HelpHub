@@ -2,34 +2,53 @@ import { useContext, useState, useEffect, useCallback } from 'react';
 import { UserContext } from '@/context/UserContext'; // Importuje kontekst użytkownika
 import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage'; // Pobiera i zwraca ulubione ogłoszenia użytkownika z localStorage jako tablicę, używa pustej tablicy, jeśli brak danych.
 
-// hook useFavourite przyjmuje announcementId(od AnnouncementCard albo AnnouncementDetails). Hook działa dla pojedynczego ogłoszenia – sprawdza, czy jego id znajduje się w localStorage danego użytkownika (favs_userId) i daje możliwość przełączenia statusu, czyli zarządza stanem ulubionych ogłoszeń zalogowanego użytkownika.
+/**
+ * Hook `useFavourite` zarządza stanem ulubionych ogłoszeń dla zalogowanego użytkownika.
+ * - Przyjmuje `announcementId` pojedynczego ogłoszenia.
+ * - Sprawdza, czy ogłoszenie znajduje się w ulubionych zapisanych w localStorage dla aktualnego użytkownika.
+ * - Zwraca:
+ *    - `isFaved` – boolean, czy ogłoszenie jest w ulubionych,
+ *    - `toggleFav` – funkcję do przełączania statusu ulubionego (dodawanie/usuwanie z localStorage).
+ * - Hook automatycznie aktualizuje stan przy zmianie użytkownika lub identyfikatora ogłoszenia.
+ *
+ * Użycie:
+ * - `AnnouncementCard`
+ * - `AnnouncementDetails`
+ */
 export function useFavourite(announcementId) {
-  const { user } = useContext(UserContext); // Pobiera aktualnego użytkownika z UserContext, bo ulubione są dostępne tyko dla zalogowanych
-  const [isFaved, setIsFaved] = useState(false); // Ustawia stan isFaved, który śledzi, czy ogłoszenie jest ulubione w komponencie AnnouncementCard i AnnouncementDetails
+  const { user } = useContext(UserContext); // Pobiera zalogowanego użytkownika
+  const [isFaved, setIsFaved] = useState(false); // Stan, który śledzi, czy ogłoszenie jest ulubione
 
-  // Hook useEffect uruchamia się przy zmianie user lub announcementId. Pobiera aktualną listę ulubionych ogłoszeń z localStorage przy każdej zmianie użytkownika lub identyfikatora ogłoszenia i aktualizuje stan isFaved, aby odzwierciedlić, czy bieżące ogłoszenie jest ulubione.
+  // Synchronizacja stanu ulubionych przy zmianie użytkownika lub ID ogłoszenia
   useEffect(() => {
-    if (!user) return; // Jeśli user jest niezdefiniowany (np. użytkownik nie jest zalogowany), funkcja useEffect kończy działanie i nic więcej się nie wykonuje.
+    if (!user) return; // Brak użytkownika
 
-    // favs - jest używana do sprawdzenia, czy konkretne ogłoszenie jest oznaczone jako ulubione i do aktualizacji stanu komponent
-    const favs = parseFavsFromLocalStorage(user.id); // favs próbuje pobrać wartość z localStorage pod kluczem, który jest dynamicznie tworzony na podstawie identyfikatora użytkownika (user.id)
-    setIsFaved(favs.includes(announcementId)); // Ustawia stan isFaved na true, jeśli announcementId jest w ulubionych
+    const favs = parseFavsFromLocalStorage(user.id); // Pobranie ulubionych z localStorage
+    setIsFaved(favs.includes(announcementId)); // Ustawienie stanu isFaved
   }, [user, announcementId]);
 
-  // toggleFav- przełącza stan ulubionego ogłoszenia
-  // useCallback- jest użyty do zapamiętania funkcji toggleFav, co oznacza, że funkcja ta nie zostanie utworzona na nowo przy każdym renderowaniu komponentu nadrzędnego, chyba że zmienią się jej zależności (user lub announcementId).
+  /**
+   * toggleFav – funkcja przełączająca stan ulubionego ogłoszenia.
+   * useCallback jest użyty w celu „zapamiętania” tej funkcji między renderami komponentu,
+   * co ma kilka zalet:
+   * - Funkcja nie jest tworzona na nowo przy każdym renderze komponentu,
+   *   co zmniejsza niepotrzebne renderowania podkomponentów, które mogą używać toggleFav jako prop.
+   * - Zapobiega niekontrolowanemu wywoływaniu efektów w innych hookach (np. w useEffect zależnym od toggleFav),
+   *   ponieważ referencja funkcji pozostaje stabilna dopóki nie zmienią się jej zależności (user lub announcementId).
+   * - Dzięki temu komponenty typu AnnouncementCard czy AnnouncementDetails mogą optymalnie reagować
+   *   na zmianę stanu ulubionego, bez zbędnych renderów.
+   */
   const toggleFav = useCallback(() => {
     if (!user) return; // Jeśli nie ma użytkownika, wyjdź z funkcji
-    //`favs_${user.id}`; - Tworzy klucz dla localStorage na podstawie user.id
-    const favs = parseFavsFromLocalStorage(user.id); // favs próbuje pobrać wartość z localStorage pod kluczem, który jest dynamicznie tworzony na podstawie identyfikatora użytkownika (user.id)
+    const favs = parseFavsFromLocalStorage(user.id); // Aktualne ulubione
     const updated = favs.includes(announcementId)
       ? favs.filter((id) => id !== announcementId) // Usuwa announcementId, jeśli jest w ulubionych
       : [...favs, announcementId]; // Dodaje announcementId, jeśli nie ma go w ulubionych
 
-    // Ta linia kodu zapisuje zaktualizowaną listę ulubionych ogłoszeń w localStorage pod określonym kluczem, co pozwala na późniejsze odczytanie i użycie tych danych.
-    localStorage.setItem(`favs_${user.id}`, JSON.stringify(updated)); // JSON.stringify(updated) konwertuje zaktualizowaną listę ulubionych (updated) do formatu JSON, ponieważ localStorage może przechowywać tylko dane w formie łańcuchów tekstowych. Dzięki temu lista ulubionych, która jest tablicą, może być poprawnie zapisana w localStorage.
+    // Aktualizacja localStorage pod określonym kluczem, co pozwala na późniejsze odczytanie i użycie tych danych.
+    localStorage.setItem(`favs_${user.id}`, JSON.stringify(updated));
     setIsFaved(updated.includes(announcementId)); // Ustawia isFaved na podstawie zaktualizowanej listy
   }, [user, announcementId]); // Zależności dla useCallback
 
-  return { isFaved, toggleFav }; // Zwraca isFaved i toggleFav z hooka, po to żeby można było je wykorzystać w komponentach AnnouncementCard i AnnouncementDetails
+  return { isFaved, toggleFav }; // Zwraca stan i funkcję do użycia w komponentach AnnouncementCard i AnnouncementDetails
 }

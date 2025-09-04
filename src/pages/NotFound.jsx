@@ -1,6 +1,12 @@
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
+/**
+ * Komponent strony 404 (Not Found).
+ * - Wyświetla animację Lottie informującą użytkownika, że strona nie istnieje.
+ * - Zawiera link do powrotu na stronę główną.
+ * - Używa flexbox do wyśrodkowania treści zarówno w pionie, jak i poziomie.
+ */
 function NotFound() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center fs-2 h-100 w-100">

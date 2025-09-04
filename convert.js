@@ -1,7 +1,8 @@
-import sharp from 'sharp'; // sharp to popularna biblioteka Node.js do manipulacji obrazami. Umożliwia szybkie i efektywne przetwarzanie obrazów na serwerze.
-import fs from 'fs'; // Moduł fs pozwala na interakcję z systemem plików na serwerze. Możesz używać go do odczytywania, zapisywania, aktualizowania i usuwania plików oraz katalogów.
-import path from 'path'; //  Moduł path w Node.js służy do pracy ze ścieżkami plików i katalogów. Jest przydatny do manipulacji ścieżkami w sposób niezależny od systemu operacyjnego, co oznacza, że działa poprawnie zarówno na Windows, jak i na Unix/Linux.
+import sharp from 'sharp';
+import fs from 'fs';
+import path from 'path';
 
+// Lista folderów, w których będą szukane obrazy do konwersji
 const folders = [
   'public/images/accessories',
   'public/images/children',
@@ -9,6 +10,8 @@ const folders = [
   'public/images/food_hygiene_blanket',
   'public/images/homeless',
   'public/images/house_of_a_single_mother',
+  'public',
+  'src/assets',
 ];
 
 folders.forEach((folder) => {
@@ -21,10 +24,23 @@ folders.forEach((folder) => {
     files
       .filter((f) => f.endsWith('.jpg') || f.endsWith('.png'))
       .forEach((file) => {
-        sharp(path.join(folder, file))
+        const inputPath = path.join(folder, file);
+        const outputPath = path.join(
+          folder,
+          file.replace(/\.(jpg|png)$/, '.webp'),
+        );
+
+        sharp(inputPath)
           .webp()
-          .toFile(path.join(folder, file.replace(/\.(jpg|png)$/, '.webp')))
-          .then(() => console.log(`Converted ${file} in folder ${folder}`))
+          .toFile(outputPath)
+          .then(() => {
+            console.log(`Converted ${file} in folder ${folder}`);
+
+            fs.unlink(inputPath, (err) => {
+              if (err) console.error(`Nie udało się usunąć ${file}:`, err);
+              else console.log(`Deleted original file: ${file}`);
+            });
+          })
           .catch(console.error);
       });
   });

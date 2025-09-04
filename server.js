@@ -1,11 +1,11 @@
-//Ten fragment kodu to konfiguracja prostego serwera API opartego na json-server. To bardzo przydatne narzędzie do mockowania backendu (np. w czasie developmentu). Potrzebne są zmienne środowiskowe na Render więc musiał powstać server.js
+// Konfiguracja serwera API opartego na json-server do mockowania backendu w czasie developmentu. Server.js z json-server jest potrzebny na Render, bo tam nie ma lokalnego backendu – dzięki niemu można uruchomić mockowane API z db.json, żeby frontend miał dostęp do danych podczas hostingu.
 import jsonServer from 'json-server';
 
 const server = jsonServer.create(); // Tworzy nowy serwer
 const router = jsonServer.router('db.json'); // Wskazuje plik z danymi (baza JSON)
-const middlewares = jsonServer.defaults(); // Dodaje domyślne middleware (np. CORS, logger)
+const middlewares = jsonServer.defaults(); // Dodaje domyślne middleware (np. CORS, logger). Z CORS → frontend (np. na porcie 3000) może pobierać dane z backendu (3020).
 
-const PORT = process.env.PORT || 10000; // PORT env variable: undefined, dlatego zawsze będzie lokalny 10000
+const PORT = process.env.PORT || 3020; // Oznacza, że serwer użyje portu podanego przez Render (process.env.PORT), a jeśli nie jest ustawiony podczas lokalnego uruchomienia, użyje domyślnie 3020.
 
 server.use(middlewares); // Middleware to funkcje, które działają po drodze, między zapytaniem a odpowiedzią serwera, json-server ma wbudowane middleware
 server.use(router); // Podłącza router z pliku db.json

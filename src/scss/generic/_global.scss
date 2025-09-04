@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth; // sprawia, że przewijanie strony do kotwic (anchor links) staje się płynne, zamiast natychmiastowego przeskoku.
+  scroll-behavior: smooth; // Sprawia, że przewijanie strony do kotwic (anchor links) staje się płynne, zamiast natychmiastowego przeskoku.
 }
 
 body {
@@ -16,11 +16,11 @@ body {
 .font--resp {
   font-size: 12px;
 
-  @include md {
+  @include respond(md) {
     font-size: 14px;
   }
 
-  @include lg {
+  @include respond(lg) {
     font-size: 15px;
   }
 }
@@ -28,11 +28,11 @@ body {
 .logo-font--resp {
   font-size: 25px;
 
-  @include md {
+  @include respond(md) {
     font-size: 30px;
   }
 
-  @include lg {
+  @include respond(lg) {
     font-size: 32px;
   }
 }
@@ -49,11 +49,11 @@ body {
       color: $danger;
     }
 
-    @include md {
+    @include respond(md) {
       font-size: 25px;
     }
 
-    @include lg {
+    @include respond(lg) {
       font-size: 30px;
     }
 

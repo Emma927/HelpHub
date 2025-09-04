@@ -9,11 +9,11 @@ header {
   .logo {
     font-size: 17px;
 
-    @include sm {
+    @include respond(sm) {
       flex-direction: row !important;
     }
 
-    @include md {
+    @include respond(md) {
       font-size: 20px;
     }
   }
@@ -23,11 +23,11 @@ header {
   }
 
   .logo-chev--resp {
-    @include md {
+    @include respond(md) {
       font-size: 20px;
     }
 
-    @include lg {
+    @include respond(lg) {
       font-size: 20px;
     }
   }
@@ -41,7 +41,7 @@ header {
       align-items: center;
       justify-content: center;
 
-      @include md {
+      @include respond(md) {
         // Ustawienie szerokości i wysokości na auto pozwala przyciskowi dostosować się do zawartości (tekst i ikona) oraz do stylów takich jak padding
         width: auto;
         height: auto;
@@ -52,7 +52,7 @@ header {
     &--text {
       display: none;
 
-      @include md {
+      @include respond(md) {
         display: inline;
       }
     }

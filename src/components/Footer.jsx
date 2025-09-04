@@ -1,8 +1,14 @@
 import { MdDeviceHub } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { socialMediaSites } from '@/constans.js';
+import { socialMediaSites } from '@/constants.js';
 
+/**
+ * Komponent `Footer`
+ * - Wyświetla dolny pasek aplikacji z logo HelpHub, informacjami prawnymi i linkami do mediów społecznościowych.
+ * - Linki do social media otwierają się w nowej karcie i są opisane etykietami dla dostępności (aria-label).
+ * - Projekt i układ dostosowany do responsywności.
+ */
 function Footer() {
   return (
     <footer className="border-element">

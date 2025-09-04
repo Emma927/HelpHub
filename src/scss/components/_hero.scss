@@ -11,11 +11,11 @@ main {
       h1 {
         font-size: 29px;
 
-        @include md {
+        @include respond(md) {
           font-size: 36px;
         }
 
-        @include lg {
+        @include respond(lg) {
           font-size: 46px;
         }
       }
@@ -56,15 +56,15 @@ main {
         font-weight: bold;
         margin: 7px 0;
 
-        @include md {
+        @include respond(md) {
           font-size: 15px;
         }
 
-        @include lg {
+        @include respond(lg) {
           font-size: 16px;
         }
 
-        @include xl {
+        @include respond(xl) {
           font-size: 17px;
         }
       }
@@ -73,29 +73,20 @@ main {
     .card {
       min-height: 500px;
 
-      @include md {
+      @include respond(md) {
         min-height: 540px;
       }
 
-      @include lg {
+      @include respond(lg) {
         min-height: 600px;
       }
 
-      @include xl {
+      @include respond(xl) {
         min-height: 570px;
       }
 
-      &-img-container {
-        overflow: hidden; // Dodanie containera, który ogranicza ruch obrazka tylko do obszaru kontenera
-        position: relative;
-      }
-
       &-img-top {
-        width: 100%;
         min-height: 250px;
-        object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
-        transition: transform 0.2s ease-out;
-        z-index: 3;
       }
     }
 
@@ -106,16 +97,15 @@ main {
         justify-content: center;
         align-items: center;
         padding: 50px 0;
-        //width: 100%;
         max-width: 410px;
-        margin: 0 auto; // wyśrodkowanie
+        margin: 0 auto; // Wyśrodkowanie
       }
     }
 
     // Style card-custom na ostatniej stronie paginacji kiedy znajduje się na niej tylko 1 albo 2 karty z ogłoszeniem
     .card-custom { // Sam card-custom nie ma styli, działa jak identyfikator, używany po to aby JavaScript mógł łatwo odnaleźć karty i dodać dodatkowe style dla tych elementów
       &.only-card {
-        /* Styl dla jedynej karty na stronie */
+        // Styl dla jedynej karty na stronie
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -123,12 +113,12 @@ main {
       }
 
       &.two-cards {
-        /* Styl dla kart, gdy są dokładnie dwie na stronie */
+        // Styl dla kart, gdy są dokładnie dwie na stronie
         margin-left: auto;
         margin-right: auto;
         width: 100%;
 
-        @include md {
+        @include respond(md) {
           width: 50%;
           max-width: 400px;
         }
@@ -144,19 +134,19 @@ main {
         height: auto;
         object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
 
-        @include sm {
+        @include respond(sm) {
           min-width: 520px;
         }
 
-        @include md {
+        @include respond(md) {
           min-width: 580px;
         }
 
-        @include lg {
+        @include respond(lg) {
           max-width: 640px;
         }
 
-        @include xl {
+        @include respond(xl) {
           max-width: 700px;
         }
       }
@@ -165,11 +155,11 @@ main {
         font-weight: bold;
         font-size: 17px;
 
-        @include md {
+        @include respond(md) {
           font-size: 18px;
         }
 
-        @include lg {
+        @include respond(lg) {
           font-size: 20px;
         }
       }
@@ -178,15 +168,15 @@ main {
         font-weight: bold;
         font-size: 14px;
 
-        @include sm {
+        @include respond(sm) {
           font-size: 16px;
         }
 
-        @include md {
+        @include respond(md) {
           font-size: 17px;
         }
 
-        @include lg {
+        @include respond(lg) {
           font-size: 19px;
         }
       }
@@ -194,11 +184,11 @@ main {
       .font--back {
         font-size: 14px;
 
-        @include sm {
+        @include respond(sm) {
           font-size: 16px;
         }
 
-        @include md {
+        @include respond(md) {
           font-size: 17px;
         }
       }
@@ -235,11 +225,11 @@ main {
     h1 {
       font-size: 17px;
 
-      @include md {
+      @include respond(md) {
         font-size: 22px;
       }
 
-      @include lg {
+      @include respond(lg) {
         font-size: 28px;
       }
     }

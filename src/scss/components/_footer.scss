@@ -28,11 +28,11 @@ footer {
   .font-down--resp {
     font-size: 10px;
 
-    @include md {
+    @include respond(md) {
       font-size: 12px;
     }
 
-    @include lg {
+    @include respond(lg) {
       font-size: 14px;
     }
   }
@@ -40,11 +40,11 @@ footer {
   .logo-down--resp {
     font-size: 14px;
 
-    @include md {
+    @include respond(md) {
       font-size: 16px;
     }
 
-    @include lg {
+    @include respond(lg) {
       font-size: 18px;
     }
   }

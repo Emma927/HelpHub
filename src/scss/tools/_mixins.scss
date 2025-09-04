@@ -1,36 +1,23 @@
-// XS >= 0px - taki breakpoint nie będzie potrzebny - Bootstrap daje podejście Mobile-First
+@use "sass:map";
 
-// SM >= 576px
-@mixin sm {
-  @media (min-width: 576px) {
-    @content;
-  }
-}
+// Definicja breakpointów
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
 
-// MD >= 768px
-@mixin md {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
+// Mixin dla media queries dynamicznie
+@mixin respond($size) {
+  $width: map.get($breakpoints, $size);
 
-// LG >= 992px
-@mixin lg {
-  @media (min-width: 992px) {
-    @content;
-  }
-}
-
-// XL >= 1200px
-@mixin xl {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-// XXL >= 1400px
-@mixin xxl {
-  @media (min-width: 1400px) {
-    @content;
+  @if $width {
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint defined for: #{$size}";
   }
 }

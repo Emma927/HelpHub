@@ -10,8 +10,16 @@ import {
   BsBagHeartFill,
 } from 'react-icons/bs';
 import { UserContext } from '@/context/UserContext';
-import { navSites } from '@/constans.js';
+import { navSites } from '@/constants.js';
+import DeleteAccountButton from '@/user/DeleteAccountButton';
 
+/**
+ * Komponent `Header`
+ * - Wyświetla górną nawigację aplikacji z logo, linkami do podstron oraz przyciskami logowania i ulubionych.
+ * - Menu rozwijane (dropdown) otwiera się na hover i automatycznie zamyka po zmianie strony.
+ * - Przyciski logowania, wylogowania i dostęp do ulubionych są zależne od stanu użytkownika (`UserContext`).
+ * - Responsywny układ i obsługa collapse zapewnia prawidłowe wyświetlanie na urządzeniach mobilnych.
+ */
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
@@ -20,7 +28,7 @@ function Header() {
   const closeNav = () => setIsNavOpen(false);
   const { user, logout } = useContext(UserContext);
 
-  // Reset menu po zmianie strony- zamykanie menu po zmianie ścieżki przez użytkownika jako dodatkowe, automatyczne zabezpieczenie zamykania nawigacji. Bez useEffect też działa open/close ale wymaga interakcji użytkownika.
+  // Automatyczne zamykanie menu po zmianie strony, które działa bez useEffect jako openNav/closeNav, ale wymaga interakcji użytkownika.
   useEffect(() => {
     setIsNavOpen(false); // Zamyka nawigację przy zmianie strony
   }, [location.pathname]);
@@ -56,16 +64,17 @@ function Header() {
         </div>
 
         <nav className="d-flex align-items-center gap-4">
-          {/*user ? '/favourites' : '/auth/user/login' - ten warunek sprawdza stan użytkownika w momencie kliknięcia przycisku i decyduje, dokąd użytkownik powinien zostać przekierowany*/}
+          {/* user ? '/favourites' : '/login' - ten warunek sprawdza stan użytkownika w momencie kliknięcia przycisku i decyduje, dokąd użytkownik powinien zostać przekierowany */}
           <button
             className="fav__heart"
-            onClick={() => navigate(user ? '/favourites' : '/auth/user/login')}
+            onClick={() => navigate(user ? '/favourites' : '/login')}
           >
             <BsHeartFill />
           </button>
 
           {user ? (
             <>
+              {/* Przyciski zalogowanego użytkownika */}
               <button
                 className="btn btn-primary btn--rounded"
                 onClick={() => navigate('/favourites')}
@@ -87,11 +96,13 @@ function Header() {
                   Wyloguj się
                 </span>
               </button>
+
+              <DeleteAccountButton />
             </>
           ) : (
             <button
               className="btn btn-primary btn--rounded"
-              onClick={() => navigate('/auth/user/login')}
+              onClick={() => navigate('/login')}
             >
               <BsPersonFill size={17} className="text-secondary" />
               <span className="font--resp text-secondary mx-1 btn--text">
@@ -100,6 +111,7 @@ function Header() {
             </button>
           )}
 
+          {/* Nieaktywny przycisk dla niezalogowanego */}
           {!user && (
             <button className="btn btn-primary btn--rounded" disabled>
               <BsBagHeartFill size={17} className="text-secondary" />
@@ -111,11 +123,8 @@ function Header() {
         </nav>
       </div>
 
-      {/* Navbar z React-Bootstrap w Collapse */}
-      <Collapse
-        in={isNavOpen} //Collapse pojawi się jeśli isNavOpen ma wartość true, a ona jest nadawana przez najechanie myszką i zmianę stanu
-        onMouseLeave={closeNav} // dodanie obsługi opuszczenia myszą
-      >
+      {/* Dropdown menu z linkami */}
+      <Collapse in={isNavOpen} onMouseLeave={closeNav}>
         <div id="navbar-collapse">
           <Navbar className="font--resp" expand="md">
             <Container className>
@@ -125,7 +134,6 @@ function Header() {
                   <NavLink
                     key={path}
                     // NavLink zmienia podstronę bez przeładowania
-                    // Sprawdza, czy path jest "/", jeśli tak, używa tylko "/", w przeciwnym razie dodaje nazwę ścieżki path
                     to={path === '/' ? path : `/${path}`}
                     className={({ isActive }) =>
                       `nav-link ${isActive ? 'active' : ''}`
@@ -134,7 +142,7 @@ function Header() {
                     {name}
                   </NavLink>
                 ))}
-                {/*isActive Jest to parametr przekazywany do funkcji className w NavLink, który informuje, czy dany link jest aktualnie aktywny (czy jego ścieżka pasuje do bieżącej lokalizacji).*/}
+                {/*isActive- jest to parametr przekazywany do funkcji className w NavLink, który informuje, czy dany link jest aktualnie aktywny (czy jego ścieżka pasuje do bieżącej lokalizacji).*/}
               </Nav>
             </Container>
           </Navbar>
