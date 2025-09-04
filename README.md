@@ -19,7 +19,7 @@ various aid organizations.
 
 ## 📸 Screenshots
 
-Below are example screenshots of the CarSharing app on desktop and mobile devices.
+Below are example screenshots of the HelpHub app on desktop and mobile devices.
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-bottom: 40px">
   <img src="src/screenshots/desktop-view1.png" alt="Desktop view" style="margin-right: 10px;">
