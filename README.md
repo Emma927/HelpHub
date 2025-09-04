@@ -1,7 +1,8 @@
 # 🛟 HelpHub
 
 A central announcement app connecting users with aid organizations conducting collections of clothes, footwear,
-accessories, and food in Poland. It solves the problem of the lack of a single place to browse and add collections by
+accessories, and personal hygiene products, blankets and medicines in Poland. It solves the problem of the lack of a
+single place to browse and add collections by
 various aid organizations.
 
 **Available online at:**  
