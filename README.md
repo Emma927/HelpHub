@@ -1,7 +1,8 @@
 # 🛟 HelpHub
 
 A central announcement app connecting users with aid organizations conducting collections of clothes, footwear,
-accessories, and personal hygiene products, blankets and medicines in Poland. It solves the problem of the lack of a
+accessories, food, hygiene products, blankets, and medicines in Poland. It solves the problem of the lack of
+a
 single place to browse and add collections by
 various aid organizations.
 
@@ -80,7 +81,7 @@ Below are example screenshots of the HelpHub app on desktop and mobile devices.
 
    `.env.local` — local file (ignored by Git), where you can override the backend address for local testing:
 
-   `VITE_API_URL=http://localhost:10000`
+   `VITE_API_URL=http://localhost:3020`
 
    If `.env.local` does not exist, the app uses the settings from `.env`
 
@@ -116,13 +117,13 @@ Local backend startup instructions:
 
 - Or run without installation — ensure `db.json` is in the project root (where `package.json` is). Run json-server with:
 
-  `npx json-server --watch db.json --port 10000`
+  `npx json-server --watch db.json --port 3020`
 
-**Note:** Port 10000 is an example — you can choose any available port but remember to set it in `.env.local`.
+**Note:** Port 3020is an example — you can choose any available port but remember to set it in `.env.local`.
 
 - Configure `.env.local` (ignored by Git) so the app uses the local backend:
 
-  `VITE_API_URL=http://localhost:10000`
+  `VITE_API_URL=http://localhost:3020`
 
 Production backend runs on Render at:  
 [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)

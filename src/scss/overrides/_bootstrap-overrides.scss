@@ -47,6 +47,7 @@
 
   &-img-container {
     overflow: hidden; // Dodanie img-containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+    border-radius: 6px;
   }
 
   &-img-top {
