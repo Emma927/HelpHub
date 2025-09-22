@@ -1,13 +1,16 @@
 # 🛟 HelpHub
 
 A central announcement app connecting users with aid organizations conducting collections of clothes, footwear,
-accessories, food, hygiene products, blankets, and medicines in Poland. It solves the problem of the lack of
-a
-single place to browse and add collections by
+accessories, food, hygiene products, blankets, and medicines in Poland. It solves the problem of the lack of a single
+place to browse and add collections by
 various aid organizations.
 
 **Available online at:**  
 [https://help-hub-render.netlify.app/](https://help-hub-render.netlify.app/)
+
+⚠️ Note for reviewers
+The backend runs in serverless mode on Render’s free plan, so the first request after a period of inactivity may take up
+to 30 seconds. Subsequent requests respond immediately. For local testing, JSON Server provides instant responses.
 
 ## 🚀 Features
 
@@ -23,15 +26,10 @@ various aid organizations.
 
 Below are example screenshots of the HelpHub app on desktop and mobile devices.
 
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-bottom: 40px">
-  <img src="src/screenshots/desktop-view1.png" alt="Desktop view" style="margin-right: 10px;">
-  <img src="src/screenshots/mobile-view1.png" alt="Mobile view">
-</div>
-
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; margin-bottom: 40px">
-  <img src="src/screenshots/desktop-view2.png" alt="Desktop view" style="margin-right: 10px;">
-  <img src="src/screenshots/mobile-view2.png" alt="Mobile view">
-</div>
+![Desktop view](src/screenshots/desktop-view1.png)  
+![Mobile view](src/screenshots/mobile-view1.png)  
+![Desktop view](src/screenshots/desktop-view2.png)  
+![Mobile view](src/screenshots/mobile-view2.png)
 
 ## 🛠️ Technologies
 
@@ -99,15 +97,10 @@ Below are example screenshots of the HelpHub app on desktop and mobile devices.
 
 ## 🖥️ Backend and Hosting
 
-The backend for production is hosted on Render at:  
-`https://help-hub-2sac.onrender.com`
-
-**Note for reviewers:**  
-The backend runs on Render's free plan, which may put the app to sleep after 15 minutes of inactivity.  
-When the app is asleep, the first request might take a few seconds to respond.  
-For local testing, using JSON server provides instant responses.
-
-For local backend testing, JSON server is used — a REST API server based on the `db.json` file.
+- Production backend: [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
+- Hosted on Render’s free plan (serverless)
+- Uptime Robot pings every 5 minutes to keep the backend awake
+- Local development uses JSON Server (`db.json`)
 
 Local backend startup instructions:
 
@@ -119,7 +112,7 @@ Local backend startup instructions:
 
   `npx json-server --watch db.json --port 3020`
 
-**Note:** Port 3020is an example — you can choose any available port but remember to set it in `.env.local`.
+**Note:** Port 3020 is an example — you can choose any available port but remember to set it in `.env.local`.
 
 - Configure `.env.local` (ignored by Git) so the app uses the local backend:
 
