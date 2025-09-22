@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { FiltersContext } from '@/context/FiltersContext';
+import { useFilters } from '@/context/FiltersContext';
 import { filterButtons } from '@/constants.js';
 
 /**
@@ -9,8 +8,7 @@ import { filterButtons } from '@/constants.js';
  * - Aktualizuje globalny stan filtrów przez `FiltersContext`.
  */
 function Filters() {
-  const { selectedCategories, setSelectedCategories } =
-    useContext(FiltersContext);
+  const { selectedCategories, setSelectedCategories } = useFilters();
 
   // Przełącza obecność kategorii w liście aktywnych filtrów. Jeśli kategoria jest już na liście, zostaje usunięta, a jeśli jej nie ma, zostaje dodana.
   const toggleCategory = (cat) => {

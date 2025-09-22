@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
 import Select from 'react-select';
-import { FiltersContext } from '@/context/FiltersContext';
+import { useFilters } from '@/context/FiltersContext';
 import { voivodeships, customStyles } from '@/constants.js';
 
 /**
@@ -10,8 +9,7 @@ import { voivodeships, customStyles } from '@/constants.js';
  * - Aktualizuje stan w FiltersContext przy zmianie wyboru przez użytkownika.
  */
 function SelectBar() {
-  const { selectedVoivodeship, setSelectedVoivodeship } =
-    useContext(FiltersContext);
+  const { selectedVoivodeship, setSelectedVoivodeship } = useFilters();
 
   // defaultOption - ustala domyślną opcję na podstawie wartości selectedVoivodeship, która jest przekazywana z FiltersContext. Jeśli selectedVoivodeship nie odpowiada żadnej opcji, wybiera pierwszą opcję z listy constants.
   const defaultOption =

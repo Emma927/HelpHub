@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { UserContext } from '@/context/UserContext';
+import React, { useState } from 'react';
+import { useUser } from '@/context/UserContext';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { API } from '@/constants.js';
 
@@ -11,7 +11,7 @@ import { API } from '@/constants.js';
  * - Jeśli użytkownik jest już zalogowany → formularz nie jest renderowany.
  */
 function UserLoginForm() {
-  const { login, user } = useContext(UserContext);
+  const { login, user } = useUser();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');

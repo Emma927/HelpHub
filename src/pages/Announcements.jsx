@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
-import { FiltersContext } from '@/context/FiltersContext';
-import { AnnouncementsContext } from '@/context/AnnouncementsContext';
+import React, { useState, useEffect, useRef } from 'react';
+import { useFilters } from '@/context/FiltersContext';
+import { useAnnouncements } from '@/context/AnnouncementsContext';
 import SelectBar from '@/components/SelectBar';
 import Filters from '@/components/Filters';
 import AnnouncementCard from '@/components/AnnouncementCard';
@@ -15,7 +15,7 @@ import { useSearchParams } from 'react-router-dom';
  * - Obsługuje paginację i synchronizuje numer strony z URL.
  */
 function Announcements() {
-  const { announcements, error } = useContext(AnnouncementsContext); // Dostęp do globalnych ogłoszeń i błędu z Context API
+  const { announcements, error } = useAnnouncements(); // Dostęp do globalnych ogłoszeń i błędu z Context API
 
   const {
     selectedVoivodeship,
@@ -24,7 +24,7 @@ function Announcements() {
     setSelectedCategories,
     currentPage,
     setCurrentPage,
-  } = useContext(FiltersContext); // Globalny stan FiltersContext przechowuje stan filtrów na poziomie aplikacji, co oznacza, że jest on dostępny i zachowany niezależnie od tego, na której stronie aktualnie się znajduję.
+  } = useFilters(); // Globalny stan FiltersContext przechowuje stan filtrów na poziomie aplikacji, co oznacza, że jest on dostępny i zachowany niezależnie od tego, na której stronie aktualnie się znajduję.
 
   const [searchParams, setSearchParams] = useSearchParams(); // Synchronizacja strony z URL
   const topRef = useRef(null); // Referencja do góry listy ogłoszeń (<section>, scroll po zmianie strony)

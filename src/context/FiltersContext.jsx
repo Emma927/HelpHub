@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 // Globalny stan FiltersContext przechowuje stan filtrów na poziomie aplikacji, co oznacza, że jest on dostępny i zachowany niezależnie od tego, na której stronie aktualnie się znajduję.
 export const FiltersContext = createContext();
 
@@ -32,3 +32,5 @@ export function FiltersProvider({ children }) {
     </FiltersContext.Provider>
   );
 }
+
+export const useFilters = () => useContext(FiltersContext);

@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { BsHeartFill, BsCaretRightFill } from 'react-icons/bs';
 import { useFavourite } from '@/hook/useFavourite';
-import { UserContext } from '@/context/UserContext';
+import { useUser } from '@/context/UserContext';
 
 /**
  * Komponent `AnnouncementCard` wyświetla pojedyncze ogłoszenie.
@@ -38,7 +37,7 @@ function AnnouncementCard({
   } = announcement;
 
   const { isFaved, toggleFav } = useFavourite(id);
-  const { user } = useContext(UserContext);
+  const { user } = useUser();
   const navigate = useNavigate();
 
   // Dodanie klasy zależnie od liczby kart

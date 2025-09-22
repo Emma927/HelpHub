@@ -1,5 +1,5 @@
-import { useContext, useState, useEffect, useCallback } from 'react';
-import { UserContext } from '@/context/UserContext'; // Importuje kontekst użytkownika
+import { useState, useEffect, useCallback } from 'react';
+import { useUser } from '@/context/UserContext'; // Importuje kontekst użytkownika
 import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage'; // Pobiera i zwraca ulubione ogłoszenia użytkownika z localStorage jako tablicę, używa pustej tablicy, jeśli brak danych.
 
 /**
@@ -16,7 +16,7 @@ import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage'; /
  * - `AnnouncementDetails`
  */
 export function useFavourite(announcementId) {
-  const { user } = useContext(UserContext); // Pobiera zalogowanego użytkownika
+  const { user } = useUser(); // Pobiera zalogowanego użytkownika
   const [isFaved, setIsFaved] = useState(false); // Stan, który śledzi, czy ogłoszenie jest ulubione
 
   // Synchronizacja stanu ulubionych przy zmianie użytkownika lub ID ogłoszenia

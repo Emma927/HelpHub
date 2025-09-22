@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Collapse, Navbar, Nav, Container } from 'react-bootstrap';
 import { MdDeviceHub } from 'react-icons/md';
@@ -9,7 +9,7 @@ import {
   BsChevronDown,
   BsBagHeartFill,
 } from 'react-icons/bs';
-import { UserContext } from '@/context/UserContext';
+import { useUser } from '@/context/UserContext';
 import { navSites } from '@/constants.js';
 import DeleteAccountButton from '@/user/DeleteAccountButton';
 
@@ -26,7 +26,7 @@ function Header() {
   const navigate = useNavigate();
   const openNav = () => setIsNavOpen(true);
   const closeNav = () => setIsNavOpen(false);
-  const { user, logout } = useContext(UserContext);
+  const { user, logout } = useUser();
 
   // Automatyczne zamykanie menu po zmianie strony, które działa bez useEffect jako openNav/closeNav, ale wymaga interakcji użytkownika.
   useEffect(() => {

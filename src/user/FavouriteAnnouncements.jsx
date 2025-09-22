@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState, useRef } from 'react';
-import { UserContext } from '@/context/UserContext';
-import { AnnouncementsContext } from '@/context/AnnouncementsContext';
+import React, { useEffect, useState, useRef } from 'react';
+import { useUser } from '@/context/UserContext';
+import { useAnnouncements } from '@/context/AnnouncementsContext';
 import AnnouncementCard from '@/components/AnnouncementCard';
 import PaginationComponent from '@/components/PaginationComponent';
 import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage';
@@ -11,8 +11,8 @@ import { useSearchParams } from 'react-router-dom';
  * z paginacją i synchronizacją z parametrem `page` w URL.
  */
 function FavouriteAnnouncements() {
-  const { user } = useContext(UserContext);
-  const { announcements } = useContext(AnnouncementsContext);
+  const { user } = useUser();
+  const { announcements } = useAnnouncements();
   const [favs, setFavs] = useState([]); // Stan ulubionych ogłoszeń
   const announcementsPerPage = 12; // Liczba ogłoszeń na jednej stronie
   const [searchParams, setSearchParams] = useSearchParams(); // Hook React Router – pozwala odczytać i zmieniać parametry w URL, np. ?page=3

@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import {
   useParams,
   useSearchParams,
@@ -6,8 +5,8 @@ import {
   useNavigate,
 } from 'react-router-dom';
 import { BsCaretRightFill, BsHeartFill } from 'react-icons/bs';
-import { AnnouncementsContext } from '@/context/AnnouncementsContext'; // Kontekst przechowujący dane ogłoszeń (lista, błędy, stan ładowania). Dzięki temu komponenty w aplikacji mają dostęp do tych samych danych bez przekazywania propsów.
-import { UserContext } from '@/context/UserContext';
+import { useAnnouncements } from '@/context/AnnouncementsContext'; // Kontekst przechowujący dane ogłoszeń (lista, błędy, stan ładowania). Dzięki temu komponenty w aplikacji mają dostęp do tych samych danych bez przekazywania propsów.
+import { useUser } from '@/context/UserContext';
 import { useFavourite } from '@/hook/useFavourite';
 
 /**
@@ -19,11 +18,11 @@ import { useFavourite } from '@/hook/useFavourite';
  * - Umożliwia powrót do listy ogłoszeń lub ulubionych (z zachowaniem numeru strony w paginacji).
  */
 function AnnouncementDetails({ listType = 'all' }) {
-  const { announcements, error } = useContext(AnnouncementsContext);
+  const { announcements, error } = useAnnouncements();
   const { id } = useParams();
   const [searchParams] = useSearchParams();
   const page = searchParams.get('page') || 1; // odczyt strony
-  const { user } = useContext(UserContext);
+  const { user } = useUser();
   const navigate = useNavigate();
 
   // Szuka w tablicy ogłoszeń elementu, którego id zgadza się z parametrem URL

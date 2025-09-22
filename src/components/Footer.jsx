@@ -1,6 +1,5 @@
 import { MdDeviceHub } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import { socialMediaSites } from '@/constants.js';
 
 /**

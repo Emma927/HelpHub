@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { UserContext } from '@/context/UserContext';
+import React, { useState } from 'react';
+import { useUser } from '@/context/UserContext';
 import { API } from '@/constants.js';
 import { useNavigate } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
@@ -13,7 +13,7 @@ import { BsTrash } from 'react-icons/bs';
  *  - jeśli wystąpi błąd, wyświetla komunikat w modalu.
  */
 function DeleteAccountButton() {
-  const { user, logout } = useContext(UserContext);
+  const { user, logout } = useUser();
   const [error, setError] = useState('');
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();

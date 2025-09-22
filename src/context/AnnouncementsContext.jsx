@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import { API } from '@/constants.js';
 
 export const AnnouncementsContext = createContext();
@@ -44,3 +44,5 @@ export function AnnouncementsProvider({ children }) {
     </AnnouncementsContext.Provider>
   );
 }
+
+export const useAnnouncements = () => useContext(AnnouncementsContext);
