@@ -8,7 +8,7 @@ various aid organizations.
 **Available online at:**  
 [https://help-hub-render.netlify.app/](https://help-hub-render.netlify.app/)
 
-⚠️ Note for reviewers
+⚠️ **Note for reviewers:**  
 The backend runs in serverless mode on Render’s free plan, so the first request after a period of inactivity may take up
 to 30 seconds. Subsequent requests respond immediately. For local testing, JSON Server provides instant responses.
 
