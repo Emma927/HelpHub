@@ -7,6 +7,9 @@ const router = jsonServer.router('db.json'); // Wskazuje plik z danymi (baza JSO
 const middlewares = jsonServer.defaults(); // Dodaje domyślne middleware (np. CORS, logger). Z CORS → frontend (np. na porcie 3000) może pobierać dane z backendu (3020).
 
 // Jawne włączenie CORS dla frontendu
+// Frontend: https://help-hub-render.netlify.app
+// Backend: https://help-hub-2sac.onrender.com
+//To są różne domeny, więc przeglądarka traktuje każde żądanie fetch jako cross-origin.
 server.use(cors({
   origin: 'https://help-hub-render.netlify.app', // albo '*' dla wszystkich
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
