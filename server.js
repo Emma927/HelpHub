@@ -8,7 +8,9 @@ const middlewares = jsonServer.defaults(); // Dodaje domyślne middleware (np. C
 
 const PORT = process.env.PORT || 3020; // Oznacza, że serwer użyje portu podanego przez Render (process.env.PORT), a jeśli nie jest ustawiony podczas lokalnego uruchomienia, użyje domyślnie 3020.
 
-server.use(cors()); // Włącza CORS, aby frontend z Netlify mógł bezpiecznie komunikować się z backendem hostowanym na Render.
+// Cors umożliwia bezpieczną komunikację między frontendem na Netlify a backendem na Render.
+// Dzięki temu zapytania fetch nie są blokowane przez politykę CORS w przeglądarce.
+server.use(cors());
 server.use(middlewares); // Middleware to funkcje, które działają po drodze, między zapytaniem a odpowiedzią serwera, json-server ma wbudowane middleware
 server.use(router); // Podłącza router z pliku db.json
 // 0.0.0.0 to adres IP, nasłuchuje na publicznym interfejsie IP, który Render przydzieli
