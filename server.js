@@ -6,18 +6,9 @@ const server = jsonServer.create(); // Tworzy nowy serwer
 const router = jsonServer.router('db.json'); // Wskazuje plik z danymi (baza JSON)
 const middlewares = jsonServer.defaults(); // Dodaje domyślne middleware (np. CORS, logger). Z CORS → frontend (np. na porcie 3000) może pobierać dane z backendu (3020).
 
-// Jawne włączenie CORS dla frontendu
-// Frontend: https://help-hub-render.netlify.app
-// Backend: https://help-hub-2sac.onrender.com
-//To są różne domeny, więc przeglądarka traktuje każde żądanie fetch jako cross-origin.
-server.use(cors({
-  origin: 'https://help-hub-render.netlify.app', // albo '*' dla wszystkich
-  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type']
-}));
-
 const PORT = process.env.PORT || 3020; // Oznacza, że serwer użyje portu podanego przez Render (process.env.PORT), a jeśli nie jest ustawiony podczas lokalnego uruchomienia, użyje domyślnie 3020.
 
+server.use(cors()); // Włącza CORS, aby frontend z Netlify mógł bezpiecznie komunikować się z backendem hostowanym na Render.
 server.use(middlewares); // Middleware to funkcje, które działają po drodze, między zapytaniem a odpowiedzią serwera, json-server ma wbudowane middleware
 server.use(router); // Podłącza router z pliku db.json
 // 0.0.0.0 to adres IP, nasłuchuje na publicznym interfejsie IP, który Render przydzieli
