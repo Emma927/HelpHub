@@ -1,56 +1,42 @@
-import {
-  useParams,
-  useSearchParams,
-  NavLink,
-  useNavigate,
-} from 'react-router-dom';
+import { useParams, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { BsCaretRightFill, BsHeartFill } from 'react-icons/bs';
-import { useAnnouncements } from '@/context/AnnouncementsContext'; // Kontekst przechowujący dane ogłoszeń (lista, błędy, stan ładowania). Dzięki temu komponenty w aplikacji mają dostęp do tych samych danych bez przekazywania propsów.
-import { useUser } from '@/context/UserContext';
+import { useAnnouncements } from '@/contexts/announcementsContext/useAnnouncements';
+import { useUser } from '@/contexts/userContext/useUser';
 import { useFavourite } from '@/hook/useFavourite';
 
-/**
- * Komponent wyświetlający szczegóły pojedynczego ogłoszenia.
- * - Pobiera identyfikator ogłoszenia z adresu URL i wyszukuje je w kontekście `AnnouncementsContext`.
- * - Prezentuje wszystkie informacje o ogłoszeniu: organizację, opis, lokalizację, dane kontaktowe, daty i zdjęcie.
- * - Pozwala użytkownikowi dodać lub usunąć ogłoszenie z ulubionych (tylko po zalogowaniu).
- * - Obsługuje brak danych (ładowanie, błędy, brak ogłoszenia).
- * - Umożliwia powrót do listy ogłoszeń lub ulubionych (z zachowaniem numeru strony w paginacji).
- */
-function AnnouncementDetails({ listType = 'all' }) {
+// Displays detailed information about a single announcement based on URL ID
+function AnnouncementDetails({ listType: propListType = 'all' }) {
   const { announcements, error } = useAnnouncements();
   const { id } = useParams();
-  const [searchParams] = useSearchParams();
-  const page = searchParams.get('page') || 1; // odczyt strony
   const { user } = useUser();
   const navigate = useNavigate();
+  const location = useLocation();
+  // Handle navigation origin and scroll position
+  const listType = location.state?.listType || propListType;
 
-  // Szuka w tablicy ogłoszeń elementu, którego id zgadza się z parametrem URL
+  // Ensure the page starts at the top when navigating to details
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  const { isFaved, toggleFav } = useFavourite(id);
+  // Find announcement and manage favorites
   const announcement =
     announcements && announcements.find((item) => item.id === id);
 
-  // Hook obsługujący ulubione – sprawdza, czy ogłoszenie jest już dodane do ulubionych(isFaved), i umożliwia zmianę tego stanu(toggleFav)
-  const { isFaved, toggleFav } = useFavourite(id);
-
-  /**
-   * Obsługuje kliknięcie ikony "serca":
-   * - jeśli użytkownik nie jest zalogowany → przenosi do strony logowania,
-   * - w przeciwnym razie przełącza stan ulubionych dla tego ogłoszenia.
-   */
   function handleToggleFav() {
     if (!user) {
       navigate('/login');
-      return; // Wykonanie funkcji zatrzyma się, jeśli użytkownik nie jest zalogowany
+      return;
     }
     toggleFav();
   }
 
-  // Jeśli podczas pobierania danych z kontekstu wystąpił błąd → pokaż komunikat o błędzie
   if (error) {
     return <div>Błąd ładowania</div>;
   }
 
-  // Jeśli dane ogłoszeń jeszcze nie zostały pobrane → wyświetl informację o trwającym ładowaniu
   if (!announcements) {
     return (
       <div className="text-primary logo-font--resp">
@@ -59,7 +45,6 @@ function AnnouncementDetails({ listType = 'all' }) {
     );
   }
 
-  // Jeśli żadne ogłoszenie nie pasuje do id z URL → poinformuj użytkownika, że ogłoszenie nie zostało znalezione
   if (!announcement) {
     return (
       <div className="text-primary logo-font--resp text-danger">
@@ -68,7 +53,6 @@ function AnnouncementDetails({ listType = 'all' }) {
     );
   }
 
-  // Destrukturyzacja danych pojedynczego ogłoszenia – dla czytelności i łatwiejszego użycia w JSX
   const {
     title,
     organizationName,
@@ -85,7 +69,7 @@ function AnnouncementDetails({ listType = 'all' }) {
   } = announcement;
 
   return (
-    <section className="announcement__details mx-5 font--resp my-2 text-primary">
+    <section className="announcement__details font--resp text-primary">
       <div className="announcements__info d-flex flex-column">
         <h2>Szczegóły ogłoszenia:</h2>
         <p>
@@ -108,7 +92,7 @@ function AnnouncementDetails({ listType = 'all' }) {
             Telefon: <span>{phone}</span>
           </p>
           <p>
-            {/*mailto: – pozwala otworzyć klienta pocztowego po kliknięciu w adres*/}
+            {/* Link using the mailto: protocol to open default mail client */}
             E-mail: <a href={`mailto:${email}`}>{email}</a>
           </p>
           <p>
@@ -134,7 +118,7 @@ function AnnouncementDetails({ listType = 'all' }) {
         <h3 className="mt-3">{title}</h3>
       </div>
       <p className="mb-3">{description}</p>
-      {/* Jeśli jest jakakolwiek szansa, że faq może być undefined, null, albo API nie zwróci tego pola — jest zabezpieczenie: (faq && ...), dopóki nie mam pewności, że dane istnieją.*/}
+      {/* Render FAQ if data is available */}
       {faq &&
         faq.map(({ question, answer }, index) => (
           <div key={index} className="mb-4">
@@ -143,14 +127,12 @@ function AnnouncementDetails({ listType = 'all' }) {
           </div>
         ))}
       <div className="d-flex justify-content-center">
-        {/* Link powrotny – kieruje użytkownika do listy ogłoszeń lub ulubionych,
-    zachowując numer strony przekazany w parametrze URL */}
+        {/* Back button with location state preservation */}
         <NavLink
-          to={{
-            pathname:
-              listType === 'favourites' ? '/favourites' : '/announcements',
-            search: page ? `?page=${page}` : '',
-          }}
+          to={
+            location.state?.from ||
+            (listType === 'favourites' ? '/favourites' : '/announcements')
+          }
           className="btn--welcome fw-normal text-secondary mb-3 font--back text-decoration-none"
         >
           <BsCaretRightFill size={25} className="arrow" />

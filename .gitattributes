@@ -1,0 +1,10 @@
+# Ustawia domyślne traktowanie wszystkich plików jako tekstowe i wymusza LF przy commicie
+* text=auto eol=lf
+
+# Oznacza pliki graficzne i inne jako binarne (ich Git nie powinien dotykać)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

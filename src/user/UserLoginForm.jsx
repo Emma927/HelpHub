@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { useUser } from '@/context/UserContext';
+import { useState } from 'react';
+import { useUser } from '@/contexts/userContext/useUser';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { API } from '@/constants.js';
 
 /**
- * Komponent formularza logowania użytkownika.
- * - Umożliwia logowanie na podstawie emaila i hasła.
- * - W razie sukcesu zapisuje dane użytkownika w kontekście i przekierowuje do strony głównej.
- * - W razie błędu wyświetla komunikat pod formularzem.
- * - Jeśli użytkownik jest już zalogowany → formularz nie jest renderowany.
+ * User login form component.
+ * Handles authentication, user context update, and redirection.
+ * Returns null if user is already authenticated.
  */
 function UserLoginForm() {
   const { login, user } = useUser();
@@ -19,12 +17,8 @@ function UserLoginForm() {
   const [error, setError] = useState('');
 
   /**
-   * Obsługuje wysłanie formularza logowania:
-   * - waliduje dane wejściowe,
-   * - pobiera użytkownika z API po adresie email,
-   * - porównuje hasło z odpowiedzią serwera,
-   * - w razie sukcesu loguje użytkownika i przekierowuje na stronę główną,
-   * - w przeciwnym razie ustawia komunikat o błędzie.
+   * Handles the login submission.
+   * Fetches user data by email and validates credentials.
    */
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,39 +28,38 @@ function UserLoginForm() {
     }
 
     try {
-      // encodeURIComponent zabezpiecza email w URL, aby uniknąć błędów przy znakach specjalnych
-      // Zabezpiecza email użytkownika (lub każdy inny tekst) w URL, aby nie zepsuł on zapytania GET. Bez tego funkcja mogłaby zwracać błędy lub szukać złego użytkownika.
+      // encodeURIComponent ensures the email is safe for use in a URL
       const response = await fetch(
         `${API}/users?email=${encodeURIComponent(email)}`,
       );
 
-      // To jest żądanie typu GET – pobiera dane użytkownika, który ma podany e-mail
       if (!response.ok) {
         throw new Error('Błąd sieciowy lub serwera');
       }
 
       const data = await response.json();
-      const u = data[0]; // data[0] odnosi się do pierwszego użytkownika w tablicy data, ponieważ zakładamy unikalny email
+      const u = data[0]; // Assume unique email, take the first result
 
       if (!u || u.password !== password) {
-        // Sprawdza, czy użytkownik istnieje i czy hasło się zgadza; jeśli tak → logowanie, jeśli nie → komunikat o błędzie
         setError('Nieprawidłowe dane');
       } else {
-        login({ id: u.id, name: u.name, surname: u.surname, email: u.email }); // Logowanie zapisane do localStorage
-        navigate('/'); // Zmiana na stronę główną po zalogowaniu
+        // Login user and redirect after successful authentication
+        const { id, name, surname, email } = u;
+        login({ id, name, surname, email });
+        navigate('/');
       }
     } catch (error) {
+      console.error('Szczegóły błędu logowania:', error);
       setError('Nie ma takiego użytkownika');
     }
   };
 
-  // Warunek, jeśli użytkownik jest już zalogowany, nie renderuje się formularza logowania- zapobiega to migotaniu UI działa jako sprawdzenie przed renderowaniem, aby uniknąć tymczasowego wyświetlania formularza logowania.
+  // Prevent form rendering if user is already logged in
   if (user) return null;
 
   return (
     <section className="user__login">
       <div className="img-container">
-        {/*Atrybut loading="lazy" w <img> mówi przeglądarce, żeby odłożyła ładowanie obrazka do momentu, aż będzie potrzebny, czyli gdy użytkownik przewinie stronę w jego okolice.*/}
         <img src="/login.webp" alt="login" loading="lazy" />
         <div className="text">
           <h3>Hej!</h3>
@@ -80,14 +73,13 @@ function UserLoginForm() {
           <label htmlFor="email" className="form-label">
             Email
           </label>
-          {/*Dzięki ustawieniu w labelu htmlFor i id w input, kliknięcie na tekst "Email"/"Password" spowoduje, że fokus zostanie przeniesiony do pola tekstowego o id="email"/"password".*/}
           <input
             id="email"
             className="form-control"
             type="email"
             name="email"
             placeholder="Twój email"
-            autoComplete="username" // Autouzupełnienie danych z przeglądarki
+            autoComplete="username" // Enables browser credential autofill
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -110,7 +102,6 @@ function UserLoginForm() {
           </button>
         </form>
         <h3 className="mt-4">Nie masz konta?</h3>
-        {/*"/register" – tu potrzebny jest ukośnik, bo navigate() lub to="" w <NavLink> zawsze wymaga ścieżki absolutnej.*/}
         <NavLink to="/register" className="fw-normal d-inline-flex pb-4">
           Zarejestruj się
         </NavLink>

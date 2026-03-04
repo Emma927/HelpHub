@@ -3,7 +3,7 @@ header {
   position: relative;
 
   &.bg--fill {
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-color: #fff;
   }
 
   .logo {
@@ -42,7 +42,7 @@ header {
       justify-content: center;
 
       @include respond(md) {
-        // Ustawienie szerokości i wysokości na auto pozwala przyciskowi dostosować się do zawartości (tekst i ikona) oraz do stylów takich jak padding
+        // Reset fixed dimensions so the button adapts to its content on larger screens
         width: auto;
         height: auto;
         border-radius: 0;

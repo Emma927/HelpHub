@@ -1,9 +1,9 @@
-// Importy według ITCSS
-// Zmienne projektowe
+// SETTINGS
+// Project-wide variables
 @import "settings/variables";
-// Nadpisane zmienne bootstrap (build overrides)
+// Bootstrap overrides
 @import "settings/variables-overrides";
-// Import Bootstrap, aby wygenerować wszystkie klasy Bootstrapa w dist CSS. Ten import generuje pełny build Bootstrapa - wczytuje zmienne, a potem generuje klasy już z nowymi / nadpisanymi wartościami.
+// Full Bootstrap build with custom variables
 @import "bootstrap/scss/bootstrap";
 
 // TOOLS
@@ -11,11 +11,11 @@
 @import "tools/mixins";
 
 // GENERIC
-// Podstawowe style
+// Basic styles
 @import "generic/global";
 
 // COMPONENTS
-// Podstawowa struktura strony
+// Page layout and UI elements
 @import "components/header";
 @import "components/hero";
 @import "components/footer";
@@ -24,5 +24,5 @@
 @import "components/forms";
 
 // OVERRIDES
-// Nadpisane istniejące klasy Bootsrapa
+// Custom overrides for default Bootstrap classes
 @import "overrides/bootstrap-overrides";

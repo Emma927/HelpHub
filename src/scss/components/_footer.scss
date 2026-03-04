@@ -12,10 +12,11 @@ footer {
     border-top: 1px solid $primary;
   }
 
+  // Double border top effect using pseudo-elements
   &::after {
     content: '';
     position: absolute;
-    top: 2px; // Odstęp między liniami krawędzi footer
+    top: 2px;
     left: 0;
     right: 0;
     border-top: 1px solid $primary;

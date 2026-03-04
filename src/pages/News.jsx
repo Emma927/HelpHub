@@ -1,11 +1,9 @@
 import { Alert } from 'react-bootstrap';
-import { possibilities } from '@/constants.js';
+import { POSSIBILITIES } from '@/constants.js';
 
 /**
- * Komponent News wyświetlający aktualności lub ogłoszenia systemowe.
- * - Informuje użytkowników o planowanych zmianach i nowych funkcjach aplikacji.
- * - Wykorzystuje komponent Alert z react-bootstrap do wyróżnienia komunikatu.
- * - Renderuje listę nadchodzących możliwości z danych importowanych z `possibilities`.
+ * News component displaying upcoming platform updates and features.
+ * Informs users about planned HelpHub expansions using the POSSIBILITIES list.
  */
 function News() {
   return (
@@ -17,11 +15,11 @@ function News() {
           Wdrożymy nowe opcje, takie jak:
         </h5>
         <ul>
-          {possibilities.map((possibility, index) => (
+          {POSSIBILITIES.map((possibility, index) => (
             <li key={index}>{possibility}</li>
           ))}
         </ul>
-        {/*<hr /> to element HTML, który reprezentuje poziomą linię (ang. horizontal rule) używaną do wizualnego oddzielenia sekcji treści.*/}
+        {/* Horizontal rule to separate content sections */}
         <hr />
         <p className="mb-0">Mamy nadzieję, że będzie Wam się podobać!</p>
       </Alert>

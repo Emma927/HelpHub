@@ -11,10 +11,11 @@ import {
   BsTiktok,
 } from 'react-icons/bs';
 
+// API endpoint (fallback used if VITE_API_URL is not set)
 export const API =
-  import.meta.env.VITE_API_URL || 'https://help-hub-2sac.onrender.com'; // fallback — czyli wartość domyślna na wypadek, gdyby zmienna środowiskowa REACT_APP_API_URL nie była ustawiona
+  import.meta.env.VITE_API_URL || 'https://help-hub-2sac.onrender.com';
 
-export const socialMediaSites = [
+export const SOCIAL_MEDIA_SITES = [
   {
     icon: BsFacebook,
     address: 'https://www.facebook.com/helphub',
@@ -47,7 +48,8 @@ export const socialMediaSites = [
   },
 ];
 
-export const cards = [
+// Cards displayed in the app
+export const CARDS = [
   {
     title: 'Odzież i obuwie',
     description:
@@ -57,7 +59,7 @@ export const cards = [
   {
     title: 'Akcesoria',
     description:
-      'Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: torby, plecaki, biżuterię, czapki, szaliki i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.',
+      'Zbiórka akcesoriów obejmuje wszystko, co może ułatwić codzienne życie: przybory kuchenne, torby, plecaki, biżuterię, czapki, szaliki, książki, zeszyty, długopisy i inne dodatki. Każdy przedmiot może znaleźć nowego właściciela i stać się praktycznym wsparciem dla osób w potrzebie.',
     image: image2,
   },
   {
@@ -68,7 +70,7 @@ export const cards = [
   },
 ];
 
-export const faq = [
+export const FAQ = [
   {
     question: 'Kim jesteśmy?',
     answer:
@@ -93,7 +95,7 @@ export const faq = [
   },
 ];
 
-export const navSites = [
+export const NAV_SITES = [
   {
     name: 'Strona główna',
     path: '/',
@@ -112,14 +114,15 @@ export const navSites = [
   },
 ];
 
-export const voivodeships = [
+// 'value' is used as a URL-safe technical slug, matching 'voivodeshipSlug' in db.json
+export const VOIVODESHIPS = [
   {
     value: 'all',
     label: 'Wybierz województwo',
     isDisabled: true,
   },
   {
-    value: 'dolnośląskie',
+    value: 'dolnoslaskie',
     label: 'Dolnośląskie',
   },
   {
@@ -135,11 +138,11 @@ export const voivodeships = [
     label: 'Lubuskie',
   },
   {
-    value: 'łódzkie',
+    value: 'lodzkie',
     label: 'Łódzkie',
   },
   {
-    value: 'małopolskie',
+    value: 'malopolskie',
     label: 'Małopolskie',
   },
   {
@@ -163,15 +166,15 @@ export const voivodeships = [
     label: 'Pomorskie',
   },
   {
-    value: 'śląskie',
+    value: 'slaskie',
     label: 'Śląskie',
   },
   {
-    value: 'świętokrzyskie',
+    value: 'swietokrzyskie',
     label: 'Świętokrzyskie',
   },
   {
-    value: 'warmińsko-mazurskie',
+    value: 'warminsko-mazurskie',
     label: 'Warmińsko-Mazurskie',
   },
   {
@@ -184,22 +187,22 @@ export const voivodeships = [
   },
 ];
 
-export const filterButtons = [
+export const FILTER_BUTTONS = [
   {
-    cat: 'clothesAndShoes',
-    label: 'Odzież i obuwie',
+    cat: 'odziez-i-obuwie',
+    label: 'Odzież\ni Obuwie',
   },
   {
-    cat: 'accessories',
+    cat: 'akcesoria',
     label: 'Akcesoria',
   },
   {
-    cat: 'urgent',
+    cat: 'pilne',
     label: 'Pilne',
   },
 ];
 
-export const possibilities = [
+export const POSSIBILITIES = [
   'Licznik ulubionych ofert w nagłówku strony (header), widoczny po zalogowaniu,',
   'Rejestracja i logowanie dla organizacji pomocowych, ',
   'Indywidualne zamieszczenie ogłoszeń przez wszystkich organizatorów zbiórek,',
@@ -209,25 +212,27 @@ export const possibilities = [
   'Wersja HelpHub_v2.0 – aplikacja z obsługą zbiórek dla zwierząt i przeglądania ogłoszeń adopcji zwierząt w granicach Polski.',
 ];
 
-//control, option, singleValue, menu- wyświetlane jako property unused, ponieważ edytory kodu interpretują użycie kodu, a nie z faktycznego działania aplikacji.
+// customStyles for react-select: not a simple constant or static data
+// This is a configuration object with functions used by react-select
+// to dynamically style the control, options, selected value, and menu.
 export const customStyles = {
   control: (provided, state) => ({
     ...provided,
-    borderColor: state.isFocused ? '#d3bcb2' : '#ccc', // kolor obramowania
-    boxShadow: state.isFocused ? '0 0 0 1px #8A7369' : 'none',
+    borderColor: state.isFocused ? '#d3bcb2' : '#ccc', // border color on focus
+    boxShadow: state.isFocused ? '0 0 0 1px #8A7369' : 'none', // shadow on focus
     '&:hover': {
       borderColor: '#8A7369',
     },
   }),
   option: (provided, state) => ({
-    // option - funkcja stylizująca, używana w bibliotece react-select
+    // option - styles for individual options in the react-select dropdown
     ...provided,
     backgroundColor: state.isSelected
-      ? '#8A7369' // kolor tła dla wybranej opcji
+      ? '#8A7369' // selected option
       : state.isFocused
-        ? '#baa595' // kolor tła dla najechanej opcji, pochodzi tylko z klawiatury
+        ? '#baa595' // hovered option (only from keyboard focus)
         : null,
-    color: state.isSelected || state.isFocused ? 'white' : '#8A7369', // kolor tekstu
+    color: state.isSelected || state.isFocused ? 'white' : '#8A7369', // text color
     '&:hover': {
       backgroundColor: '#baa595',
       color: 'white',
@@ -236,10 +241,10 @@ export const customStyles = {
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: '#5c5050', // kolor wybranej opcji w inpucie (po kliknięciu)
+    color: '#5c5050', // selected value in input
   }),
   menu: (provided) => ({
     ...provided,
-    zIndex: 9999, // w razie problemów z dropdownem, aby był widoczny
+    zIndex: 9999, // ensures dropdown is visible
   }),
 };

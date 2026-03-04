@@ -1,14 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { BsCaretRightFill } from 'react-icons/bs';
 import { Card } from 'react-bootstrap';
-import { cards } from '@/constants.js';
+import { CARDS } from '@/constants.js';
 
-/**
- * Komponent strony głównej.
- * - Wyświetla nagłówki i hasła motywacyjne.
- * - Zawiera przycisk prowadzący do strony ogłoszeń.
- * - Renderuje zestaw kart informacyjnych z danych z `cards`.
- */
+// Home page component displaying the welcome section and info cards.
 function Home() {
   return (
     <section className="section__home">
@@ -28,13 +23,14 @@ function Home() {
             className="btn--welcome d-flex justify-content-center align-items-center font--resp my-2 text-decoration-none"
           >
             <BsCaretRightFill size={25} className="arrow" />
-            Przejdź do ogłoszeń i dołącz się do naszej misji!
+            {'Przejdź do ogłoszeń\ni dołącz się do naszej misji!'}
           </NavLink>
         </div>
       </div>
       <div className="container  mb-5 mt-2 my-2">
         <div className="row g-3">
-          {cards.map(({ title, description, image }, index) => (
+          {/* Mapping through static CARDS data to display informational cards */}
+          {CARDS.map(({ title, description, image }, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4">
               <Card className="shadow border-0 font--resp">
                 <div className="card-img-container">

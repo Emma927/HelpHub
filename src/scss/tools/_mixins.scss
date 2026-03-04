@@ -1,15 +1,16 @@
-@use "sass:map";
+@use 'sass:map';
 
-// Definicja breakpointów
+// Responsive breakpoints map (aligned with Bootstrap standards)
 $breakpoints: (
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 );
 
-// Mixin dla media queries dynamicznie
+// Mixin for mobile-first media queries.
+// Retrieves a breakpoint value from the $breakpoints map.
 @mixin respond($size) {
   $width: map.get($breakpoints, $size);
 

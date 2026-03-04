@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { useUser } from '@/context/UserContext';
+import { useState } from 'react';
+import { useUser } from '@/contexts/userContext/useUser';
 import { API } from '@/constants.js';
 import { useNavigate } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 import { BsTrash } from 'react-icons/bs';
 
 /**
- * Komponent renderujący przycisk "Usuń konto".
- * Po kliknięciu otwiera modal z potwierdzeniem.
- * Jeśli użytkownik potwierdzi, wysyła żądanie DELETE do API w celu usunięcia konta:
- *  - jeśli operacja się powiedzie, wylogowuje użytkownika i przekierowuje na stronę główną,
- *  - jeśli wystąpi błąd, wyświetla komunikat w modalu.
+ * Component that renders a "Delete Account" button and handles account termination.
+ * Opens a confirmation modal and sends a DELETE request to the API.
+ * On success: logs out the user and redirects to the home page.
+ * On failure: displays an error message within the modal.
  */
 function DeleteAccountButton() {
   const { user, logout } = useUser();
@@ -18,15 +17,9 @@ function DeleteAccountButton() {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
-  /**
-   * Obsługuje usunięcie konta użytkownika:
-   * - wysyła żądanie DELETE do API,
-   * - w razie sukcesu wylogowuje i przekierowuje do strony głównej,
-   * - w razie błędu zapisuje komunikat w stanie,
-   * - zawsze zamyka modal po zakończeniu operacji.
-   */
+  // Handles the asynchronous user account deletion process.
   const handleDelete = async () => {
-    if (!user) return; // Funkcja kończy działanie, ponieważ nie można usunąć konta, jeśli użytkownik nie jest zalogowany
+    if (!user) return; // Guard clause - ensure user is authenticated
 
     try {
       const response = await fetch(`${API}/users/${user.id}`, {
@@ -36,11 +29,14 @@ function DeleteAccountButton() {
       if (!response.ok) {
         throw new Error('Nie udało się usunąć konta');
       }
+      // Cleanup local session and redirect on success
       logout();
       navigate('/');
     } catch (err) {
-      setError(err.message); // Aktualizuje stan błędu, ustawiając wiadomość z obiektu Error (np. z throw new Error)
+      // Update error state with the message from the caught error
+      setError(err.message);
     } finally {
+      // Always close the modal after the operation completes
       setShowModal(false);
     }
   };

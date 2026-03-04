@@ -23,12 +23,12 @@ Backend runs on Render’s free plan, so the first request after inactivity may 
 
 ## 📸 Screenshots
 
-Below are example screenshots of the HelpHub app on desktop and mobile devices.
+Below are example screenshots of the HelpHub app on mobile and desktop devices.
 
-![Desktop view](src/screenshots/desktop-view1.png)  
 ![Mobile view](src/screenshots/mobile-view1.png)  
-![Desktop view](src/screenshots/desktop-view2.png)  
+![Desktop view](src/screenshots/desktop-view1.png)  
 ![Mobile view](src/screenshots/mobile-view2.png)
+![Desktop view](src/screenshots/desktop-view2.png)
 
 ## 🛠️ Technologies
 
@@ -43,8 +43,17 @@ Below are example screenshots of the HelpHub app on desktop and mobile devices.
 - Responsive Web Design (Mobile First)
 - Context API
 - localStorage
-- dotlottie-react
 - React-Select
+
+## 🛡️ Error Handling
+
+The application includes a basic error handling mechanism to ensure stability and provide clear feedback to the user.
+
+- Network errors and unsuccessful server responses are handled during API requests using try/catch.
+- In case of a failure, the user sees an error message instead of the application crashing.
+- Loading states are displayed while data is being fetched.
+- If data cannot be loaded, an appropriate error message is shown.
+- Login and registration forms include client-side validation and display messages for invalid input or server-related issues.
 
 ## 🔧 Local Installation
 
@@ -55,81 +64,87 @@ Below are example screenshots of the HelpHub app on desktop and mobile devices.
 2. **Clone the application into the created folder**
 
    Use the command `git clone` to download the repository:
-
-   `git clone https://github.com/Your-Account/HelpHub.git`
+```bash
+   git clone https://github.com/Your-Account/HelpHub.git
+```
 
 3. **Navigate to the main folder in the terminal**
 
    Go to the project directory to be able to run npm commands:
-
-   `cd HelpHub`
+```bash
+   cd HelpHub
+```
 
 4. **Install the application**
 
    Install all required dependencies:
-
-   `npm install`
+```bash
+   npm install
+```
 
 5. **Configure environment variables**
-
-   `.env` — file included in the repo with the default backend URL (e.g., production):
-
-   `VITE_API_URL=https://help-hub-2sac.onrender.com`
-
-   `.env.local` — local file (ignored by Git), where you can override the backend address for local testing:
-
-   `VITE_API_URL=http://localhost:3020`
-
+```bash
+   .env — file included in the repo with the default backend URL (e.g., production):
+```
+```bash
+   VITE_API_URL=https://help-hub-2sac.onrender.com
+```
+   .env.local — local file (ignored by Git), where you can override the backend address for local testing:
+```bash
+   VITE_API_URL=http://localhost:3020
+```
    If `.env.local` does not exist, the app uses the settings from `.env`
 
 6. **Run the app in development mode**
 
    To run the app in dev mode, use:
-
-   `npm run dev`
-
+```bash
+   npm run dev
+```
 7. **Build the app for production (optional)**
 
    Prepare the app for deployment in production:
-
-   `npm run build`
+```bash
+   npm run build
+```
 
 ## 🖥️ Backend and Hosting
 
-- Production backend: [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
-- Hosted on Render’s free plan (serverless)
-- Uptime Robot pings every 5 minutes to keep the backend awake
-- Local development uses JSON Server (`db.json`)
+This project uses a REST API built with `json-server`.  
+The backend is hosted online on Render and can also be run locally for development.
 
-Local backend startup instructions:
+### Production backend
+
+- Hosted on Render (free plan, serverless): [https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
+- Free plan is ephemeral (temporary; POST/PUT/DELETE data may be lost after server sleeps)
+- Uptime Robot pings every 5 minutes to keep the backend awake.
+
+### Local development
+
+To run a local backend with `json-server` use local backend startup instructions:
 
 - Install json-server globally:
+```bash
+  npm install -g json-server
+```
 
-  `npm install -g json-server`
+- Or run without installation - ensure `db.json` is in the project root (where `package.json` is). Run json-server with:
+```bash
+  npx json-server --watch db.json --port 3020
+```
+> ⚠️ **Note:**
+>
+> - Port 3020 is an example — you can choose any available port but remember to set it in `.env.local`.
+> - Without --watch, JSON Server loads db.json only once at start. Any changes in the file require restarting the server.
 
-- Or run without installation — ensure `db.json` is in the project root (where `package.json` is). Run json-server with:
+- Configure `.env.local` (ignored by Git) to point to local backend:
+```bash
+  VITE_API_URL=http://localhost:3020
+```
+Available endpoints:
 
-  `npx json-server --watch db.json --port 3020`
-
-**Note:** Port 3020 is an example — you can choose any available port but remember to set it in `.env.local`.
-
-- Configure `.env.local` (ignored by Git) so the app uses the local backend:
-
-  `VITE_API_URL=http://localhost:3020`
-
-Production backend runs on Render at:  
-[https://help-hub-2sac.onrender.com](https://help-hub-2sac.onrender.com)
-
-### 🆓 Render — free backend hosting
-
-- Backend is hosted on Render’s free plan, which puts the app to sleep after 15 minutes of inactivity.
-- To prevent sleeping and keep fast responses, Uptime Robot is used.
-- Uptime Robot sends a GET request every 5 minutes to `https://help-hub-2sac.onrender.com` to keep the backend awake.
-
-**Important:**  
-In the free Render plan, data sent via POST, PUT, DELETE methods is not persistent — the backend works as a temporary
-database, and after sleeping or restarting, changes may be lost. For persistent data storage, a dedicated database
-server or a paid plan is needed.
+- http://localhost:3020/announcements
+- http://localhost:3020/users
 
 ## 🧾 Usage Instructions
 
@@ -150,14 +165,14 @@ server or a paid plan is needed.
 ✅ **Must Have**
 
 - Filtering announcements
-    - Voivodeship: filter announcements by region
-    - Clothes and Shoes: filter by collections with clothes and footwear
-    - Accessories: filter by collections with accessories
-    - Urgent: filter by urgency (food, hygiene products, blankets, medicine)
+  - Voivodeship: filter announcements by region
+  - Clothes and Shoes: filter by collections with clothes and footwear
+  - Accessories: filter by collections with accessories
+  - Urgent: filter by urgency (food, hygiene products, blankets, medicine)
 
 - User registration and login
-    - Ability to create an account
-    - Login to existing account
+  - Ability to create an account
+  - Login to existing account
 
 - After login, user can manage favorite collections — add/remove collections to/from favorites
 

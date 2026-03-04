@@ -21,11 +21,14 @@ export default defineConfig({
   plugins: [react(), imagetools()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // Alias @ w resolve.alias pozwala używać skróconej ścieżki do katalogu src, co upraszcza importy.
+      '@': path.resolve(__dirname, './src'),
     },
   },
+  // 'id' is the full path of the module Rollup is processing.
+  // manualChunks(id) lets you control which modules go into which chunks.
+  // chunkSizeWarningLimit is increased to 1 MB to reduce warnings.
   build: {
-    chunkSizeWarningLimit: 1000, // zwiększa limit ostrzeżeń do 1 MB
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {

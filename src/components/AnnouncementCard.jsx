@@ -2,34 +2,21 @@ import { Card } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { BsHeartFill, BsCaretRightFill } from 'react-icons/bs';
 import { useFavourite } from '@/hook/useFavourite';
-import { useUser } from '@/context/UserContext';
+import { useUser } from '@/contexts/userContext/useUser';
+import { FILTER_BUTTONS } from '@/constants';
 
 /**
- * Komponent `AnnouncementCard` wyświetla pojedyncze ogłoszenie.
- * - Prezentuje tytuł, daty, województwo, kategorie i obrazek.
- * - Obsługuje dodawanie/odejmowanie ogłoszenia z ulubionych
- *   (zależnie od zalogowania użytkownika).
- * - Pozwala przejść do szczegółów ogłoszenia przez `NavLink`.
- *
- * Props:
- * - `announcement` – dane ogłoszenia,
- * - `numberOfCards` – do zmiany układu karty,
- * - `onToggleFav` – callback informujący komponent nadrzędny o zmianie ulubionych,
- * - `currentPage` – numer strony (dodawany do linku),
- * - `listType` – typ listy (wszystkie / ulubione).
+ * AnnouncementCard component:
+ * - Renders individual announcement details using React-Bootstrap Card.
+ * - Handles favorite toggling logic with authentication check.
+ * - Provides dynamic routing to details page with navigation state preservation.
  */
-function AnnouncementCard({
-  announcement,
-  numberOfCards,
-  onToggleFav,
-  currentPage,
-  listType = 'all',
-}) {
+function AnnouncementCard({ announcement, onToggleFav, listType }) {
   const {
     id,
     title,
     voivodeship,
-    category: { clothesAndShoes, accessories, urgent }, // Destrukturyzacja wewnętrzna
+    category,
     deadline,
     datePosted,
     imageUrl,
@@ -40,29 +27,27 @@ function AnnouncementCard({
   const { user } = useUser();
   const navigate = useNavigate();
 
-  // Dodanie klasy zależnie od liczby kart
-  let additionalClass = ''; // Na początek brak dodatkowej klasy
-  if (numberOfCards === 1) {
-    additionalClass = 'only-card';
-  } else if (numberOfCards === 2) {
-    additionalClass = 'two-cards';
-  }
-
+  /**
+   * Handles adding/removing from favorites.
+   * Redirects unauthorized users to the login page.
+   */
   function handleToggle() {
     if (!user) {
       navigate('/login');
       return;
     }
 
-    toggleFav(); // Zmienia stan ulubionego ogłoszenia w localStorage i aktualizuje lokalny stan isFaved w hooku useFavourite
+    toggleFav(); // Persists the change in localStorage and updates the local heart icon state
     if (typeof onToggleFav === 'function') {
+      // Executes the callback passed by the parent to signal that local data has changed.
+      // It notifies the parent  to re-sync its state with localStorage
       onToggleFav();
     }
   }
 
   return (
-    <div className={`col-12 col-md-6 col-lg-4 card-custom ${additionalClass}`}>
-      <Card className="shadow border-0 font--resp card__announcement">
+    <div className="col-12 col-md-6 col-lg-4">
+      <Card className="shadow border-0 font--resp">
         <div className="card-img-container">
           <Card.Img
             variant="top"
@@ -89,28 +74,47 @@ function AnnouncementCard({
           <h5 className="font__card-resp">{title}</h5>
           <p>
             Kategoria zbiórki:
-            {/*Operator && zwraca wartość po prawej stronie, jeśli wartość po lewej jest prawdziwa*/}
             <span>
-              {[
-                clothesAndShoes && 'Odzież i obuwie',
-                accessories && 'Akcesoria',
-                urgent && 'Pilne',
-              ]
-                .filter(Boolean) // Usuwa wartości false/null
-                .map((category) => ` ${category}`) // Dodaje spację przed każdą nazwą
-                // join- dodaje przecinek, jeśli będzie dołączona kolejna kategoria
+              {category
+                .map((catValue) => {
+                  // Searches for a category object in constants that matches the announcement's category key
+                  const found = FILTER_BUTTONS.find(
+                    (btn) => btn.cat === catValue,
+                  );
+                  // Formats the label by removing line breaks ( '/n' used in filter buttons)
+                  // to ensure consistent single-line text alignment in the card.
+                  return found
+                    ? ` ${found.label.replace('\n', ' ')}`
+                    : ` ${catValue}`;
+                })
                 .join(', ')}
             </span>
           </p>
           <p>
             Koniec zbiórki: <span>{deadline}</span>
           </p>
-          {/*Dzięki mapowaniu tworzone są NavLinki dla każdego ogłoszenia z przypisanym id*/}
+          {/* Navigation Logic: 
+  - Preserves all active URL search parameters (filters, pagination) 
+    to maintain the user's context when returning from the details view.
+  - Passes 'listType' and 'from' in state for smart "Go Back" functionality.*/}
           <NavLink
-            to={`/${listType === 'favourites' ? 'favourites' : 'announcements'}/${id}${currentPage ? `?page=${currentPage}` : ''}`}
+            to={{
+              pathname: `/announcements/${id}`,
+              // Appends the current query string (filters + pagination) to the URL.
+              // This allows the Details view to maintain the user's browsing context.
+              search: window.location.search,
+            }}
+            state={
+              listType === 'favourites'
+                ? {
+                    listType: 'favourites',
+                    from: `${window.location.pathname}${window.location.search}`,
+                  }
+                : undefined // If undefined, listType is overridden by the default 'all' fallback in AnnouncementDetails
+            }
+            // mt-auto: pushes the button to the bottom of the card by absorbing available vertical space in the flex container
             className="btn--welcome d-flex justify-content-center align-items-center font--resp mt-auto text-decoration-none"
           >
-            {/*mt-auto - zmusza element, żeby przesunął się na dół kontenera, jeśli reszta przestrzeni jest wolna.*/}
             <BsCaretRightFill size={25} className="arrow" />
             Czytaj więcej
           </NavLink>

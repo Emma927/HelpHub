@@ -1,12 +1,12 @@
 import { MdDeviceHub } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { socialMediaSites } from '@/constants.js';
+import { SOCIAL_MEDIA_SITES } from '@/constants.js';
 
 /**
- * Komponent `Footer`
- * - Wyświetla dolny pasek aplikacji z logo HelpHub, informacjami prawnymi i linkami do mediów społecznościowych.
- * - Linki do social media otwierają się w nowej karcie i są opisane etykietami dla dostępności (aria-label).
- * - Projekt i układ dostosowany do responsywności.
+ * Footer component:
+ * - Displays brand logo and copyright information.
+ * - Renders dynamic social media links from configuration.
+ * - Implements accessibility best practices (aria-labels) and security (rel attributes).
  */
 function Footer() {
   return (
@@ -24,13 +24,13 @@ function Footer() {
           </p>
         </div>
         <div className="d-flex gap-3">
-          {/* Przypisanie wartości icon do zmiennej Icon */}
-          {socialMediaSites.map(({ icon: Icon, address, label }) => (
+          {/* Dynamic mapping of social media links for better scalability */}
+          {SOCIAL_MEDIA_SITES.map(({ icon: Icon, address, label }) => (
             <a
               key={address}
               href={address}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" // Security best practice for external links
               aria-label={label}
             >
               <Icon className="text-primary logo-down--resp" />

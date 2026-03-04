@@ -7,11 +7,16 @@
   border-radius: 30px;
   cursor: pointer;
   overflow: hidden;
+  white-space: pre-line; // Enables \n line breaks for better text wrapping on small screens
+
+  // On larger screens, reset filter text to a single line
+  @include respond(sm) {
+    white-space: nowrap;
+  }
 
   .arrow {
     margin-right: 10px;
     transition: transform 0.5s ease;
-
   }
 
   &:hover .arrow {

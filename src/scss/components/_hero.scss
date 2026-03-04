@@ -24,10 +24,18 @@ main {
 
   // Announcements
   .announcements {
-    margin: 40px 0;
+    margin: 10px 0 30px;
+    scroll-margin-top: 138px; // Preserves top spacing to prevent content from jumping under the fixed header
 
     &__filters {
       font-weight: 400;
+      white-space: pre-line; // Enables \n line breaks for better text wrapping on small screens
+      line-height: 1.2;
+
+      // On larger screens, reset filter text to a single line
+      @include respond(sm) {
+        white-space: nowrap;
+      }
 
       &--active {
         background-color: $primary-active;
@@ -69,7 +77,7 @@ main {
         }
       }
     }
-
+    // Custom card styles for the announcements section
     .card {
       min-height: 500px;
 
@@ -98,30 +106,7 @@ main {
         align-items: center;
         padding: 50px 0;
         max-width: 410px;
-        margin: 0 auto; // Wyśrodkowanie
-      }
-    }
-
-    // Style card-custom na ostatniej stronie paginacji kiedy znajduje się na niej tylko 1 albo 2 karty z ogłoszeniem
-    .card-custom { // Sam card-custom nie ma styli, działa jak identyfikator, używany po to aby JavaScript mógł łatwo odnaleźć karty i dodać dodatkowe style dla tych elementów
-      &.only-card {
-        // Styl dla jedynej karty na stronie
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        max-width: 400px;
-      }
-
-      &.two-cards {
-        // Styl dla kart, gdy są dokładnie dwie na stronie
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-
-        @include respond(md) {
-          width: 50%;
-          max-width: 400px;
-        }
+        margin: 0 auto; // Horizontal centering
       }
     }
   }
@@ -130,24 +115,24 @@ main {
   .announcement {
     &__details {
       &-img {
-        max-width: 385px;
+        max-width: 360px;
         height: auto;
-        object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
+        object-fit: cover; // Fill container while maintaining aspect ratio
 
         @include respond(sm) {
-          min-width: 520px;
+          max-width: 520px;
         }
 
         @include respond(md) {
-          min-width: 580px;
+          max-width: 630px;
         }
 
         @include respond(lg) {
-          max-width: 640px;
+          max-width: 700px;
         }
 
         @include respond(xl) {
-          max-width: 700px;
+          max-width: 750px;
         }
       }
 
@@ -237,7 +222,11 @@ main {
 
   // NotFound
   .not-found {
-    width: 100%;
     height: auto;
+    width: 100%;
+
+    @include respond(lg) {
+      width: 80%;
+    }
   }
 }

@@ -1,15 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { FiltersProvider } from '@/context/FiltersContext';
-import { AnnouncementsProvider } from '@/context/AnnouncementsContext';
-import { UserProvider } from '@/context/UserContext';
+import { BrowserRouter } from 'react-router-dom';
+import { FiltersProvider } from '@/contexts/filtersContext/FiltersProvider';
+import { AnnouncementsProvider } from '@/contexts/announcementsContext/AnnouncementsProvider';
+import { UserProvider } from '@/contexts/userContext/UserProvider';
 import '@/scss/main.scss';
 import App from '@/App';
 
 createRoot(document.getElementById('app')).render(
   <StrictMode>
-    <Router>
+    <BrowserRouter>
       <FiltersProvider>
         <AnnouncementsProvider>
           <UserProvider>
@@ -17,6 +17,6 @@ createRoot(document.getElementById('app')).render(
           </UserProvider>
         </AnnouncementsProvider>
       </FiltersProvider>
-    </Router>
+    </BrowserRouter>
   </StrictMode>,
 );

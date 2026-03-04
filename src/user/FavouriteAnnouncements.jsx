@@ -1,106 +1,88 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useUser } from '@/context/UserContext';
-import { useAnnouncements } from '@/context/AnnouncementsContext';
+import { useEffect, useState, useRef } from 'react';
+import { useUser } from '@/contexts/userContext/useUser';
+import { useAnnouncements } from '@/contexts/announcementsContext/useAnnouncements';
 import AnnouncementCard from '@/components/AnnouncementCard';
 import PaginationComponent from '@/components/PaginationComponent';
 import { parseFavsFromLocalStorage } from '@/utils/parseFavsFromLocalStorage';
 import { useSearchParams } from 'react-router-dom';
 
 /**
- * Komponent wyświetlający ulubione ogłoszenia zalogowanego użytkownika
- * z paginacją i synchronizacją z parametrem `page` w URL.
+ * Displays the user's favorite announcements with pagination.
+ * Synchronizes the internal state with the URL search parameters.
  */
 function FavouriteAnnouncements() {
   const { user } = useUser();
   const { announcements } = useAnnouncements();
-  const [favs, setFavs] = useState([]); // Stan ulubionych ogłoszeń
-  const announcementsPerPage = 12; // Liczba ogłoszeń na jednej stronie
-  const [searchParams, setSearchParams] = useSearchParams(); // Hook React Router – pozwala odczytać i zmieniać parametry w URL, np. ?page=3
-  const initialPage = parseInt(searchParams.get('page')) || 1; // Pobiera numer strony z URL (?page=...), zamienia na liczbę.
-  // Jeśli nie ma parametru, używa domyślnie 1
-  const [currentPage, setCurrentPage] = useState(initialPage); // Stan przechowujący bieżącą stronę paginacji, inicjalizowany wartością z URL
-  const topRef = useRef(null); // Tworzy referencję, która będzie używana do przewijania do góry strony
 
-  /**
-   * Załaduj ulubione ogłoszenia z localStorage przy zmianie użytkownika.
-   * Jeśli użytkownik nie jest zalogowany, nie wykonuje akcji.
-   * Jeśli w localStorage brak danych dla danego użytkownika, ustawia pustą tablicę.
-   */
+  // Lazy init - reads favorites from localStorage only on the first mount.
+  // ProtectedRoute ensures the component remounts on user change,
+  // keeping data in sync. Try/catch prevents app crashes from malformed JSON.
+  const [favs, setFavs] = useState(() => {
+    try {
+      const stored = localStorage.getItem('user');
+      if (!stored) return [];
+
+      const parsedUser = JSON.parse(stored);
+      // Optional chaining (?.) safely handles cases where parsedUser might be null
+      return parsedUser?.id ? parseFavsFromLocalStorage(parsedUser.id) : [];
+    } catch (error) {
+      console.error('Error parsing user favs at init:', error);
+      return [];
+    }
+  });
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const announcementsPerPage = 12;
+  const topRef = useRef(null);
+
+  // Derive page from URL – no local useState needed for pagination
+  const pageInURL = parseInt(searchParams.get('page')) || 1;
+
+  // Filter and sort global announcements to match user favorites.
+  const favAnnouncements = (announcements || [])
+    .filter((a) => favs.includes(a.id))
+    .sort((a, b) => favs.indexOf(b.id) - favs.indexOf(a.id));
+
+  const totalPages = Math.ceil(favAnnouncements.length / announcementsPerPage);
+
+  // Final validated page value (ensures we don't stay on a non-existent page)
+  const currentPage =
+    pageInURL > totalPages && totalPages > 0 ? totalPages : pageInURL;
+
+  // Corrects the URL if the page parameter exceeds available pages
+  // uses { replace: true } for silent correction without polluting history.
   useEffect(() => {
-    if (!user) return;
-    const stored = parseFavsFromLocalStorage(user.id); // Pobierz i sparsuj favs z localStorage dla użytkownika; ustaw jako pustą tablicę, jeśli brak danych.
-    setFavs(stored); // Aktualizuje stan ulubionych, umożliwiając operacje na danych.
-  }, [user]);
+    if (pageInURL > totalPages && totalPages > 0) {
+      setSearchParams({ page: totalPages }, { replace: true });
+    }
+  }, [pageInURL, totalPages, setSearchParams]);
 
-  /**
-   * Przewija stronę do góry przy zmianie currentPage
-   */
+  // Smooth scroll to top on page change.
   useEffect(() => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [currentPage]);
 
-  /**
-   * Filtruje wszystkie ogłoszenia, aby wyświetlić tylko ulubione.
-   * Nawet jeśli announcements jest null/undefined, filtrowanie wykona się na pustej tablicy i nie spowoduje błędu
-   * announcements || [] gwarantuje, że zawsze mamy tablicę.
-   */
-  const favAnnouncements = (announcements || []).filter((a) =>
-    favs.includes(a.id),
-  );
-  // Oblicza całkowitą liczbę stron potrzebnych do wyświetlenia wszystkich ulubionych ogłoszeń
-  const totalPages = Math.ceil(favAnnouncements.length / announcementsPerPage);
+  // Pagination slicing logic
+  const indexOfLast = currentPage * announcementsPerPage;
+  const indexOfFirst = indexOfLast - announcementsPerPage;
+  const currentFavs = favAnnouncements.slice(indexOfFirst, indexOfLast);
 
-  /**
-   * Synchronizacja currentPage z parametrem w URL.
-   * Ogranicza wartość currentPage do totalPages.
-   */
-  useEffect(() => {
-    const pageInURL = parseInt(searchParams.get('page')) || 1;
-    let newPage = pageInURL;
-
-    if (pageInURL > totalPages && totalPages > 0) {
-      newPage = totalPages; // Nie pozwalamy na stronę większą niż totalPages
-    }
-
-    if (currentPage !== newPage) {
-      setCurrentPage(newPage);
-      if (pageInURL !== newPage) setSearchParams({ page: newPage });
-    }
-  }, [searchParams, currentPage, totalPages, setSearchParams]);
-
-  // Wyznaczenie ogłoszeń dla bieżącej strony
-  const indexOfLast = currentPage * announcementsPerPage; // Oblicza indeks ostatniego ogłoszenia na bieżącej stronie
-  const indexOfFirst = indexOfLast - announcementsPerPage; // Oblicza indeks pierwszego ogłoszenia na bieżącej stronie
-  const currentFavs = favAnnouncements.slice(indexOfFirst, indexOfLast); // Wyodrębnia ogłoszenia, które powinny być wyświetlone na bieżącej stronie
-
-  /**
-   * Aktualizuje stan ulubionych ogłoszeń po zmianie w localStorage
-   */
+  // Updates local state when favorites change
   const updateFavs = () => {
-    const stored = parseFavsFromLocalStorage(user.id);
-    setFavs(stored);
+    if (user?.id) setFavs(parseFavsFromLocalStorage(user.id));
   };
 
-  /**
-   * Funkcja obsługująca zmianę strony w paginacji
-   * @param {number} page - numer nowej strony
-   */
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    setSearchParams({ page });
+    setSearchParams({ page }); // No { replace: true } here – this preserves the browser history for the Back button.
   };
 
-  // Sprawdza, czy user i announcements istnieją. Jeśli brak użytkownika lub ogłoszeń, nie renderujemy nic
   if (!user || !announcements) return null;
 
   return (
-    <section
-      className="announcements d-flex flex-column align-items-center"
-      ref={topRef}
-    >
-      <h2 className="logo-font--resp text-primary mb-4">
+    <section className="announcements" ref={topRef}>
+      <h2 className="text-primary text-center logo-font--resp mb-5">
         Twoje ulubione ogłoszenia:
       </h2>
       {currentFavs.length === 0 ? (
@@ -108,20 +90,24 @@ function FavouriteAnnouncements() {
           Nie masz jeszcze ulubionych zbiórek.
         </p>
       ) : (
-        <div className="row g-3 align-items-start">
+        <div
+          className={`row g-3 ${
+            currentFavs.length <= 2
+              ? 'align-items-center justify-content-center'
+              : 'align-items-start'
+          }`}
+        >
           {currentFavs.map((announcement) => (
             <AnnouncementCard
               key={announcement.id}
               announcement={announcement}
-              numberOfCards={currentFavs.length}
-              onToggleFav={updateFavs}
-              currentPage={currentPage} // przekazanie aktualnej strony
+              onToggleFav={updateFavs} // Passing the update function as a callback
+              currentPage={currentPage}
               listType="favourites"
             />
           ))}
         </div>
       )}
-      {/*PaginationComponent otrzymuje bieżącą stronę, całkowitą liczbę stron i funkcję zmiany strony.*/}
       <PaginationComponent
         currentPage={currentPage}
         totalPages={totalPages}

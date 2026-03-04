@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { Collapse, Navbar, Nav, Container } from 'react-bootstrap';
 import { MdDeviceHub } from 'react-icons/md';
 import {
@@ -9,29 +9,20 @@ import {
   BsChevronDown,
   BsBagHeartFill,
 } from 'react-icons/bs';
-import { useUser } from '@/context/UserContext';
-import { navSites } from '@/constants.js';
+import { useUser } from '@/contexts/userContext/useUser';
+import { NAV_SITES } from '@/constants.js';
 import DeleteAccountButton from '@/user/DeleteAccountButton';
 
 /**
- * Komponent `Header`
- * - Wyświetla górną nawigację aplikacji z logo, linkami do podstron oraz przyciskami logowania i ulubionych.
- * - Menu rozwijane (dropdown) otwiera się na hover i automatycznie zamyka po zmianie strony.
- * - Przyciski logowania, wylogowania i dostęp do ulubionych są zależne od stanu użytkownika (`UserContext`).
- * - Responsywny układ i obsługa collapse zapewnia prawidłowe wyświetlanie na urządzeniach mobilnych.
+ * Header component managing top navigation, user authentication state,
+ * and responsive dropdown menu.
  */
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
   const openNav = () => setIsNavOpen(true);
   const closeNav = () => setIsNavOpen(false);
   const { user, logout } = useUser();
-
-  // Automatyczne zamykanie menu po zmianie strony, które działa bez useEffect jako openNav/closeNav, ale wymaga interakcji użytkownika.
-  useEffect(() => {
-    setIsNavOpen(false); // Zamyka nawigację przy zmianie strony
-  }, [location.pathname]);
 
   return (
     <header className="fixed-top shadow bg--fill">
@@ -45,7 +36,7 @@ function Header() {
             <span className="fw-bold text-primary">HelpHub</span>
           </Link>
 
-          {/* Dropdown strzałka toggle */}
+          {/* Navigation Toggle Button */}
           <button
             onMouseEnter={openNav}
             className="btn pl-2 border-0 text-primary"
@@ -64,7 +55,7 @@ function Header() {
         </div>
 
         <nav className="d-flex align-items-center gap-4">
-          {/* user ? '/favourites' : '/login' - ten warunek sprawdza stan użytkownika w momencie kliknięcia przycisku i decyduje, dokąd użytkownik powinien zostać przekierowany */}
+          {/* Protected route logic: Redirect guests to login */}
           <button
             className="fav__heart"
             onClick={() => navigate(user ? '/favourites' : '/login')}
@@ -74,7 +65,7 @@ function Header() {
 
           {user ? (
             <>
-              {/* Przyciski zalogowanego użytkownika */}
+              {/* Navigation Toggle Button */}
               <button
                 className="btn btn-primary btn--rounded"
                 onClick={() => navigate('/favourites')}
@@ -100,6 +91,7 @@ function Header() {
               <DeleteAccountButton />
             </>
           ) : (
+            /* Guest Login Button */
             <button
               className="btn btn-primary btn--rounded"
               onClick={() => navigate('/login')}
@@ -111,7 +103,7 @@ function Header() {
             </button>
           )}
 
-          {/* Nieaktywny przycisk dla niezalogowanego */}
+          {/* Button reserved for future help organization features */}
           {!user && (
             <button className="btn btn-primary btn--rounded" disabled>
               <BsBagHeartFill size={17} className="text-secondary" />
@@ -123,26 +115,24 @@ function Header() {
         </nav>
       </div>
 
-      {/* Dropdown menu z linkami */}
+      {/* Expandable Navigation Menu */}
       <Collapse in={isNavOpen} onMouseLeave={closeNav}>
         <div id="navbar-collapse">
           <Navbar className="font--resp" expand="md">
             <Container className>
-              {/* Gdy użytkownik kliknie na NavLink, React Router zmienia aktualną ścieżkę URL na tę określoną w atrybucie "to".*/}
               <Nav className="gap-3">
-                {navSites.map(({ name, path }) => (
+                {NAV_SITES.map(({ name, path }) => (
                   <NavLink
                     key={path}
-                    // NavLink zmienia podstronę bez przeładowania
                     to={path === '/' ? path : `/${path}`}
                     className={({ isActive }) =>
                       `nav-link ${isActive ? 'active' : ''}`
                     }
+                    onClick={closeNav}
                   >
                     {name}
                   </NavLink>
                 ))}
-                {/*isActive- jest to parametr przekazywany do funkcji className w NavLink, który informuje, czy dany link jest aktualnie aktywny (czy jego ścieżka pasuje do bieżącej lokalizacji).*/}
               </Nav>
             </Container>
           </Navbar>

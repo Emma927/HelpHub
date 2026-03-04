@@ -1,11 +1,11 @@
-// Bootstrap overrides - nadpisywanie całych klas Bootstrap
+// Bootstrap global component overrides for project-wide UI consistency
 .btn {
   border-radius: 30px !important;
   padding: 8px 8px !important;
   border: none !important;
 }
 
-//Nadpisanie styli Collapse-navbar
+// Custom styling for Collapse-navbar
 .navbar {
   background-color: rgb(216, 206, 206);
 
@@ -31,7 +31,7 @@
 .card {
   color: $primary;
   min-height: 320px;
-  margin: 0 auto; // Wycentrowanie w kolumnie, jeśli będzie mniejsza
+  margin: 0 auto; // Center cards within columns
 
   @include respond(md) {
     min-height: 410px;
@@ -46,14 +46,14 @@
   }
 
   &-img-container {
-    overflow: hidden; // Dodanie img-containera, który ogranicza ruch obrazka tylko do obszaru kontenera
+    overflow: hidden; // Ensures zoom effect stays within image boundaries
     border-radius: 6px;
   }
 
   &-img-top {
     width: 100%;
     max-height: 170px;
-    object-fit: cover; // Zapewnia, że obraz wypełnia cały kontener, zachowując swoje proporcje. Oznacza to, że obraz może zostać przycięty, aby uniknąć zniekształceń.
+    object-fit: cover; // Maintains aspect ratio while filling the container
     transition: transform 0.2s ease-out;
   }
 

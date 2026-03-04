@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { faq } from '@/constants';
+import { FAQ } from '@/constants';
 
 /**
- * Komponent sekcji "O nas" z najczęściej zadawanymi pytaniami (FAQ).
- * - Renderuje listę pytań i odpowiedzi pobranych z `faq`.
- * - Pozwala użytkownikowi rozwijać i zwijać odpowiedzi, klikając ikonę.
- * - Jednocześnie rozwinięte może być tylko jedno pytanie (przechowywane w stanie `showInfo`).
+ * About component featuring an accordion-style FAQ section.
+ * Only one question can be expanded at a time using 'showInfo' state.
  */
 function About() {
+  // Use null as initial state since we store the question number
   const [showInfo, setShowInfo] = useState(false);
 
-  /**
-   * Funkcja przełączająca rozwinięcie odpowiedzi:
-   * - jeśli kliknięte pytanie jest już otwarte → zamyka je (ustawia `null`),
-   * - w przeciwnym razie otwiera wybrane pytanie.
-   */
+  // Toggles FAQ visibility: closes if already open, otherwise opens selected
   function openAnswer(number) {
     setShowInfo((prev) => (prev === number ? null : number));
   }
@@ -25,7 +20,7 @@ function About() {
       <h1 className="text-primary">Wszystko o "HelpHub":</h1>
       <div className="container">
         <div className="faq row">
-          {faq.map(({ question, answer, number }) => (
+          {FAQ.map(({ question, answer, number }) => (
             <React.Fragment key={question}>
               <div className="question col-12">
                 <p className="font--resp">
@@ -36,6 +31,7 @@ function About() {
                   className="btn pl-2 border-0 text-primary"
                   key={number}
                 >
+                  {/* Conditional rendering: show answer if current question is active */}
                   {showInfo === number ? (
                     <BsChevronUp
                       className={`logo-chev--resp ${showInfo === number ? 'rotate' : ''}`}

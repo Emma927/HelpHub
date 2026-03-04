@@ -1,18 +1,20 @@
+// Root elements configuration
 html {
-  scroll-behavior: smooth; // Sprawia, że przewijanie strony do kotwic (anchor links) staje się płynne, zamiast natychmiastowego przeskoku.
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: $secondary;
 }
 
+// Main application layout wrapper
 #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
+// Responsive typography utilities
 .font--resp {
   font-size: 12px;
 
@@ -37,12 +39,13 @@ body {
   }
 }
 
+// Favorite button (heart) interaction and styling
 .fav {
   &__heart {
     transition: color 0.3s;
     color: $primary;
     border: none;
-    background-color: inherit; // dziedziczy kolor od swojego rodzica
+    background-color: inherit;
     font-size: 20px;
 
     &:hover {
@@ -63,6 +66,7 @@ body {
   }
 }
 
+// Custom dropdown option styling
 .custom-select option {
   color: #212529;
   font-weight: 400;

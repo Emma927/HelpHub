@@ -1,29 +1,21 @@
-import { useFilters } from '@/context/FiltersContext';
-import { filterButtons } from '@/constants.js';
+import { useFilters } from '@/contexts/filtersContext/useFilters';
+import { FILTER_BUTTONS } from '@/constants.js';
 
 /**
- * Komponent `Filters`
- * - Wyświetla zestaw przycisków kategorii (zdefiniowanych w `filterButtons`).
- * - Umożliwia użytkownikowi aktywację/dezaktywację kategorii filtrowania.
- * - Aktualizuje globalny stan filtrów przez `FiltersContext`.
+ * Filters component:
+ * - Manages category filtering via global FiltersContext.
+ * - Renders interactive filter buttons based on pre-defined constants.
+ * - Supports multi-selection logic for category filtering.
  */
 function Filters() {
-  const { selectedCategories, setSelectedCategories } = useFilters();
-
-  // Przełącza obecność kategorii w liście aktywnych filtrów. Jeśli kategoria jest już na liście, zostaje usunięta, a jeśli jej nie ma, zostaje dodana.
-  const toggleCategory = (cat) => {
-    setSelectedCategories((prev) =>
-      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat],
-    );
-  };
+  const { selectedCategories, toggleCategory } = useFilters();
 
   return (
     <div className="d-flex justify-content-center gap-3 mt-5">
-      {/*Jeśli kategoria jest zaznaczona, dostaje klasę aktywnych filtrów. key={cat} używa cat jako klucza dla każdego elementu przycisku*/}
-      {filterButtons.map(({ cat, label }) => (
+      {FILTER_BUTTONS.map(({ cat, label }) => (
         <button
-          key={cat}
-          className={`btn--welcome announcements__filters ${selectedCategories.includes(cat) ? 'announcements__filters--active' : ''}`}
+          key={cat} // Efficient list reconciliation using unique category ID
+          className={`btn--welcome announcements__filters ${selectedCategories.includes(cat) ? 'announcements__filters--active' : ''}`} // Dynamic class binding based on active state
           onClick={() => toggleCategory(cat)}
         >
           {label}
