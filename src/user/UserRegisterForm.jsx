@@ -160,7 +160,11 @@ function UserRegisterForm() {
         </NavLink>
       </div>
       <div className="img-container img-container--register">
-        <img src="/register.webp" alt="login" loading="lazy" />
+        <img
+          src="https://res.cloudinary.com/dtoczcwf4/image/upload/helphub_images/register.avif"
+          alt="login"
+          loading="lazy"
+        />
         <div className="text text-register">
           <h3>Czekamy na Ciebie!</h3>
           <h4>Zarejestruj się, aby korzystać z pełni możliwości HelpHub!</h4>

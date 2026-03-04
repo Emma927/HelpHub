@@ -60,7 +60,11 @@ function UserLoginForm() {
   return (
     <section className="user__login">
       <div className="img-container">
-        <img src="/login.webp" alt="login" loading="lazy" />
+        <img
+          src="https://res.cloudinary.com/dtoczcwf4/image/upload/helphub_images/login.avif"
+          alt="login"
+          loading="lazy"
+        />
         <div className="text">
           <h3>Hej!</h3>
           <h4>Dobrze Cię widzieć!</h4>
