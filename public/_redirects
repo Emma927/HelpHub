@@ -1,0 +1,5 @@
+# 1. API Proxy (Najpierw konkretne ścieżki)
+/api/*  /.netlify/functions/:splat  200
+
+# 2. SPA Catch-all (Musi być na samym końcu!)
+/*  /index.html  200
