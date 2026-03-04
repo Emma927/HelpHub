@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useUser } from '@/contexts/userContext/useUser';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { API } from '@/constants.js';
@@ -18,6 +18,11 @@ function UserRegisterForm() {
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
   const [errors, setErrors] = useState([]);
+
+  // Ensure the page starts at the top when navigating to register form
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   /**
    * Validates form data and returns an array of error messages.

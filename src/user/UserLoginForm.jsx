@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useUser } from '@/contexts/userContext/useUser';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { API } from '@/constants.js';
@@ -15,6 +15,11 @@ function UserLoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  // Ensure the page starts at the top when navigating to login form
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   /**
    * Handles the login submission.

@@ -17,7 +17,7 @@ function AnnouncementDetails({ listType: propListType = 'all' }) {
 
   // Ensure the page starts at the top when navigating to details
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, []);
 
   const { isFaved, toggleFav } = useFavourite(id);
