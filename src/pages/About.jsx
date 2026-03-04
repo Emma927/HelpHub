@@ -17,7 +17,7 @@ function About() {
 
   return (
     <div className="about h-100 pt-5">
-      <h1 className="text-primary">Wszystko o "HelpHub":</h1>
+      <h1 className="text-primary">Wszystko o  &quot;HelpHub&quot;:</h1>
       <div className="container">
         <div className="faq row">
           {FAQ.map(({ question, answer, number }) => (
