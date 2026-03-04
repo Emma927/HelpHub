@@ -1,4 +1,4 @@
-\# 1. API Proxy: Redirects /api requests to Netlify Functions. 
+# 1. API Proxy: Redirects /api requests to Netlify Functions. 
 # Must be placed BEFORE the catch-all rule.
 [[redirects]]
   from = "/api/*"
