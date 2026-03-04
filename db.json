@@ -21,7 +21,7 @@
       "address": "ul. Pomocna 37, 00-001 Legnica",
       "datePosted": "2026-01-05",
       "deadline": "2026-04-09",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Legnica w Legnicy",
       "faq": [
         {
@@ -55,7 +55,7 @@
       "address": "ul. Pomocna 15, 00-001 Mielec",
       "datePosted": "2026-01-08",
       "deadline": "2026-06-16",
-      "imageUrl": "/images/house_of_a_single_mother/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Mielec w Mielcu",
       "faq": [
         {
@@ -89,7 +89,7 @@
       "address": "ul. Pomocna 27, 00-001 Szczecin",
       "datePosted": "2026-02-02",
       "deadline": "2026-06-22",
-      "imageUrl": "/images/children/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Szczecin w Szczecinie",
       "faq": [
         {
@@ -122,7 +122,7 @@
       "address": "ul. Pomocna 35, 00-001 Jelenia Góra",
       "datePosted": "2026-01-02",
       "deadline": "2026-06-25",
-      "imageUrl": "/images/accessories/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -155,7 +155,7 @@
       "address": "ul. Pomocna 29, 00-001 Iława",
       "datePosted": "2026-02-13",
       "deadline": "2026-05-22",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Iława w Iławie",
       "faq": [
         {
@@ -188,7 +188,7 @@
       "address": "ul. Pomocna 27, 00-001 Zamość",
       "datePosted": "2026-01-07",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/food_hygiene_blanket/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Zamość w Zamościu",
       "faq": [
         {
@@ -222,7 +222,7 @@
       "address": "ul. Pomocna 50, 00-001 Nowy Sącz",
       "datePosted": "2026-02-09",
       "deadline": "2026-05-10",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -256,7 +256,7 @@
       "address": "ul. Pomocna 33, 00-001 Konin",
       "datePosted": "2026-01-09",
       "deadline": "2026-06-10",
-      "imageUrl": "/images/house_of_a_single_mother/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Konin w Koninie",
       "faq": [
         {
@@ -290,7 +290,7 @@
       "address": "ul. Pomocna 24, 00-001 Toruń",
       "datePosted": "2026-02-01",
       "deadline": "2026-04-06",
-      "imageUrl": "/images/children/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Toruń w Toruniu",
       "faq": [
         {
@@ -323,7 +323,7 @@
       "address": "ul. Pomocna 32, 00-001 Biała Podlaska",
       "datePosted": "2026-02-14",
       "deadline": "2026-02-26",
-      "imageUrl": "/images/accessories/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image25.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -356,7 +356,7 @@
       "address": "ul. Pomocna 41, 00-001 Zielona Góra",
       "datePosted": "2026-02-09",
       "deadline": "2026-04-19",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -389,7 +389,7 @@
       "address": "ul. Pomocna 26, 00-001 Toruń",
       "datePosted": "2026-01-16",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/food_hygiene_blanket/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Toruń w Toruniu",
       "faq": [
         {
@@ -423,7 +423,7 @@
       "address": "ul. Pomocna 30, 00-001 Opole",
       "datePosted": "2026-02-08",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Opole w Opolu",
       "faq": [
         {
@@ -457,7 +457,7 @@
       "address": "ul. Pomocna 43, 00-001 Przemyśl",
       "datePosted": "2026-01-15",
       "deadline": "2026-04-09",
-      "imageUrl": "/images/house_of_a_single_mother/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Przemyśl w Przemyślu",
       "faq": [
         {
@@ -491,7 +491,7 @@
       "address": "ul. Pomocna 22, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-02-19",
       "deadline": "2026-04-19",
-      "imageUrl": "/images/children/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -524,7 +524,7 @@
       "address": "ul. Pomocna 15, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-14",
       "deadline": "2026-04-01",
-      "imageUrl": "/images/accessories/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -557,7 +557,7 @@
       "address": "ul. Pomocna 1, 00-001 Elbląg",
       "datePosted": "2026-01-24",
       "deadline": "2026-03-03",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Elbląg w Elblągu",
       "faq": [
         {
@@ -590,7 +590,7 @@
       "address": "ul. Pomocna 19, 00-001 Wejherowo",
       "datePosted": "2026-01-23",
       "deadline": "2026-03-28",
-      "imageUrl": "/images/food_hygiene_blanket/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Wejherowo w Wejherowie",
       "faq": [
         {
@@ -624,7 +624,7 @@
       "address": "ul. Pomocna 44, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-11",
       "deadline": "2026-03-06",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -658,7 +658,7 @@
       "address": "ul. Pomocna 5, 00-001 Skierniewice",
       "datePosted": "2026-02-02",
       "deadline": "2026-04-02",
-      "imageUrl": "/images/house_of_a_single_mother/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -692,7 +692,7 @@
       "address": "ul. Pomocna 38, 00-001 Świnoujście",
       "datePosted": "2026-02-04",
       "deadline": "2026-03-25",
-      "imageUrl": "/images/children/image28.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image28.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -725,7 +725,7 @@
       "address": "ul. Pomocna 5, 00-001 Ełk",
       "datePosted": "2026-02-11",
       "deadline": "2026-04-18",
-      "imageUrl": "/images/accessories/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Ełk w Ełku",
       "faq": [
         {
@@ -758,7 +758,7 @@
       "address": "ul. Pomocna 30, 00-001 Szczecin",
       "datePosted": "2026-02-19",
       "deadline": "2026-02-19",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Szczecin w Szczecinie",
       "faq": [
         {
@@ -791,7 +791,7 @@
       "address": "ul. Pomocna 22, 00-001 Konin",
       "datePosted": "2026-02-10",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/food_hygiene_blanket/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Konin w Koninie",
       "faq": [
         {
@@ -825,7 +825,7 @@
       "address": "ul. Pomocna 2, 00-001 Biała Podlaska",
       "datePosted": "2026-02-07",
       "deadline": "2026-02-28",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -859,7 +859,7 @@
       "address": "ul. Pomocna 18, 00-001 Gdańsk",
       "datePosted": "2026-02-08",
       "deadline": "2026-03-28",
-      "imageUrl": "/images/house_of_a_single_mother/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image7.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Gdańsk w Gdańsku",
       "faq": [
         {
@@ -893,7 +893,7 @@
       "address": "ul. Pomocna 17, 00-001 Płock",
       "datePosted": "2026-02-05",
       "deadline": "2026-03-18",
-      "imageUrl": "/images/children/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Płock w Płocku",
       "faq": [
         {
@@ -926,7 +926,7 @@
       "address": "ul. Pomocna 38, 00-001 Elbląg",
       "datePosted": "2026-01-16",
       "deadline": "2026-03-10",
-      "imageUrl": "/images/accessories/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Elbląg w Elblągu",
       "faq": [
         {
@@ -959,7 +959,7 @@
       "address": "ul. Pomocna 43, 00-001 Jelenia Góra",
       "datePosted": "2026-02-02",
       "deadline": "2026-05-27",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -992,7 +992,7 @@
       "address": "ul. Pomocna 43, 00-001 Szczecin",
       "datePosted": "2026-01-22",
       "deadline": "2026-04-17",
-      "imageUrl": "/images/food_hygiene_blanket/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Szczecin w Szczecinie",
       "faq": [
         {
@@ -1026,7 +1026,7 @@
       "address": "ul. Pomocna 44, 00-001 Słupsk",
       "datePosted": "2026-02-10",
       "deadline": "2026-02-22",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Słupsk w Słupsku",
       "faq": [
         {
@@ -1060,7 +1060,7 @@
       "address": "ul. Pomocna 21, 00-001 Włocławek",
       "datePosted": "2026-02-18",
       "deadline": "2026-05-27",
-      "imageUrl": "/images/house_of_a_single_mother/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image12.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Włocławek we Włocławku",
       "faq": [
         {
@@ -1094,7 +1094,7 @@
       "address": "ul. Pomocna 36, 00-001 Kielce",
       "datePosted": "2026-01-21",
       "deadline": "2026-01-25",
-      "imageUrl": "/images/children/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Kielce w Kielcach",
       "faq": [
         {
@@ -1127,7 +1127,7 @@
       "address": "ul. Pomocna 23, 00-001 Koszalin",
       "datePosted": "2026-02-07",
       "deadline": "2026-03-01",
-      "imageUrl": "/images/accessories/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Koszalin w Koszalinie",
       "faq": [
         {
@@ -1160,7 +1160,7 @@
       "address": "ul. Pomocna 16, 00-001 Nowa Sól",
       "datePosted": "2026-01-25",
       "deadline": "2026-03-23",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -1193,7 +1193,7 @@
       "address": "ul. Pomocna 26, 00-001 Łomża",
       "datePosted": "2026-01-11",
       "deadline": "2026-02-14",
-      "imageUrl": "/images/food_hygiene_blanket/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Łomża w Łomży",
       "faq": [
         {
@@ -1227,7 +1227,7 @@
       "address": "ul. Pomocna 39, 00-001 Biała Podlaska",
       "datePosted": "2026-01-07",
       "deadline": "2026-03-14",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -1261,7 +1261,7 @@
       "address": "ul. Pomocna 30, 00-001 Tomaszów Mazowiecki",
       "datePosted": "2026-02-02",
       "deadline": "2026-05-13",
-      "imageUrl": "/images/house_of_a_single_mother/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image18.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Tomaszów Mazowiecki w Tomaszowie Mazowieckim",
       "faq": [
         {
@@ -1295,7 +1295,7 @@
       "address": "ul. Pomocna 29, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-31",
       "deadline": "2026-02-01",
-      "imageUrl": "/images/children/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -1328,7 +1328,7 @@
       "address": "ul. Pomocna 47, 00-001 Leszno",
       "datePosted": "2026-02-18",
       "deadline": "2026-06-06",
-      "imageUrl": "/images/accessories/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Leszno w Lesznie",
       "faq": [
         {
@@ -1361,7 +1361,7 @@
       "address": "ul. Pomocna 15, 00-001 Lublin",
       "datePosted": "2026-01-03",
       "deadline": "2026-04-29",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Lublin w Lublinie",
       "faq": [
         {
@@ -1394,7 +1394,7 @@
       "address": "ul. Pomocna 35, 00-001 Gliwice",
       "datePosted": "2026-01-24",
       "deadline": "2026-04-23",
-      "imageUrl": "/images/food_hygiene_blanket/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Gliwice w Gliwicach",
       "faq": [
         {
@@ -1428,7 +1428,7 @@
       "address": "ul. Pomocna 27, 00-001 Lublin",
       "datePosted": "2026-02-07",
       "deadline": "2026-02-20",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Lublin w Lublinie",
       "faq": [
         {
@@ -1462,7 +1462,7 @@
       "address": "ul. Pomocna 37, 00-001 Bydgoszcz",
       "datePosted": "2026-01-20",
       "deadline": "2026-01-31",
-      "imageUrl": "/images/house_of_a_single_mother/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image23.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -1496,7 +1496,7 @@
       "address": "ul. Pomocna 13, 00-001 Warszawa",
       "datePosted": "2026-02-17",
       "deadline": "2026-03-04",
-      "imageUrl": "/images/children/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Warszawa w Warszawie",
       "faq": [
         {
@@ -1529,7 +1529,7 @@
       "address": "ul. Pomocna 2, 00-001 Nowy Sącz",
       "datePosted": "2026-01-23",
       "deadline": "2026-05-07",
-      "imageUrl": "/images/accessories/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -1562,7 +1562,7 @@
       "address": "ul. Pomocna 33, 00-001 Kielce",
       "datePosted": "2026-01-22",
       "deadline": "2026-06-02",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Kielce w Kielcach",
       "faq": [
         {
@@ -1595,7 +1595,7 @@
       "address": "ul. Pomocna 3, 00-001 Iława",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-20",
-      "imageUrl": "/images/food_hygiene_blanket/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Iława w Iławie",
       "faq": [
         {
@@ -1629,7 +1629,7 @@
       "address": "ul. Pomocna 37, 00-001 Nowa Sól",
       "datePosted": "2026-01-26",
       "deadline": "2026-06-02",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -1663,7 +1663,7 @@
       "address": "ul. Pomocna 35, 00-001 Grudziądz",
       "datePosted": "2026-01-09",
       "deadline": "2026-04-26",
-      "imageUrl": "/images/house_of_a_single_mother/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image3.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Grudziądz w Grudziądzu",
       "faq": [
         {
@@ -1697,7 +1697,7 @@
       "address": "ul. Pomocna 47, 00-001 Zamość",
       "datePosted": "2026-02-08",
       "deadline": "2026-04-08",
-      "imageUrl": "/images/children/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image27.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Zamość w Zamościu",
       "faq": [
         {
@@ -1730,7 +1730,7 @@
       "address": "ul. Pomocna 17, 00-001 Kielce",
       "datePosted": "2026-01-10",
       "deadline": "2026-04-28",
-      "imageUrl": "/images/accessories/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Kielce w Kielcach",
       "faq": [
         {
@@ -1763,7 +1763,7 @@
       "address": "ul. Pomocna 7, 00-001 Elbląg",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-17",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Elbląg w Elblągu",
       "faq": [
         {
@@ -1796,7 +1796,7 @@
       "address": "ul. Pomocna 38, 00-001 Radom",
       "datePosted": "2026-01-01",
       "deadline": "2026-02-28",
-      "imageUrl": "/images/food_hygiene_blanket/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Radom w Radomiu",
       "faq": [
         {
@@ -1830,7 +1830,7 @@
       "address": "ul. Pomocna 15, 00-001 Nowy Sącz",
       "datePosted": "2026-01-24",
       "deadline": "2026-04-02",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -1864,7 +1864,7 @@
       "address": "ul. Pomocna 33, 00-001 Słupsk",
       "datePosted": "2026-02-14",
       "deadline": "2026-05-02",
-      "imageUrl": "/images/house_of_a_single_mother/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image9.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Słupsk w Słupsku",
       "faq": [
         {
@@ -1898,7 +1898,7 @@
       "address": "ul. Pomocna 27, 00-001 Suwałki",
       "datePosted": "2026-02-13",
       "deadline": "2026-06-08",
-      "imageUrl": "/images/children/image32.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image32.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Suwałki w Suwałkach",
       "faq": [
         {
@@ -1931,7 +1931,7 @@
       "address": "ul. Pomocna 37, 00-001 Słupsk",
       "datePosted": "2026-02-05",
       "deadline": "2026-02-28",
-      "imageUrl": "/images/accessories/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Słupsk w Słupsku",
       "faq": [
         {
@@ -1964,7 +1964,7 @@
       "address": "ul. Pomocna 17, 00-001 Toruń",
       "datePosted": "2026-01-05",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Toruń w Toruniu",
       "faq": [
         {
@@ -1997,7 +1997,7 @@
       "address": "ul. Pomocna 19, 00-001 Legnica",
       "datePosted": "2026-01-24",
       "deadline": "2026-02-02",
-      "imageUrl": "/images/food_hygiene_blanket/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Legnica w Legnicy",
       "faq": [
         {
@@ -2031,7 +2031,7 @@
       "address": "ul. Pomocna 43, 00-001 Chełm",
       "datePosted": "2026-01-08",
       "deadline": "2026-06-01",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Chełm w Chełmie",
       "faq": [
         {
@@ -2065,7 +2065,7 @@
       "address": "ul. Pomocna 39, 00-001 Nysa",
       "datePosted": "2026-01-20",
       "deadline": "2026-04-15",
-      "imageUrl": "/images/house_of_a_single_mother/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image14.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Nysa w Nysie",
       "faq": [
         {
@@ -2099,7 +2099,7 @@
       "address": "ul. Pomocna 22, 00-001 Nowy Sącz",
       "datePosted": "2026-02-05",
       "deadline": "2026-03-02",
-      "imageUrl": "/images/children/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -2132,7 +2132,7 @@
       "address": "ul. Pomocna 22, 00-001 Katowice",
       "datePosted": "2026-01-05",
       "deadline": "2026-04-19",
-      "imageUrl": "/images/accessories/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Katowice w Katowicach",
       "faq": [
         {
@@ -2165,7 +2165,7 @@
       "address": "ul. Pomocna 43, 00-001 Chełm",
       "datePosted": "2026-01-05",
       "deadline": "2026-02-04",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Chełm w Chełmie",
       "faq": [
         {
@@ -2198,7 +2198,7 @@
       "address": "ul. Pomocna 35, 00-001 Kielce",
       "datePosted": "2026-01-23",
       "deadline": "2026-04-14",
-      "imageUrl": "/images/food_hygiene_blanket/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Kielce w Kielcach",
       "faq": [
         {
@@ -2232,7 +2232,7 @@
       "address": "ul. Pomocna 21, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-23",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -2266,7 +2266,7 @@
       "address": "ul. Pomocna 14, 00-001 Bielsko-Biała",
       "datePosted": "2026-01-27",
       "deadline": "2026-03-27",
-      "imageUrl": "/images/house_of_a_single_mother/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image2.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -2300,7 +2300,7 @@
       "address": "ul. Pomocna 11, 00-001 Piotrków Trybunalski",
       "datePosted": "2026-01-13",
       "deadline": "2026-04-17",
-      "imageUrl": "/images/children/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -2333,7 +2333,7 @@
       "address": "ul. Pomocna 46, 00-001 Gdynia",
       "datePosted": "2026-01-28",
       "deadline": "2026-05-23",
-      "imageUrl": "/images/accessories/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Gdynia w Gdyni",
       "faq": [
         {
@@ -2366,7 +2366,7 @@
       "address": "ul. Pomocna 5, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-02-14",
       "deadline": "2026-05-17",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -2399,7 +2399,7 @@
       "address": "ul. Pomocna 47, 00-001 Poznań",
       "datePosted": "2026-01-05",
       "deadline": "2026-06-13",
-      "imageUrl": "/images/food_hygiene_blanket/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Poznań w Poznaniu",
       "faq": [
         {
@@ -2433,7 +2433,7 @@
       "address": "ul. Pomocna 47, 00-001 Bielsko-Biała",
       "datePosted": "2026-02-14",
       "deadline": "2026-04-09",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -2467,7 +2467,7 @@
       "address": "ul. Pomocna 17, 00-001 Wrocław",
       "datePosted": "2026-02-02",
       "deadline": "2026-04-02",
-      "imageUrl": "/images/house_of_a_single_mother/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image25.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Wrocław we Wrocławiu",
       "faq": [
         {
@@ -2501,7 +2501,7 @@
       "address": "ul. Pomocna 15, 00-001 Augustów",
       "datePosted": "2026-01-07",
       "deadline": "2026-03-01",
-      "imageUrl": "/images/children/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Augustów w Augustowie",
       "faq": [
         {
@@ -2534,7 +2534,7 @@
       "address": "ul. Pomocna 24, 00-001 Tomaszów Mazowiecki",
       "datePosted": "2026-01-14",
       "deadline": "2026-06-03",
-      "imageUrl": "/images/accessories/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image24.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Tomaszów Mazowiecki w Tomaszowie Mazowieckim",
       "faq": [
         {
@@ -2567,7 +2567,7 @@
       "address": "ul. Pomocna 39, 00-001 Łódź",
       "datePosted": "2026-01-27",
       "deadline": "2026-02-28",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Łódź w Łodzi",
       "faq": [
         {
@@ -2600,7 +2600,7 @@
       "address": "ul. Pomocna 19, 00-001 Oświęcim",
       "datePosted": "2026-01-01",
       "deadline": "2026-06-16",
-      "imageUrl": "/images/food_hygiene_blanket/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -2634,7 +2634,7 @@
       "address": "ul. Pomocna 36, 00-001 Nowa Sól",
       "datePosted": "2026-02-03",
       "deadline": "2026-03-18",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -2668,7 +2668,7 @@
       "address": "ul. Pomocna 43, 00-001 Gdańsk",
       "datePosted": "2026-02-08",
       "deadline": "2026-06-11",
-      "imageUrl": "/images/house_of_a_single_mother/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Gdańsk w Gdańsku",
       "faq": [
         {
@@ -2702,7 +2702,7 @@
       "address": "ul. Pomocna 48, 00-001 Białystok",
       "datePosted": "2026-01-28",
       "deadline": "2026-01-30",
-      "imageUrl": "/images/children/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Białystok w Białymstoku",
       "faq": [
         {
@@ -2735,7 +2735,7 @@
       "address": "ul. Pomocna 12, 00-001 Lublin",
       "datePosted": "2026-01-07",
       "deadline": "2026-05-14",
-      "imageUrl": "/images/accessories/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Lublin w Lublinie",
       "faq": [
         {
@@ -2768,7 +2768,7 @@
       "address": "ul. Pomocna 45, 00-001 Katowice",
       "datePosted": "2026-01-25",
       "deadline": "2026-03-05",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Katowice w Katowicach",
       "faq": [
         {
@@ -2801,7 +2801,7 @@
       "address": "ul. Pomocna 27, 00-001 Płock",
       "datePosted": "2026-01-12",
       "deadline": "2026-01-17",
-      "imageUrl": "/images/food_hygiene_blanket/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Płock w Płocku",
       "faq": [
         {
@@ -2835,7 +2835,7 @@
       "address": "ul. Pomocna 20, 00-001 Skierniewice",
       "datePosted": "2026-01-05",
       "deadline": "2026-06-18",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -2869,7 +2869,7 @@
       "address": "ul. Pomocna 23, 00-001 Iława",
       "datePosted": "2026-01-22",
       "deadline": "2026-05-16",
-      "imageUrl": "/images/house_of_a_single_mother/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Iława w Iławie",
       "faq": [
         {
@@ -2903,7 +2903,7 @@
       "address": "ul. Pomocna 49, 00-001 Częstochowa",
       "datePosted": "2026-01-25",
       "deadline": "2026-03-18",
-      "imageUrl": "/images/children/image31.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image31.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Częstochowa w Częstochowie",
       "faq": [
         {
@@ -2936,7 +2936,7 @@
       "address": "ul. Pomocna 26, 00-001 Gdańsk",
       "datePosted": "2026-02-11",
       "deadline": "2026-03-11",
-      "imageUrl": "/images/accessories/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Gdańsk w Gdańsku",
       "faq": [
         {
@@ -2969,7 +2969,7 @@
       "address": "ul. Pomocna 33, 00-001 Lublin",
       "datePosted": "2026-02-19",
       "deadline": "2026-04-10",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Lublin w Lublinie",
       "faq": [
         {
@@ -3002,7 +3002,7 @@
       "address": "ul. Pomocna 33, 00-001 Koszalin",
       "datePosted": "2026-01-25",
       "deadline": "2026-06-27",
-      "imageUrl": "/images/food_hygiene_blanket/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Koszalin w Koszalinie",
       "faq": [
         {
@@ -3036,7 +3036,7 @@
       "address": "ul. Pomocna 30, 00-001 Katowice",
       "datePosted": "2026-01-28",
       "deadline": "2026-02-21",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Katowice w Katowicach",
       "faq": [
         {
@@ -3070,7 +3070,7 @@
       "address": "ul. Pomocna 34, 00-001 Ełk",
       "datePosted": "2026-02-10",
       "deadline": "2026-05-09",
-      "imageUrl": "/images/house_of_a_single_mother/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Ełk w Ełku",
       "faq": [
         {
@@ -3104,7 +3104,7 @@
       "address": "ul. Pomocna 40, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-02-11",
       "deadline": "2026-05-22",
-      "imageUrl": "/images/children/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -3137,7 +3137,7 @@
       "address": "ul. Pomocna 31, 00-001 Iława",
       "datePosted": "2026-01-29",
       "deadline": "2026-03-29",
-      "imageUrl": "/images/accessories/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Iława w Iławie",
       "faq": [
         {
@@ -3170,7 +3170,7 @@
       "address": "ul. Pomocna 29, 00-001 Leszno",
       "datePosted": "2026-01-17",
       "deadline": "2026-02-07",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Leszno w Lesznie",
       "faq": [
         {
@@ -3203,7 +3203,7 @@
       "address": "ul. Pomocna 13, 00-001 Płock",
       "datePosted": "2026-01-17",
       "deadline": "2026-02-10",
-      "imageUrl": "/images/food_hygiene_blanket/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Płock w Płocku",
       "faq": [
         {
@@ -3237,7 +3237,7 @@
       "address": "ul. Pomocna 9, 00-001 Kraków",
       "datePosted": "2026-02-01",
       "deadline": "2026-04-03",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Kraków w Krakowie",
       "faq": [
         {
@@ -3271,7 +3271,7 @@
       "address": "ul. Pomocna 46, 00-001 Skierniewice",
       "datePosted": "2026-01-31",
       "deadline": "2026-02-12",
-      "imageUrl": "/images/house_of_a_single_mother/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -3305,7 +3305,7 @@
       "address": "ul. Pomocna 28, 00-001 Stalowa Wola",
       "datePosted": "2026-02-17",
       "deadline": "2026-04-23",
-      "imageUrl": "/images/children/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Stalowa Wola w Stalowej Woli",
       "faq": [
         {
@@ -3338,7 +3338,7 @@
       "address": "ul. Pomocna 31, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-06",
       "deadline": "2026-06-01",
-      "imageUrl": "/images/accessories/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -3371,7 +3371,7 @@
       "address": "ul. Pomocna 1, 00-001 Nysa",
       "datePosted": "2026-02-03",
       "deadline": "2026-02-14",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Nysa w Nysie",
       "faq": [
         {
@@ -3404,7 +3404,7 @@
       "address": "ul. Pomocna 40, 00-001 Oświęcim",
       "datePosted": "2026-01-02",
       "deadline": "2026-04-14",
-      "imageUrl": "/images/food_hygiene_blanket/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -3438,7 +3438,7 @@
       "address": "ul. Pomocna 43, 00-001 Nowy Sącz",
       "datePosted": "2026-01-29",
       "deadline": "2026-03-22",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -3472,7 +3472,7 @@
       "address": "ul. Pomocna 12, 00-001 Oświęcim",
       "datePosted": "2026-02-12",
       "deadline": "2026-05-03",
-      "imageUrl": "/images/house_of_a_single_mother/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -3506,7 +3506,7 @@
       "address": "ul. Pomocna 23, 00-001 Gdynia",
       "datePosted": "2026-01-12",
       "deadline": "2026-06-28",
-      "imageUrl": "/images/children/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Gdynia w Gdyni",
       "faq": [
         {
@@ -3539,7 +3539,7 @@
       "address": "ul. Pomocna 37, 00-001 Wejherowo",
       "datePosted": "2026-02-05",
       "deadline": "2026-03-08",
-      "imageUrl": "/images/accessories/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Wejherowo w Wejherowie",
       "faq": [
         {
@@ -3572,7 +3572,7 @@
       "address": "ul. Pomocna 9, 00-001 Starachowice",
       "datePosted": "2026-01-05",
       "deadline": "2026-03-02",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Starachowice w Starachowicach",
       "faq": [
         {
@@ -3605,7 +3605,7 @@
       "address": "ul. Pomocna 45, 00-001 Łomża",
       "datePosted": "2026-02-10",
       "deadline": "2026-04-10",
-      "imageUrl": "/images/food_hygiene_blanket/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Łomża w Łomży",
       "faq": [
         {
@@ -3639,7 +3639,7 @@
       "address": "ul. Pomocna 48, 00-001 Gdańsk",
       "datePosted": "2026-02-12",
       "deadline": "2026-04-24",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Gdańsk w Gdańsku",
       "faq": [
         {
@@ -3673,7 +3673,7 @@
       "address": "ul. Pomocna 49, 00-001 Iława",
       "datePosted": "2026-01-11",
       "deadline": "2026-01-12",
-      "imageUrl": "/images/house_of_a_single_mother/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image7.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Iława w Iławie",
       "faq": [
         {
@@ -3707,7 +3707,7 @@
       "address": "ul. Pomocna 4, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-29",
       "deadline": "2026-02-04",
-      "imageUrl": "/images/children/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image25.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -3740,7 +3740,7 @@
       "address": "ul. Pomocna 9, 00-001 Konin",
       "datePosted": "2026-02-19",
       "deadline": "2026-05-31",
-      "imageUrl": "/images/accessories/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Konin w Koninie",
       "faq": [
         {
@@ -3773,7 +3773,7 @@
       "address": "ul. Pomocna 33, 00-001 Gliwice",
       "datePosted": "2026-01-13",
       "deadline": "2026-01-30",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Gliwice w Gliwicach",
       "faq": [
         {
@@ -3806,7 +3806,7 @@
       "address": "ul. Pomocna 44, 00-001 Świnoujście",
       "datePosted": "2026-02-17",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/food_hygiene_blanket/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -3840,7 +3840,7 @@
       "address": "ul. Pomocna 40, 00-001 Katowice",
       "datePosted": "2026-02-06",
       "deadline": "2026-05-30",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Katowice w Katowicach",
       "faq": [
         {
@@ -3874,7 +3874,7 @@
       "address": "ul. Pomocna 49, 00-001 Skierniewice",
       "datePosted": "2026-01-24",
       "deadline": "2026-02-19",
-      "imageUrl": "/images/house_of_a_single_mother/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image12.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -3908,7 +3908,7 @@
       "address": "ul. Pomocna 46, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-01-07",
       "deadline": "2026-03-03",
-      "imageUrl": "/images/children/image30.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image30.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -3941,7 +3941,7 @@
       "address": "ul. Pomocna 15, 00-001 Rzeszów",
       "datePosted": "2026-01-14",
       "deadline": "2026-02-18",
-      "imageUrl": "/images/accessories/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Rzeszów w Rzeszowie",
       "faq": [
         {
@@ -3974,7 +3974,7 @@
       "address": "ul. Pomocna 21, 00-001 Nowy Sącz",
       "datePosted": "2026-02-16",
       "deadline": "2026-06-03",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -4007,7 +4007,7 @@
       "address": "ul. Pomocna 49, 00-001 Kielce",
       "datePosted": "2026-01-20",
       "deadline": "2026-05-31",
-      "imageUrl": "/images/food_hygiene_blanket/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Kielce w Kielcach",
       "faq": [
         {
@@ -4041,7 +4041,7 @@
       "address": "ul. Pomocna 37, 00-001 Włocławek",
       "datePosted": "2026-01-17",
       "deadline": "2026-06-27",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Włocławek we Włocławku",
       "faq": [
         {
@@ -4075,7 +4075,7 @@
       "address": "ul. Pomocna 13, 00-001 Iława",
       "datePosted": "2026-01-31",
       "deadline": "2026-02-17",
-      "imageUrl": "/images/house_of_a_single_mother/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image18.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Iława w Iławie",
       "faq": [
         {
@@ -4109,7 +4109,7 @@
       "address": "ul. Pomocna 18, 00-001 Toruń",
       "datePosted": "2026-01-03",
       "deadline": "2026-05-20",
-      "imageUrl": "/images/children/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Toruń w Toruniu",
       "faq": [
         {
@@ -4142,7 +4142,7 @@
       "address": "ul. Pomocna 42, 00-001 Konin",
       "datePosted": "2026-02-06",
       "deadline": "2026-03-21",
-      "imageUrl": "/images/accessories/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Konin w Koninie",
       "faq": [
         {
@@ -4175,7 +4175,7 @@
       "address": "ul. Pomocna 5, 00-001 Tarnów",
       "datePosted": "2026-01-07",
       "deadline": "2026-06-17",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Tarnów w Tarnowie",
       "faq": [
         {
@@ -4208,7 +4208,7 @@
       "address": "ul. Pomocna 7, 00-001 Chełm",
       "datePosted": "2026-02-05",
       "deadline": "2026-04-06",
-      "imageUrl": "/images/food_hygiene_blanket/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Chełm w Chełmie",
       "faq": [
         {
@@ -4242,7 +4242,7 @@
       "address": "ul. Pomocna 32, 00-001 Ełk",
       "datePosted": "2026-01-20",
       "deadline": "2026-06-16",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Ełk w Ełku",
       "faq": [
         {
@@ -4276,7 +4276,7 @@
       "address": "ul. Pomocna 13, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-02-14",
       "deadline": "2026-04-19",
-      "imageUrl": "/images/house_of_a_single_mother/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image23.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -4310,7 +4310,7 @@
       "address": "ul. Pomocna 13, 00-001 Jelenia Góra",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/children/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -4343,7 +4343,7 @@
       "address": "ul. Pomocna 27, 00-001 Łomża",
       "datePosted": "2026-01-28",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/accessories/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Łomża w Łomży",
       "faq": [
         {
@@ -4376,7 +4376,7 @@
       "address": "ul. Pomocna 11, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-24",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -4409,7 +4409,7 @@
       "address": "ul. Pomocna 35, 00-001 Przemyśl",
       "datePosted": "2026-01-03",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/food_hygiene_blanket/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Przemyśl w Przemyślu",
       "faq": [
         {
@@ -4443,7 +4443,7 @@
       "address": "ul. Pomocna 28, 00-001 Mielec",
       "datePosted": "2026-01-19",
       "deadline": "2026-06-23",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Mielec w Mielcu",
       "faq": [
         {
@@ -4477,7 +4477,7 @@
       "address": "ul. Pomocna 15, 00-001 Bydgoszcz",
       "datePosted": "2026-02-03",
       "deadline": "2026-02-23",
-      "imageUrl": "/images/house_of_a_single_mother/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image3.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -4511,7 +4511,7 @@
       "address": "ul. Pomocna 13, 00-001 Kraków",
       "datePosted": "2026-02-18",
       "deadline": "2026-06-25",
-      "imageUrl": "/images/children/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Kraków w Krakowie",
       "faq": [
         {
@@ -4544,7 +4544,7 @@
       "address": "ul. Pomocna 27, 00-001 Leszno",
       "datePosted": "2026-02-03",
       "deadline": "2026-05-29",
-      "imageUrl": "/images/accessories/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Leszno w Lesznie",
       "faq": [
         {
@@ -4577,7 +4577,7 @@
       "address": "ul. Pomocna 31, 00-001 Słupsk",
       "datePosted": "2026-01-07",
       "deadline": "2026-06-28",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Słupsk w Słupsku",
       "faq": [
         {
@@ -4610,7 +4610,7 @@
       "address": "ul. Pomocna 7, 00-001 Tarnów",
       "datePosted": "2026-01-31",
       "deadline": "2026-04-15",
-      "imageUrl": "/images/food_hygiene_blanket/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Tarnów w Tarnowie",
       "faq": [
         {
@@ -4644,7 +4644,7 @@
       "address": "ul. Pomocna 18, 00-001 Toruń",
       "datePosted": "2026-01-27",
       "deadline": "2026-03-09",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Toruń w Toruniu",
       "faq": [
         {
@@ -4678,7 +4678,7 @@
       "address": "ul. Pomocna 13, 00-001 Stalowa Wola",
       "datePosted": "2026-01-18",
       "deadline": "2026-02-03",
-      "imageUrl": "/images/house_of_a_single_mother/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image9.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Stalowa Wola w Stalowej Woli",
       "faq": [
         {
@@ -4712,7 +4712,7 @@
       "address": "ul. Pomocna 49, 00-001 Szczecin",
       "datePosted": "2026-01-04",
       "deadline": "2026-01-13",
-      "imageUrl": "/images/children/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image24.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Szczecin w Szczecinie",
       "faq": [
         {
@@ -4745,7 +4745,7 @@
       "address": "ul. Pomocna 2, 00-001 Olsztyn",
       "datePosted": "2026-01-05",
       "deadline": "2026-05-05",
-      "imageUrl": "/images/accessories/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Olsztyn w Olsztynie",
       "faq": [
         {
@@ -4778,7 +4778,7 @@
       "address": "ul. Pomocna 10, 00-001 Kraków",
       "datePosted": "2026-01-29",
       "deadline": "2026-02-11",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Kraków w Krakowie",
       "faq": [
         {
@@ -4811,7 +4811,7 @@
       "address": "ul. Pomocna 3, 00-001 Zamość",
       "datePosted": "2026-02-04",
       "deadline": "2026-03-29",
-      "imageUrl": "/images/food_hygiene_blanket/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Zamość w Zamościu",
       "faq": [
         {
@@ -4845,7 +4845,7 @@
       "address": "ul. Pomocna 18, 00-001 Starachowice",
       "datePosted": "2026-02-09",
       "deadline": "2026-03-16",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Starachowice w Starachowicach",
       "faq": [
         {
@@ -4879,7 +4879,7 @@
       "address": "ul. Pomocna 13, 00-001 Wrocław",
       "datePosted": "2026-02-02",
       "deadline": "2026-02-12",
-      "imageUrl": "/images/house_of_a_single_mother/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image14.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Wrocław we Wrocławiu",
       "faq": [
         {
@@ -4913,7 +4913,7 @@
       "address": "ul. Pomocna 7, 00-001 Zamość",
       "datePosted": "2026-01-27",
       "deadline": "2026-05-30",
-      "imageUrl": "/images/children/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Zamość w Zamościu",
       "faq": [
         {
@@ -4946,7 +4946,7 @@
       "address": "ul. Pomocna 8, 00-001 Nysa",
       "datePosted": "2026-01-29",
       "deadline": "2026-05-22",
-      "imageUrl": "/images/accessories/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Nysa w Nysie",
       "faq": [
         {
@@ -4979,7 +4979,7 @@
       "address": "ul. Pomocna 49, 00-001 Wrocław",
       "datePosted": "2026-01-27",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Wrocław we Wrocławiu",
       "faq": [
         {
@@ -5012,7 +5012,7 @@
       "address": "ul. Pomocna 31, 00-001 Zamość",
       "datePosted": "2026-01-14",
       "deadline": "2026-03-28",
-      "imageUrl": "/images/food_hygiene_blanket/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Zamość w Zamościu",
       "faq": [
         {
@@ -5046,7 +5046,7 @@
       "address": "ul. Pomocna 30, 00-001 Oświęcim",
       "datePosted": "2026-02-19",
       "deadline": "2026-05-30",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -5080,7 +5080,7 @@
       "address": "ul. Pomocna 4, 00-001 Biała Podlaska",
       "datePosted": "2026-01-19",
       "deadline": "2026-05-07",
-      "imageUrl": "/images/house_of_a_single_mother/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image2.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -5114,7 +5114,7 @@
       "address": "ul. Pomocna 5, 00-001 Nowa Sól",
       "datePosted": "2026-01-19",
       "deadline": "2026-03-12",
-      "imageUrl": "/images/children/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -5147,7 +5147,7 @@
       "address": "ul. Pomocna 14, 00-001 Legnica",
       "datePosted": "2026-01-06",
       "deadline": "2026-03-26",
-      "imageUrl": "/images/accessories/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Legnica w Legnicy",
       "faq": [
         {
@@ -5180,7 +5180,7 @@
       "address": "ul. Pomocna 8, 00-001 Stargard",
       "datePosted": "2026-01-25",
       "deadline": "2026-06-10",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Stargard w Stargardzie",
       "faq": [
         {
@@ -5213,7 +5213,7 @@
       "address": "ul. Pomocna 6, 00-001 Tomaszów Mazowiecki",
       "datePosted": "2026-01-28",
       "deadline": "2026-03-09",
-      "imageUrl": "/images/food_hygiene_blanket/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Tomaszów Mazowiecki w Tomaszowie Mazowieckim",
       "faq": [
         {
@@ -5247,7 +5247,7 @@
       "address": "ul. Pomocna 23, 00-001 Skierniewice",
       "datePosted": "2026-02-02",
       "deadline": "2026-06-09",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -5281,7 +5281,7 @@
       "address": "ul. Pomocna 5, 00-001 Kraków",
       "datePosted": "2026-01-15",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/house_of_a_single_mother/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image25.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Kraków w Krakowie",
       "faq": [
         {
@@ -5315,7 +5315,7 @@
       "address": "ul. Pomocna 32, 00-001 Stargard",
       "datePosted": "2026-02-11",
       "deadline": "2026-05-17",
-      "imageUrl": "/images/children/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Stargard w Stargardzie",
       "faq": [
         {
@@ -5348,7 +5348,7 @@
       "address": "ul. Pomocna 15, 00-001 Bydgoszcz",
       "datePosted": "2026-02-05",
       "deadline": "2026-02-06",
-      "imageUrl": "/images/accessories/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -5381,7 +5381,7 @@
       "address": "ul. Pomocna 27, 00-001 Kraków",
       "datePosted": "2026-02-14",
       "deadline": "2026-03-29",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Kraków w Krakowie",
       "faq": [
         {
@@ -5414,7 +5414,7 @@
       "address": "ul. Pomocna 33, 00-001 Katowice",
       "datePosted": "2026-02-11",
       "deadline": "2026-03-17",
-      "imageUrl": "/images/food_hygiene_blanket/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Katowice w Katowicach",
       "faq": [
         {
@@ -5448,7 +5448,7 @@
       "address": "ul. Pomocna 25, 00-001 Koszalin",
       "datePosted": "2026-02-13",
       "deadline": "2026-06-09",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Koszalin w Koszalinie",
       "faq": [
         {
@@ -5482,7 +5482,7 @@
       "address": "ul. Pomocna 11, 00-001 Mielec",
       "datePosted": "2026-01-26",
       "deadline": "2026-06-18",
-      "imageUrl": "/images/house_of_a_single_mother/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Mielec w Mielcu",
       "faq": [
         {
@@ -5516,7 +5516,7 @@
       "address": "ul. Pomocna 7, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-26",
       "deadline": "2026-02-03",
-      "imageUrl": "/images/children/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -5549,7 +5549,7 @@
       "address": "ul. Pomocna 15, 00-001 Augustów",
       "datePosted": "2026-01-16",
       "deadline": "2026-06-05",
-      "imageUrl": "/images/accessories/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Augustów w Augustowie",
       "faq": [
         {
@@ -5582,7 +5582,7 @@
       "address": "ul. Pomocna 20, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-21",
       "deadline": "2026-06-01",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -5615,7 +5615,7 @@
       "address": "ul. Pomocna 27, 00-001 Gdynia",
       "datePosted": "2026-02-04",
       "deadline": "2026-02-22",
-      "imageUrl": "/images/food_hygiene_blanket/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Gdynia w Gdyni",
       "faq": [
         {
@@ -5649,7 +5649,7 @@
       "address": "ul. Pomocna 50, 00-001 Wrocław",
       "datePosted": "2026-01-31",
       "deadline": "2026-03-21",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Wrocław we Wrocławiu",
       "faq": [
         {
@@ -5683,7 +5683,7 @@
       "address": "ul. Pomocna 6, 00-001 Oświęcim",
       "datePosted": "2026-01-30",
       "deadline": "2026-02-21",
-      "imageUrl": "/images/house_of_a_single_mother/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -5717,7 +5717,7 @@
       "address": "ul. Pomocna 12, 00-001 Leszno",
       "datePosted": "2026-02-13",
       "deadline": "2026-05-13",
-      "imageUrl": "/images/children/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Leszno w Lesznie",
       "faq": [
         {
@@ -5750,7 +5750,7 @@
       "address": "ul. Pomocna 4, 00-001 Gliwice",
       "datePosted": "2026-01-27",
       "deadline": "2026-06-22",
-      "imageUrl": "/images/accessories/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Gliwice w Gliwicach",
       "faq": [
         {
@@ -5783,7 +5783,7 @@
       "address": "ul. Pomocna 13, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-04",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -5816,7 +5816,7 @@
       "address": "ul. Pomocna 8, 00-001 Bydgoszcz",
       "datePosted": "2026-01-27",
       "deadline": "2026-02-20",
-      "imageUrl": "/images/food_hygiene_blanket/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -5850,7 +5850,7 @@
       "address": "ul. Pomocna 9, 00-001 Bydgoszcz",
       "datePosted": "2026-01-04",
       "deadline": "2026-02-17",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -5884,7 +5884,7 @@
       "address": "ul. Pomocna 7, 00-001 Oświęcim",
       "datePosted": "2026-01-17",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/house_of_a_single_mother/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -5918,7 +5918,7 @@
       "address": "ul. Pomocna 24, 00-001 Legnica",
       "datePosted": "2026-02-05",
       "deadline": "2026-06-04",
-      "imageUrl": "/images/children/image29.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image29.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Legnica w Legnicy",
       "faq": [
         {
@@ -5951,7 +5951,7 @@
       "address": "ul. Pomocna 40, 00-001 Słupsk",
       "datePosted": "2026-02-13",
       "deadline": "2026-05-23",
-      "imageUrl": "/images/accessories/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Słupsk w Słupsku",
       "faq": [
         {
@@ -5984,7 +5984,7 @@
       "address": "ul. Pomocna 32, 00-001 Elbląg",
       "datePosted": "2026-02-06",
       "deadline": "2026-05-22",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Elbląg w Elblągu",
       "faq": [
         {
@@ -6017,7 +6017,7 @@
       "address": "ul. Pomocna 10, 00-001 Bydgoszcz",
       "datePosted": "2026-02-13",
       "deadline": "2026-05-21",
-      "imageUrl": "/images/food_hygiene_blanket/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -6051,7 +6051,7 @@
       "address": "ul. Pomocna 38, 00-001 Nowa Sól",
       "datePosted": "2026-01-02",
       "deadline": "2026-06-07",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -6085,7 +6085,7 @@
       "address": "ul. Pomocna 30, 00-001 Piotrków Trybunalski",
       "datePosted": "2026-01-23",
       "deadline": "2026-03-16",
-      "imageUrl": "/images/house_of_a_single_mother/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -6119,7 +6119,7 @@
       "address": "ul. Pomocna 45, 00-001 Zamość",
       "datePosted": "2026-01-05",
       "deadline": "2026-06-03",
-      "imageUrl": "/images/children/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Zamość w Zamościu",
       "faq": [
         {
@@ -6152,7 +6152,7 @@
       "address": "ul. Pomocna 21, 00-001 Augustów",
       "datePosted": "2026-02-10",
       "deadline": "2026-03-20",
-      "imageUrl": "/images/accessories/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Augustów w Augustowie",
       "faq": [
         {
@@ -6185,7 +6185,7 @@
       "address": "ul. Pomocna 8, 00-001 Zamość",
       "datePosted": "2026-01-11",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Zamość w Zamościu",
       "faq": [
         {
@@ -6218,7 +6218,7 @@
       "address": "ul. Pomocna 39, 00-001 Poznań",
       "datePosted": "2026-02-03",
       "deadline": "2026-06-18",
-      "imageUrl": "/images/food_hygiene_blanket/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Poznań w Poznaniu",
       "faq": [
         {
@@ -6252,7 +6252,7 @@
       "address": "ul. Pomocna 12, 00-001 Stalowa Wola",
       "datePosted": "2026-01-16",
       "deadline": "2026-06-08",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Stalowa Wola w Stalowej Woli",
       "faq": [
         {
@@ -6286,7 +6286,7 @@
       "address": "ul. Pomocna 46, 00-001 Oświęcim",
       "datePosted": "2026-02-19",
       "deadline": "2026-04-14",
-      "imageUrl": "/images/house_of_a_single_mother/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -6320,7 +6320,7 @@
       "address": "ul. Pomocna 16, 00-001 Wałbrzych",
       "datePosted": "2026-02-19",
       "deadline": "2026-05-12",
-      "imageUrl": "/images/children/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Wałbrzych w Wałbrzychu",
       "faq": [
         {
@@ -6353,7 +6353,7 @@
       "address": "ul. Pomocna 13, 00-001 Łódź",
       "datePosted": "2026-01-17",
       "deadline": "2026-04-04",
-      "imageUrl": "/images/accessories/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Łódź w Łodzi",
       "faq": [
         {
@@ -6386,7 +6386,7 @@
       "address": "ul. Pomocna 8, 00-001 Słupsk",
       "datePosted": "2026-01-10",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Słupsk w Słupsku",
       "faq": [
         {
@@ -6419,7 +6419,7 @@
       "address": "ul. Pomocna 26, 00-001 Częstochowa",
       "datePosted": "2026-02-17",
       "deadline": "2026-05-11",
-      "imageUrl": "/images/food_hygiene_blanket/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Częstochowa w Częstochowie",
       "faq": [
         {
@@ -6453,7 +6453,7 @@
       "address": "ul. Pomocna 27, 00-001 Łomża",
       "datePosted": "2026-02-01",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Łomża w Łomży",
       "faq": [
         {
@@ -6487,7 +6487,7 @@
       "address": "ul. Pomocna 30, 00-001 Świnoujście",
       "datePosted": "2026-01-20",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/house_of_a_single_mother/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image7.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -6521,7 +6521,7 @@
       "address": "ul. Pomocna 6, 00-001 Włocławek",
       "datePosted": "2026-01-22",
       "deadline": "2026-05-12",
-      "imageUrl": "/images/children/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Włocławek we Włocławku",
       "faq": [
         {
@@ -6554,7 +6554,7 @@
       "address": "ul. Pomocna 13, 00-001 Świnoujście",
       "datePosted": "2026-02-19",
       "deadline": "2026-03-10",
-      "imageUrl": "/images/accessories/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -6587,7 +6587,7 @@
       "address": "ul. Pomocna 50, 00-001 Kielce",
       "datePosted": "2026-01-08",
       "deadline": "2026-05-27",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Kielce w Kielcach",
       "faq": [
         {
@@ -6620,7 +6620,7 @@
       "address": "ul. Pomocna 26, 00-001 Nysa",
       "datePosted": "2026-02-14",
       "deadline": "2026-06-12",
-      "imageUrl": "/images/food_hygiene_blanket/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Nysa w Nysie",
       "faq": [
         {
@@ -6654,7 +6654,7 @@
       "address": "ul. Pomocna 26, 00-001 Zielona Góra",
       "datePosted": "2026-02-08",
       "deadline": "2026-05-09",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -6688,7 +6688,7 @@
       "address": "ul. Pomocna 44, 00-001 Wejherowo",
       "datePosted": "2026-02-13",
       "deadline": "2026-06-13",
-      "imageUrl": "/images/house_of_a_single_mother/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image12.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Wejherowo w Wejherowie",
       "faq": [
         {
@@ -6722,7 +6722,7 @@
       "address": "ul. Pomocna 24, 00-001 Gdynia",
       "datePosted": "2026-02-13",
       "deadline": "2026-03-20",
-      "imageUrl": "/images/children/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Gdynia w Gdyni",
       "faq": [
         {
@@ -6755,7 +6755,7 @@
       "address": "ul. Pomocna 45, 00-001 Siedlce",
       "datePosted": "2026-01-29",
       "deadline": "2026-04-01",
-      "imageUrl": "/images/accessories/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Siedlce w Siedlcach",
       "faq": [
         {
@@ -6788,7 +6788,7 @@
       "address": "ul. Pomocna 26, 00-001 Opole",
       "datePosted": "2026-02-04",
       "deadline": "2026-06-25",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Opole w Opolu",
       "faq": [
         {
@@ -6821,7 +6821,7 @@
       "address": "ul. Pomocna 45, 00-001 Rzeszów",
       "datePosted": "2026-01-25",
       "deadline": "2026-05-20",
-      "imageUrl": "/images/food_hygiene_blanket/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Rzeszów w Rzeszowie",
       "faq": [
         {
@@ -6855,7 +6855,7 @@
       "address": "ul. Pomocna 47, 00-001 Suwałki",
       "datePosted": "2026-02-10",
       "deadline": "2026-02-24",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Suwałki w Suwałkach",
       "faq": [
         {
@@ -6889,7 +6889,7 @@
       "address": "ul. Pomocna 15, 00-001 Zamość",
       "datePosted": "2026-01-29",
       "deadline": "2026-02-04",
-      "imageUrl": "/images/house_of_a_single_mother/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image18.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Zamość w Zamościu",
       "faq": [
         {
@@ -6923,7 +6923,7 @@
       "address": "ul. Pomocna 23, 00-001 Katowice",
       "datePosted": "2026-01-11",
       "deadline": "2026-02-25",
-      "imageUrl": "/images/children/image28.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image28.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Katowice w Katowicach",
       "faq": [
         {
@@ -6956,7 +6956,7 @@
       "address": "ul. Pomocna 40, 00-001 Koszalin",
       "datePosted": "2026-01-05",
       "deadline": "2026-03-09",
-      "imageUrl": "/images/accessories/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Koszalin w Koszalinie",
       "faq": [
         {
@@ -6989,7 +6989,7 @@
       "address": "ul. Pomocna 37, 00-001 Mielec",
       "datePosted": "2026-02-09",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Mielec w Mielcu",
       "faq": [
         {
@@ -7022,7 +7022,7 @@
       "address": "ul. Pomocna 10, 00-001 Szczecin",
       "datePosted": "2026-02-09",
       "deadline": "2026-06-01",
-      "imageUrl": "/images/food_hygiene_blanket/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Szczecin w Szczecinie",
       "faq": [
         {
@@ -7056,7 +7056,7 @@
       "address": "ul. Pomocna 3, 00-001 Lublin",
       "datePosted": "2026-01-06",
       "deadline": "2026-01-31",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Lublin w Lublinie",
       "faq": [
         {
@@ -7090,7 +7090,7 @@
       "address": "ul. Pomocna 15, 00-001 Koszalin",
       "datePosted": "2026-01-12",
       "deadline": "2026-05-27",
-      "imageUrl": "/images/house_of_a_single_mother/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image23.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Koszalin w Koszalinie",
       "faq": [
         {
@@ -7124,7 +7124,7 @@
       "address": "ul. Pomocna 43, 00-001 Częstochowa",
       "datePosted": "2026-01-19",
       "deadline": "2026-04-30",
-      "imageUrl": "/images/children/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Częstochowa w Częstochowie",
       "faq": [
         {
@@ -7157,7 +7157,7 @@
       "address": "ul. Pomocna 18, 00-001 Legnica",
       "datePosted": "2026-02-08",
       "deadline": "2026-05-12",
-      "imageUrl": "/images/accessories/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Legnica w Legnicy",
       "faq": [
         {
@@ -7190,7 +7190,7 @@
       "address": "ul. Pomocna 12, 00-001 Piotrków Trybunalski",
       "datePosted": "2026-02-18",
       "deadline": "2026-06-16",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -7223,7 +7223,7 @@
       "address": "ul. Pomocna 39, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-14",
       "deadline": "2026-06-19",
-      "imageUrl": "/images/food_hygiene_blanket/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -7257,7 +7257,7 @@
       "address": "ul. Pomocna 31, 00-001 Gdynia",
       "datePosted": "2026-02-11",
       "deadline": "2026-06-17",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Gdynia w Gdyni",
       "faq": [
         {
@@ -7291,7 +7291,7 @@
       "address": "ul. Pomocna 30, 00-001 Starachowice",
       "datePosted": "2026-01-25",
       "deadline": "2026-04-25",
-      "imageUrl": "/images/house_of_a_single_mother/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image3.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Starachowice w Starachowicach",
       "faq": [
         {
@@ -7325,7 +7325,7 @@
       "address": "ul. Pomocna 21, 00-001 Leszno",
       "datePosted": "2026-02-02",
       "deadline": "2026-02-10",
-      "imageUrl": "/images/children/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Leszno w Lesznie",
       "faq": [
         {
@@ -7358,7 +7358,7 @@
       "address": "ul. Pomocna 40, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-01-10",
       "deadline": "2026-03-17",
-      "imageUrl": "/images/accessories/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -7391,7 +7391,7 @@
       "address": "ul. Pomocna 10, 00-001 Nowa Sól",
       "datePosted": "2026-01-04",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -7424,7 +7424,7 @@
       "address": "ul. Pomocna 35, 00-001 Wrocław",
       "datePosted": "2026-01-29",
       "deadline": "2026-04-17",
-      "imageUrl": "/images/food_hygiene_blanket/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Wrocław we Wrocławiu",
       "faq": [
         {
@@ -7458,7 +7458,7 @@
       "address": "ul. Pomocna 46, 00-001 Koszalin",
       "datePosted": "2026-01-01",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Koszalin w Koszalinie",
       "faq": [
         {
@@ -7492,7 +7492,7 @@
       "address": "ul. Pomocna 23, 00-001 Gdańsk",
       "datePosted": "2026-02-11",
       "deadline": "2026-05-18",
-      "imageUrl": "/images/house_of_a_single_mother/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image9.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Gdańsk w Gdańsku",
       "faq": [
         {
@@ -7526,7 +7526,7 @@
       "address": "ul. Pomocna 40, 00-001 Piotrków Trybunalski",
       "datePosted": "2026-02-17",
       "deadline": "2026-06-21",
-      "imageUrl": "/images/children/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -7559,7 +7559,7 @@
       "address": "ul. Pomocna 33, 00-001 Warszawa",
       "datePosted": "2026-01-06",
       "deadline": "2026-01-14",
-      "imageUrl": "/images/accessories/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Warszawa w Warszawie",
       "faq": [
         {
@@ -7592,7 +7592,7 @@
       "address": "ul. Pomocna 9, 00-001 Mielec",
       "datePosted": "2026-01-24",
       "deadline": "2026-03-05",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Mielec w Mielcu",
       "faq": [
         {
@@ -7625,7 +7625,7 @@
       "address": "ul. Pomocna 15, 00-001 Skierniewice",
       "datePosted": "2026-02-07",
       "deadline": "2026-06-29",
-      "imageUrl": "/images/food_hygiene_blanket/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -7659,7 +7659,7 @@
       "address": "ul. Pomocna 19, 00-001 Wałbrzych",
       "datePosted": "2026-01-19",
       "deadline": "2026-06-24",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Wałbrzych w Wałbrzychu",
       "faq": [
         {
@@ -7693,7 +7693,7 @@
       "address": "ul. Pomocna 4, 00-001 Tarnów",
       "datePosted": "2026-02-18",
       "deadline": "2026-06-29",
-      "imageUrl": "/images/house_of_a_single_mother/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image14.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Tarnów w Tarnowie",
       "faq": [
         {
@@ -7727,7 +7727,7 @@
       "address": "ul. Pomocna 8, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-02-10",
       "deadline": "2026-03-03",
-      "imageUrl": "/images/children/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -7760,7 +7760,7 @@
       "address": "ul. Pomocna 2, 00-001 Iława",
       "datePosted": "2026-01-16",
       "deadline": "2026-05-08",
-      "imageUrl": "/images/accessories/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Iława w Iławie",
       "faq": [
         {
@@ -7793,7 +7793,7 @@
       "address": "ul. Pomocna 42, 00-001 Elbląg",
       "datePosted": "2026-02-06",
       "deadline": "2026-03-16",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Elbląg w Elblągu",
       "faq": [
         {
@@ -7826,7 +7826,7 @@
       "address": "ul. Pomocna 29, 00-001 Starachowice",
       "datePosted": "2026-01-25",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/food_hygiene_blanket/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Starachowice w Starachowicach",
       "faq": [
         {
@@ -7860,7 +7860,7 @@
       "address": "ul. Pomocna 24, 00-001 Płock",
       "datePosted": "2026-01-20",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Płock w Płocku",
       "faq": [
         {
@@ -7894,7 +7894,7 @@
       "address": "ul. Pomocna 10, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-02-04",
       "deadline": "2026-03-12",
-      "imageUrl": "/images/house_of_a_single_mother/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image2.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -7928,7 +7928,7 @@
       "address": "ul. Pomocna 37, 00-001 Zamość",
       "datePosted": "2026-02-02",
       "deadline": "2026-03-22",
-      "imageUrl": "/images/children/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image27.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Zamość w Zamościu",
       "faq": [
         {
@@ -7961,7 +7961,7 @@
       "address": "ul. Pomocna 5, 00-001 Biała Podlaska",
       "datePosted": "2026-01-27",
       "deadline": "2026-03-20",
-      "imageUrl": "/images/accessories/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -7994,7 +7994,7 @@
       "address": "ul. Pomocna 23, 00-001 Wrocław",
       "datePosted": "2026-01-06",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Wrocław we Wrocławiu",
       "faq": [
         {
@@ -8027,7 +8027,7 @@
       "address": "ul. Pomocna 1, 00-001 Poznań",
       "datePosted": "2026-01-05",
       "deadline": "2026-02-16",
-      "imageUrl": "/images/food_hygiene_blanket/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Poznań w Poznaniu",
       "faq": [
         {
@@ -8061,7 +8061,7 @@
       "address": "ul. Pomocna 31, 00-001 Warszawa",
       "datePosted": "2026-01-10",
       "deadline": "2026-06-28",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Warszawa w Warszawie",
       "faq": [
         {
@@ -8095,7 +8095,7 @@
       "address": "ul. Pomocna 26, 00-001 Olsztyn",
       "datePosted": "2026-02-18",
       "deadline": "2026-04-12",
-      "imageUrl": "/images/house_of_a_single_mother/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image25.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Olsztyn w Olsztynie",
       "faq": [
         {
@@ -8129,7 +8129,7 @@
       "address": "ul. Pomocna 28, 00-001 Częstochowa",
       "datePosted": "2026-01-11",
       "deadline": "2026-06-11",
-      "imageUrl": "/images/children/image32.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image32.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Częstochowa w Częstochowie",
       "faq": [
         {
@@ -8162,7 +8162,7 @@
       "address": "ul. Pomocna 1, 00-001 Częstochowa",
       "datePosted": "2026-01-15",
       "deadline": "2026-03-08",
-      "imageUrl": "/images/accessories/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Częstochowa w Częstochowie",
       "faq": [
         {
@@ -8195,7 +8195,7 @@
       "address": "ul. Pomocna 34, 00-001 Łódź",
       "datePosted": "2026-01-28",
       "deadline": "2026-02-03",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Łódź w Łodzi",
       "faq": [
         {
@@ -8228,7 +8228,7 @@
       "address": "ul. Pomocna 22, 00-001 Chełm",
       "datePosted": "2026-01-22",
       "deadline": "2026-06-13",
-      "imageUrl": "/images/food_hygiene_blanket/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Chełm w Chełmie",
       "faq": [
         {
@@ -8262,7 +8262,7 @@
       "address": "ul. Pomocna 2, 00-001 Świnoujście",
       "datePosted": "2026-02-18",
       "deadline": "2026-05-17",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -8296,7 +8296,7 @@
       "address": "ul. Pomocna 2, 00-001 Białystok",
       "datePosted": "2026-01-03",
       "deadline": "2026-06-01",
-      "imageUrl": "/images/house_of_a_single_mother/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Białystok w Białymstoku",
       "faq": [
         {
@@ -8330,7 +8330,7 @@
       "address": "ul. Pomocna 23, 00-001 Świnoujście",
       "datePosted": "2026-02-04",
       "deadline": "2026-03-04",
-      "imageUrl": "/images/children/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -8363,7 +8363,7 @@
       "address": "ul. Pomocna 33, 00-001 Płock",
       "datePosted": "2026-02-02",
       "deadline": "2026-06-18",
-      "imageUrl": "/images/accessories/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Płock w Płocku",
       "faq": [
         {
@@ -8396,7 +8396,7 @@
       "address": "ul. Pomocna 36, 00-001 Wrocław",
       "datePosted": "2026-02-07",
       "deadline": "2026-04-18",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Wrocław we Wrocławiu",
       "faq": [
         {
@@ -8429,7 +8429,7 @@
       "address": "ul. Pomocna 16, 00-001 Leszno",
       "datePosted": "2026-01-03",
       "deadline": "2026-05-15",
-      "imageUrl": "/images/food_hygiene_blanket/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Leszno w Lesznie",
       "faq": [
         {
@@ -8463,7 +8463,7 @@
       "address": "ul. Pomocna 15, 00-001 Tarnów",
       "datePosted": "2026-02-09",
       "deadline": "2026-04-20",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Tarnów w Tarnowie",
       "faq": [
         {
@@ -8497,7 +8497,7 @@
       "address": "ul. Pomocna 30, 00-001 Radom",
       "datePosted": "2026-02-14",
       "deadline": "2026-03-11",
-      "imageUrl": "/images/house_of_a_single_mother/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Radom w Radomiu",
       "faq": [
         {
@@ -8531,7 +8531,7 @@
       "address": "ul. Pomocna 14, 00-001 Kraków",
       "datePosted": "2026-01-06",
       "deadline": "2026-02-01",
-      "imageUrl": "/images/children/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Kraków w Krakowie",
       "faq": [
         {
@@ -8564,7 +8564,7 @@
       "address": "ul. Pomocna 19, 00-001 Nysa",
       "datePosted": "2026-02-16",
       "deadline": "2026-03-29",
-      "imageUrl": "/images/accessories/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image27.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Nysa w Nysie",
       "faq": [
         {
@@ -8597,7 +8597,7 @@
       "address": "ul. Pomocna 24, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-01-13",
       "deadline": "2026-02-17",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -8630,7 +8630,7 @@
       "address": "ul. Pomocna 9, 00-001 Poznań",
       "datePosted": "2026-01-13",
       "deadline": "2026-06-20",
-      "imageUrl": "/images/food_hygiene_blanket/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Poznań w Poznaniu",
       "faq": [
         {
@@ -8664,7 +8664,7 @@
       "address": "ul. Pomocna 1, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-07",
       "deadline": "2026-05-03",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -8698,7 +8698,7 @@
       "address": "ul. Pomocna 11, 00-001 Chełm",
       "datePosted": "2026-01-09",
       "deadline": "2026-05-29",
-      "imageUrl": "/images/house_of_a_single_mother/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Dom Samotnej Matki Chełm w Chełmie",
       "faq": [
         {
@@ -8732,7 +8732,7 @@
       "address": "ul. Pomocna 3, 00-001 Nysa",
       "datePosted": "2026-01-19",
       "deadline": "2026-01-21",
-      "imageUrl": "/images/children/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Nysa w Nysie",
       "faq": [
         {
@@ -8765,7 +8765,7 @@
       "address": "ul. Pomocna 23, 00-001 Legnica",
       "datePosted": "2026-01-18",
       "deadline": "2026-06-08",
-      "imageUrl": "/images/accessories/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Legnica w Legnicy",
       "faq": [
         {
@@ -8798,7 +8798,7 @@
       "address": "ul. Pomocna 35, 00-001 Skierniewice",
       "datePosted": "2026-02-15",
       "deadline": "2026-05-31",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -8831,7 +8831,7 @@
       "address": "ul. Pomocna 2, 00-001 Nysa",
       "datePosted": "2026-02-03",
       "deadline": "2026-05-25",
-      "imageUrl": "/images/food_hygiene_blanket/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Nysa w Nysie",
       "faq": [
         {
@@ -8865,7 +8865,7 @@
       "address": "ul. Pomocna 39, 00-001 Mielec",
       "datePosted": "2026-01-12",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Mielec w Mielcu",
       "faq": [
         {
@@ -8899,7 +8899,7 @@
       "address": "ul. Pomocna 27, 00-001 Częstochowa",
       "datePosted": "2026-01-11",
       "deadline": "2026-05-06",
-      "imageUrl": "/images/house_of_a_single_mother/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Częstochowa w Częstochowie",
       "faq": [
         {
@@ -8933,7 +8933,7 @@
       "address": "ul. Pomocna 27, 00-001 Łódź",
       "datePosted": "2026-01-04",
       "deadline": "2026-01-22",
-      "imageUrl": "/images/children/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Łódź w Łodzi",
       "faq": [
         {
@@ -8966,7 +8966,7 @@
       "address": "ul. Pomocna 44, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-01-14",
       "deadline": "2026-05-11",
-      "imageUrl": "/images/accessories/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -8999,7 +8999,7 @@
       "address": "ul. Pomocna 49, 00-001 Rzeszów",
       "datePosted": "2026-01-16",
       "deadline": "2026-02-10",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Rzeszów w Rzeszowie",
       "faq": [
         {
@@ -9032,7 +9032,7 @@
       "address": "ul. Pomocna 18, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-18",
       "deadline": "2026-02-13",
-      "imageUrl": "/images/food_hygiene_blanket/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -9066,7 +9066,7 @@
       "address": "ul. Pomocna 24, 00-001 Tomaszów Mazowiecki",
       "datePosted": "2026-01-08",
       "deadline": "2026-04-21",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Tomaszów Mazowiecki w Tomaszowie Mazowieckim",
       "faq": [
         {
@@ -9100,7 +9100,7 @@
       "address": "ul. Pomocna 14, 00-001 Słupsk",
       "datePosted": "2026-01-25",
       "deadline": "2026-03-03",
-      "imageUrl": "/images/house_of_a_single_mother/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Słupsk w Słupsku",
       "faq": [
         {
@@ -9134,7 +9134,7 @@
       "address": "ul. Pomocna 1, 00-001 Bielsko-Biała",
       "datePosted": "2026-02-04",
       "deadline": "2026-04-13",
-      "imageUrl": "/images/children/image31.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image31.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -9167,7 +9167,7 @@
       "address": "ul. Pomocna 24, 00-001 Opole",
       "datePosted": "2026-02-04",
       "deadline": "2026-05-09",
-      "imageUrl": "/images/accessories/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Opole w Opolu",
       "faq": [
         {
@@ -9200,7 +9200,7 @@
       "address": "ul. Pomocna 23, 00-001 Szczecin",
       "datePosted": "2026-02-06",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Szczecin w Szczecinie",
       "faq": [
         {
@@ -9233,7 +9233,7 @@
       "address": "ul. Pomocna 6, 00-001 Katowice",
       "datePosted": "2026-01-04",
       "deadline": "2026-03-25",
-      "imageUrl": "/images/food_hygiene_blanket/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Katowice w Katowicach",
       "faq": [
         {
@@ -9267,7 +9267,7 @@
       "address": "ul. Pomocna 13, 00-001 Gdynia",
       "datePosted": "2026-01-19",
       "deadline": "2026-01-26",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Gdynia w Gdyni",
       "faq": [
         {
@@ -9301,7 +9301,7 @@
       "address": "ul. Pomocna 40, 00-001 Olsztyn",
       "datePosted": "2026-01-02",
       "deadline": "2026-01-27",
-      "imageUrl": "/images/house_of_a_single_mother/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image7.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Olsztyn w Olsztynie",
       "faq": [
         {
@@ -9335,7 +9335,7 @@
       "address": "ul. Pomocna 1, 00-001 Poznań",
       "datePosted": "2026-01-15",
       "deadline": "2026-02-05",
-      "imageUrl": "/images/children/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Poznań w Poznaniu",
       "faq": [
         {
@@ -9368,7 +9368,7 @@
       "address": "ul. Pomocna 12, 00-001 Oświęcim",
       "datePosted": "2026-01-03",
       "deadline": "2026-05-06",
-      "imageUrl": "/images/accessories/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -9401,7 +9401,7 @@
       "address": "ul. Pomocna 41, 00-001 Koszalin",
       "datePosted": "2026-01-11",
       "deadline": "2026-06-04",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Koszalin w Koszalinie",
       "faq": [
         {
@@ -9434,7 +9434,7 @@
       "address": "ul. Pomocna 19, 00-001 Ełk",
       "datePosted": "2026-01-17",
       "deadline": "2026-02-01",
-      "imageUrl": "/images/food_hygiene_blanket/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Ełk w Ełku",
       "faq": [
         {
@@ -9468,7 +9468,7 @@
       "address": "ul. Pomocna 44, 00-001 Zielona Góra",
       "datePosted": "2026-02-03",
       "deadline": "2026-03-06",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -9502,7 +9502,7 @@
       "address": "ul. Pomocna 46, 00-001 Białystok",
       "datePosted": "2026-01-23",
       "deadline": "2026-05-16",
-      "imageUrl": "/images/house_of_a_single_mother/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image12.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Białystok w Białymstoku",
       "faq": [
         {
@@ -9536,7 +9536,7 @@
       "address": "ul. Pomocna 20, 00-001 Wejherowo",
       "datePosted": "2026-02-12",
       "deadline": "2026-06-14",
-      "imageUrl": "/images/children/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image14.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Wejherowo w Wejherowie",
       "faq": [
         {
@@ -9569,7 +9569,7 @@
       "address": "ul. Pomocna 8, 00-001 Świnoujście",
       "datePosted": "2026-01-16",
       "deadline": "2026-06-09",
-      "imageUrl": "/images/accessories/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -9602,7 +9602,7 @@
       "address": "ul. Pomocna 39, 00-001 Konin",
       "datePosted": "2026-01-09",
       "deadline": "2026-05-09",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Konin w Koninie",
       "faq": [
         {
@@ -9635,7 +9635,7 @@
       "address": "ul. Pomocna 17, 00-001 Warszawa",
       "datePosted": "2026-01-21",
       "deadline": "2026-05-24",
-      "imageUrl": "/images/food_hygiene_blanket/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Warszawa w Warszawie",
       "faq": [
         {
@@ -9669,7 +9669,7 @@
       "address": "ul. Pomocna 40, 00-001 Katowice",
       "datePosted": "2026-02-13",
       "deadline": "2026-03-11",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Katowice w Katowicach",
       "faq": [
         {
@@ -9703,7 +9703,7 @@
       "address": "ul. Pomocna 24, 00-001 Poznań",
       "datePosted": "2026-01-23",
       "deadline": "2026-02-09",
-      "imageUrl": "/images/house_of_a_single_mother/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image18.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Poznań w Poznaniu",
       "faq": [
         {
@@ -9737,7 +9737,7 @@
       "address": "ul. Pomocna 39, 00-001 Siedlce",
       "datePosted": "2026-01-06",
       "deadline": "2026-06-21",
-      "imageUrl": "/images/children/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Siedlce w Siedlcach",
       "faq": [
         {
@@ -9770,7 +9770,7 @@
       "address": "ul. Pomocna 20, 00-001 Nowy Sącz",
       "datePosted": "2026-02-18",
       "deadline": "2026-05-16",
-      "imageUrl": "/images/accessories/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -9803,7 +9803,7 @@
       "address": "ul. Pomocna 16, 00-001 Biała Podlaska",
       "datePosted": "2026-01-22",
       "deadline": "2026-02-13",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -9836,7 +9836,7 @@
       "address": "ul. Pomocna 4, 00-001 Warszawa",
       "datePosted": "2026-02-15",
       "deadline": "2026-02-24",
-      "imageUrl": "/images/food_hygiene_blanket/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Warszawa w Warszawie",
       "faq": [
         {
@@ -9870,7 +9870,7 @@
       "address": "ul. Pomocna 9, 00-001 Kraków",
       "datePosted": "2026-01-20",
       "deadline": "2026-05-15",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Kraków w Krakowie",
       "faq": [
         {
@@ -9904,7 +9904,7 @@
       "address": "ul. Pomocna 41, 00-001 Częstochowa",
       "datePosted": "2026-02-16",
       "deadline": "2026-04-23",
-      "imageUrl": "/images/house_of_a_single_mother/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image23.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Częstochowa w Częstochowie",
       "faq": [
         {
@@ -9938,7 +9938,7 @@
       "address": "ul. Pomocna 50, 00-001 Nysa",
       "datePosted": "2026-02-05",
       "deadline": "2026-03-20",
-      "imageUrl": "/images/children/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image25.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Nysa w Nysie",
       "faq": [
         {
@@ -9971,7 +9971,7 @@
       "address": "ul. Pomocna 16, 00-001 Lublin",
       "datePosted": "2026-01-11",
       "deadline": "2026-01-14",
-      "imageUrl": "/images/accessories/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Lublin w Lublinie",
       "faq": [
         {
@@ -10004,7 +10004,7 @@
       "address": "ul. Pomocna 29, 00-001 Bielsko-Biała",
       "datePosted": "2026-02-11",
       "deadline": "2026-06-10",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -10037,7 +10037,7 @@
       "address": "ul. Pomocna 3, 00-001 Nowy Sącz",
       "datePosted": "2026-01-12",
       "deadline": "2026-06-07",
-      "imageUrl": "/images/food_hygiene_blanket/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Nowy Sącz w Nowym Sączu",
       "faq": [
         {
@@ -10071,7 +10071,7 @@
       "address": "ul. Pomocna 12, 00-001 Szczecin",
       "datePosted": "2026-01-06",
       "deadline": "2026-05-10",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Szczecin w Szczecinie",
       "faq": [
         {
@@ -10105,7 +10105,7 @@
       "address": "ul. Pomocna 28, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-02-08",
       "deadline": "2026-03-01",
-      "imageUrl": "/images/house_of_a_single_mother/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image3.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -10139,7 +10139,7 @@
       "address": "ul. Pomocna 49, 00-001 Starachowice",
       "datePosted": "2026-01-06",
       "deadline": "2026-02-18",
-      "imageUrl": "/images/children/image30.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image30.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Starachowice w Starachowicach",
       "faq": [
         {
@@ -10172,7 +10172,7 @@
       "address": "ul. Pomocna 47, 00-001 Siedlce",
       "datePosted": "2026-01-26",
       "deadline": "2026-05-30",
-      "imageUrl": "/images/accessories/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Siedlce w Siedlcach",
       "faq": [
         {
@@ -10205,7 +10205,7 @@
       "address": "ul. Pomocna 2, 00-001 Starachowice",
       "datePosted": "2026-01-22",
       "deadline": "2026-05-05",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Starachowice w Starachowicach",
       "faq": [
         {
@@ -10238,7 +10238,7 @@
       "address": "ul. Pomocna 35, 00-001 Rzeszów",
       "datePosted": "2026-02-05",
       "deadline": "2026-06-28",
-      "imageUrl": "/images/food_hygiene_blanket/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Rzeszów w Rzeszowie",
       "faq": [
         {
@@ -10272,7 +10272,7 @@
       "address": "ul. Pomocna 15, 00-001 Jelenia Góra",
       "datePosted": "2026-01-19",
       "deadline": "2026-02-06",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -10306,7 +10306,7 @@
       "address": "ul. Pomocna 34, 00-001 Zielona Góra",
       "datePosted": "2026-02-07",
       "deadline": "2026-05-14",
-      "imageUrl": "/images/house_of_a_single_mother/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image9.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -10340,7 +10340,7 @@
       "address": "ul. Pomocna 25, 00-001 Bielsko-Biała",
       "datePosted": "2026-01-06",
       "deadline": "2026-03-24",
-      "imageUrl": "/images/children/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image8.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -10373,7 +10373,7 @@
       "address": "ul. Pomocna 42, 00-001 Gliwice",
       "datePosted": "2026-01-14",
       "deadline": "2026-03-30",
-      "imageUrl": "/images/accessories/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Gliwice w Gliwicach",
       "faq": [
         {
@@ -10406,7 +10406,7 @@
       "address": "ul. Pomocna 1, 00-001 Płock",
       "datePosted": "2026-01-07",
       "deadline": "2026-04-25",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Płock w Płocku",
       "faq": [
         {
@@ -10439,7 +10439,7 @@
       "address": "ul. Pomocna 44, 00-001 Biała Podlaska",
       "datePosted": "2026-02-04",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/food_hygiene_blanket/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -10473,7 +10473,7 @@
       "address": "ul. Pomocna 13, 00-001 Tarnów",
       "datePosted": "2026-01-28",
       "deadline": "2026-06-24",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Tarnów w Tarnowie",
       "faq": [
         {
@@ -10507,7 +10507,7 @@
       "address": "ul. Pomocna 6, 00-001 Łomża",
       "datePosted": "2026-02-16",
       "deadline": "2026-03-10",
-      "imageUrl": "/images/house_of_a_single_mother/image14.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image14.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Łomża w Łomży",
       "faq": [
         {
@@ -10541,7 +10541,7 @@
       "address": "ul. Pomocna 17, 00-001 Łomża",
       "datePosted": "2026-01-07",
       "deadline": "2026-05-15",
-      "imageUrl": "/images/children/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image13.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Łomża w Łomży",
       "faq": [
         {
@@ -10574,7 +10574,7 @@
       "address": "ul. Pomocna 38, 00-001 Poznań",
       "datePosted": "2026-02-03",
       "deadline": "2026-06-22",
-      "imageUrl": "/images/accessories/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Centrum Pomocy Społecznej Poznań w Poznaniu",
       "faq": [
         {
@@ -10607,7 +10607,7 @@
       "address": "ul. Pomocna 23, 00-001 Opole",
       "datePosted": "2026-01-03",
       "deadline": "2026-04-16",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Opole w Opolu",
       "faq": [
         {
@@ -10640,7 +10640,7 @@
       "address": "ul. Pomocna 21, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-02-15",
       "deadline": "2026-03-15",
-      "imageUrl": "/images/food_hygiene_blanket/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Fundacja Pomocy Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -10674,7 +10674,7 @@
       "address": "ul. Pomocna 5, 00-001 Bielsko-Biała",
       "datePosted": "2026-01-26",
       "deadline": "2026-02-04",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Noclegownia Miejska Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -10708,7 +10708,7 @@
       "address": "ul. Pomocna 6, 00-001 Gliwice",
       "datePosted": "2026-01-22",
       "deadline": "2026-02-01",
-      "imageUrl": "/images/house_of_a_single_mother/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image2.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Gliwice w Gliwicach",
       "faq": [
         {
@@ -10742,7 +10742,7 @@
       "address": "ul. Pomocna 22, 00-001 Opole",
       "datePosted": "2026-01-06",
       "deadline": "2026-03-08",
-      "imageUrl": "/images/children/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image19.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Opole w Opolu",
       "faq": [
         {
@@ -10775,7 +10775,7 @@
       "address": "ul. Pomocna 31, 00-001 Stalowa Wola",
       "datePosted": "2026-02-08",
       "deadline": "2026-05-27",
-      "imageUrl": "/images/accessories/image9.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image9.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Stalowa Wola w Stalowej Woli",
       "faq": [
         {
@@ -10808,7 +10808,7 @@
       "address": "ul. Pomocna 21, 00-001 Białystok",
       "datePosted": "2026-02-15",
       "deadline": "2026-03-20",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Białystok w Białymstoku",
       "faq": [
         {
@@ -10841,7 +10841,7 @@
       "address": "ul. Pomocna 38, 00-001 Gorzów Wielkopolski",
       "datePosted": "2026-02-03",
       "deadline": "2026-02-12",
-      "imageUrl": "/images/food_hygiene_blanket/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Gorzów Wielkopolski w Gorzowie Wielkopolskim",
       "faq": [
         {
@@ -10875,7 +10875,7 @@
       "address": "ul. Pomocna 23, 00-001 Siedlce",
       "datePosted": "2026-02-02",
       "deadline": "2026-02-05",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Siedlce w Siedlcach",
       "faq": [
         {
@@ -10909,7 +10909,7 @@
       "address": "ul. Pomocna 25, 00-001 Częstochowa",
       "datePosted": "2026-01-25",
       "deadline": "2026-06-17",
-      "imageUrl": "/images/house_of_a_single_mother/image25.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image25.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Częstochowa w Częstochowie",
       "faq": [
         {
@@ -10943,7 +10943,7 @@
       "address": "ul. Pomocna 38, 00-001 Wałbrzych",
       "datePosted": "2026-02-06",
       "deadline": "2026-05-18",
-      "imageUrl": "/images/children/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image24.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Wałbrzych w Wałbrzychu",
       "faq": [
         {
@@ -10976,7 +10976,7 @@
       "address": "ul. Pomocna 26, 00-001 Słupsk",
       "datePosted": "2026-02-16",
       "deadline": "2026-05-15",
-      "imageUrl": "/images/accessories/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Słupsk w Słupsku",
       "faq": [
         {
@@ -11009,7 +11009,7 @@
       "address": "ul. Pomocna 47, 00-001 Piotrków Trybunalski",
       "datePosted": "2025-12-31",
       "deadline": "2026-01-29",
-      "imageUrl": "/images/clothes_and_shoes/image13.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image13.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Bank Odzieży Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -11042,7 +11042,7 @@
       "address": "ul. Pomocna 6, 00-001 Katowice",
       "datePosted": "2026-02-12",
       "deadline": "2026-02-16",
-      "imageUrl": "/images/food_hygiene_blanket/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Katowice w Katowicach",
       "faq": [
         {
@@ -11076,7 +11076,7 @@
       "address": "ul. Pomocna 33, 00-001 Toruń",
       "datePosted": "2026-02-09",
       "deadline": "2026-05-01",
-      "imageUrl": "/images/homeless/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Toruń w Toruniu",
       "faq": [
         {
@@ -11110,7 +11110,7 @@
       "address": "ul. Pomocna 20, 00-001 Elbląg",
       "datePosted": "2026-01-13",
       "deadline": "2026-04-29",
-      "imageUrl": "/images/house_of_a_single_mother/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Elbląg w Elblągu",
       "faq": [
         {
@@ -11144,7 +11144,7 @@
       "address": "ul. Pomocna 38, 00-001 Iława",
       "datePosted": "2026-01-26",
       "deadline": "2026-06-12",
-      "imageUrl": "/images/children/image3.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image3.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Iława w Iławie",
       "faq": [
         {
@@ -11177,7 +11177,7 @@
       "address": "ul. Pomocna 23, 00-001 Leszno",
       "datePosted": "2026-01-10",
       "deadline": "2026-06-11",
-      "imageUrl": "/images/accessories/image2.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image2.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Nowy Dom Leszno w Lesznie",
       "faq": [
         {
@@ -11210,7 +11210,7 @@
       "address": "ul. Pomocna 50, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-01-08",
       "deadline": "2026-01-19",
-      "imageUrl": "/images/clothes_and_shoes/image19.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image19.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -11243,7 +11243,7 @@
       "address": "ul. Pomocna 16, 00-001 Bydgoszcz",
       "datePosted": "2026-02-10",
       "deadline": "2026-05-29",
-      "imageUrl": "/images/food_hygiene_blanket/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image21.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Bydgoszcz w Bydgoszczy",
       "faq": [
         {
@@ -11277,7 +11277,7 @@
       "address": "ul. Pomocna 37, 00-001 Opole",
       "datePosted": "2026-02-06",
       "deadline": "2026-06-28",
-      "imageUrl": "/images/homeless/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Opole w Opolu",
       "faq": [
         {
@@ -11311,7 +11311,7 @@
       "address": "ul. Pomocna 31, 00-001 Łomża",
       "datePosted": "2026-02-04",
       "deadline": "2026-04-12",
-      "imageUrl": "/images/house_of_a_single_mother/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Łomża w Łomży",
       "faq": [
         {
@@ -11345,7 +11345,7 @@
       "address": "ul. Pomocna 23, 00-001 Przemyśl",
       "datePosted": "2026-01-30",
       "deadline": "2026-04-17",
-      "imageUrl": "/images/children/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Dom Dziecka Przemyśl w Przemyślu",
       "faq": [
         {
@@ -11378,7 +11378,7 @@
       "address": "ul. Pomocna 48, 00-001 Toruń",
       "datePosted": "2026-02-07",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/accessories/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Toruń w Toruniu",
       "faq": [
         {
@@ -11411,7 +11411,7 @@
       "address": "ul. Pomocna 38, 00-001 Świnoujście",
       "datePosted": "2026-02-02",
       "deadline": "2026-04-19",
-      "imageUrl": "/images/clothes_and_shoes/image24.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image24.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Świnoujście w Świnoujściu",
       "faq": [
         {
@@ -11444,7 +11444,7 @@
       "address": "ul. Pomocna 47, 00-001 Siedlce",
       "datePosted": "2026-01-17",
       "deadline": "2026-03-01",
-      "imageUrl": "/images/food_hygiene_blanket/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Siedlce w Siedlcach",
       "faq": [
         {
@@ -11478,7 +11478,7 @@
       "address": "ul. Pomocna 29, 00-001 Gdynia",
       "datePosted": "2026-01-09",
       "deadline": "2026-04-24",
-      "imageUrl": "/images/homeless/image26.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image26.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Gdynia w Gdyni",
       "faq": [
         {
@@ -11512,7 +11512,7 @@
       "address": "ul. Pomocna 50, 00-001 Bielsko-Biała",
       "datePosted": "2026-02-02",
       "deadline": "2026-03-11",
-      "imageUrl": "/images/house_of_a_single_mother/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -11546,7 +11546,7 @@
       "address": "ul. Pomocna 1, 00-001 Radom",
       "datePosted": "2026-01-19",
       "deadline": "2026-02-25",
-      "imageUrl": "/images/children/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Radom w Radomiu",
       "faq": [
         {
@@ -11579,7 +11579,7 @@
       "address": "ul. Pomocna 36, 00-001 Słupsk",
       "datePosted": "2026-02-11",
       "deadline": "2026-02-26",
-      "imageUrl": "/images/accessories/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Słupsk w Słupsku",
       "faq": [
         {
@@ -11612,7 +11612,7 @@
       "address": "ul. Pomocna 26, 00-001 Starachowice",
       "datePosted": "2026-02-05",
       "deadline": "2026-04-03",
-      "imageUrl": "/images/clothes_and_shoes/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image5.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Starachowice w Starachowicach",
       "faq": [
         {
@@ -11645,7 +11645,7 @@
       "address": "ul. Pomocna 26, 00-001 Jelenia Góra",
       "datePosted": "2026-01-13",
       "deadline": "2026-03-04",
-      "imageUrl": "/images/food_hygiene_blanket/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -11679,7 +11679,7 @@
       "address": "ul. Pomocna 28, 00-001 Bielsko-Biała",
       "datePosted": "2026-01-30",
       "deadline": "2026-03-25",
-      "imageUrl": "/images/homeless/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Bielsko-Biała w Bielsku-Białej",
       "faq": [
         {
@@ -11713,7 +11713,7 @@
       "address": "ul. Pomocna 33, 00-001 Szczecin",
       "datePosted": "2026-02-10",
       "deadline": "2026-05-10",
-      "imageUrl": "/images/house_of_a_single_mother/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Mama Szczecin w Szczecinie",
       "faq": [
         {
@@ -11747,7 +11747,7 @@
       "address": "ul. Pomocna 13, 00-001 Szczecin",
       "datePosted": "2026-01-21",
       "deadline": "2026-04-10",
-      "imageUrl": "/images/children/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Szczecin w Szczecinie",
       "faq": [
         {
@@ -11780,7 +11780,7 @@
       "address": "ul. Pomocna 48, 00-001 Ełk",
       "datePosted": "2026-01-24",
       "deadline": "2026-04-29",
-      "imageUrl": "/images/accessories/image15.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image15.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Ełk w Ełku",
       "faq": [
         {
@@ -11813,7 +11813,7 @@
       "address": "ul. Pomocna 10, 00-001 Łomża",
       "datePosted": "2026-01-15",
       "deadline": "2026-03-21",
-      "imageUrl": "/images/clothes_and_shoes/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image10.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Łomża w Łomży",
       "faq": [
         {
@@ -11846,7 +11846,7 @@
       "address": "ul. Pomocna 43, 00-001 Chełm",
       "datePosted": "2026-02-08",
       "deadline": "2026-05-26",
-      "imageUrl": "/images/food_hygiene_blanket/image17.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image17.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Chełm w Chełmie",
       "faq": [
         {
@@ -11880,7 +11880,7 @@
       "address": "ul. Pomocna 11, 00-001 Zielona Góra",
       "datePosted": "2026-01-12",
       "deadline": "2026-05-03",
-      "imageUrl": "/images/homeless/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Misja Uliczna Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -11914,7 +11914,7 @@
       "address": "ul. Pomocna 36, 00-001 Gliwice",
       "datePosted": "2026-01-20",
       "deadline": "2026-02-08",
-      "imageUrl": "/images/house_of_a_single_mother/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Gliwice w Gliwicach",
       "faq": [
         {
@@ -11948,7 +11948,7 @@
       "address": "ul. Pomocna 22, 00-001 Zielona Góra",
       "datePosted": "2026-01-14",
       "deadline": "2026-02-23",
-      "imageUrl": "/images/children/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Zielona Góra w Zielonej Górze",
       "faq": [
         {
@@ -11981,7 +11981,7 @@
       "address": "ul. Pomocna 43, 00-001 Ostrowiec Świętokrzyski",
       "datePosted": "2026-01-08",
       "deadline": "2026-06-12",
-      "imageUrl": "/images/accessories/image20.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image20.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Ostrowiec Świętokrzyski w Ostrowcu Świętokrzyskim",
       "faq": [
         {
@@ -12014,7 +12014,7 @@
       "address": "ul. Pomocna 41, 00-001 Piotrków Trybunalski",
       "datePosted": "2026-01-10",
       "deadline": "2026-01-13",
-      "imageUrl": "/images/clothes_and_shoes/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image16.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Dobra Szafa Piotrków Trybunalski w Piotrkowie Trybunalskim",
       "faq": [
         {
@@ -12047,7 +12047,7 @@
       "address": "ul. Pomocna 42, 00-001 Kalisz",
       "datePosted": "2026-02-17",
       "deadline": "2026-03-31",
-      "imageUrl": "/images/food_hygiene_blanket/image22.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image22.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Instytut Pomocy Społecznej Kalisz w Kaliszu",
       "faq": [
         {
@@ -12081,7 +12081,7 @@
       "address": "ul. Pomocna 48, 00-001 Poznań",
       "datePosted": "2026-01-16",
       "deadline": "2026-06-07",
-      "imageUrl": "/images/homeless/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Poznań w Poznaniu",
       "faq": [
         {
@@ -12115,7 +12115,7 @@
       "address": "ul. Pomocna 23, 00-001 Nowa Sól",
       "datePosted": "2026-01-22",
       "deadline": "2026-02-05",
-      "imageUrl": "/images/house_of_a_single_mother/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image7.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -12149,7 +12149,7 @@
       "address": "ul. Pomocna 43, 00-001 Kędzierzyn-Koźle",
       "datePosted": "2026-02-05",
       "deadline": "2026-03-07",
-      "imageUrl": "/images/children/image29.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image29.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Stowarzyszenie Mały Start Kędzierzyn-Koźle w Kędzierzynie-Koźlu",
       "faq": [
         {
@@ -12182,7 +12182,7 @@
       "address": "ul. Pomocna 10, 00-001 Wrocław",
       "datePosted": "2026-01-29",
       "deadline": "2026-02-09",
-      "imageUrl": "/images/accessories/image5.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image5.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Wrocław we Wrocławiu",
       "faq": [
         {
@@ -12215,7 +12215,7 @@
       "address": "ul. Pomocna 24, 00-001 Nowa Sól",
       "datePosted": "2026-01-25",
       "deadline": "2026-04-01",
-      "imageUrl": "/images/clothes_and_shoes/image21.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image21.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -12248,7 +12248,7 @@
       "address": "ul. Pomocna 6, 00-001 Kalisz",
       "datePosted": "2026-01-20",
       "deadline": "2026-05-19",
-      "imageUrl": "/images/food_hygiene_blanket/image7.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image7.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Kalisz w Kaliszu",
       "faq": [
         {
@@ -12282,7 +12282,7 @@
       "address": "ul. Pomocna 49, 00-001 Wrocław",
       "datePosted": "2026-02-02",
       "deadline": "2026-03-12",
-      "imageUrl": "/images/homeless/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image23.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Wrocław we Wrocławiu",
       "faq": [
         {
@@ -12316,7 +12316,7 @@
       "address": "ul. Pomocna 47, 00-001 Skierniewice",
       "datePosted": "2026-01-29",
       "deadline": "2026-06-12",
-      "imageUrl": "/images/house_of_a_single_mother/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image12.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Skierniewice w Skierniewicach",
       "faq": [
         {
@@ -12350,7 +12350,7 @@
       "address": "ul. Pomocna 43, 00-001 Augustów",
       "datePosted": "2026-01-10",
       "deadline": "2026-03-01",
-      "imageUrl": "/images/children/image6.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image6.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Uśmiech Dziecka Augustów w Augustowie",
       "faq": [
         {
@@ -12383,7 +12383,7 @@
       "address": "ul. Pomocna 14, 00-001 Nowa Sól",
       "datePosted": "2026-01-28",
       "deadline": "2026-03-14",
-      "imageUrl": "/images/accessories/image10.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image10.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Pomocy Rodzinie Nowa Sól w Nowej Soli",
       "faq": [
         {
@@ -12416,7 +12416,7 @@
       "address": "ul. Pomocna 31, 00-001 Kalisz",
       "datePosted": "2026-02-18",
       "deadline": "2026-06-07",
-      "imageUrl": "/images/clothes_and_shoes/image27.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image27.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Stowarzyszenie Wsparcia Kalisz w Kaliszu",
       "faq": [
         {
@@ -12449,7 +12449,7 @@
       "address": "ul. Pomocna 22, 00-001 Szczecin",
       "datePosted": "2026-01-19",
       "deadline": "2026-02-14",
-      "imageUrl": "/images/food_hygiene_blanket/image12.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image12.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Hospicjum dla Chorych Szczecin w Szczecinie",
       "faq": [
         {
@@ -12483,7 +12483,7 @@
       "address": "ul. Pomocna 20, 00-001 Gliwice",
       "datePosted": "2026-01-24",
       "deadline": "2026-03-14",
-      "imageUrl": "/images/homeless/image4.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image4.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Stowarzyszenie Nadzieja Gliwice w Gliwicach",
       "faq": [
         {
@@ -12517,7 +12517,7 @@
       "address": "ul. Pomocna 32, 00-001 Biała Podlaska",
       "datePosted": "2026-01-03",
       "deadline": "2026-04-17",
-      "imageUrl": "/images/house_of_a_single_mother/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image18.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Fundacja Bezpieczna Przystań Biała Podlaska w Białej Podlaskiej",
       "faq": [
         {
@@ -12551,7 +12551,7 @@
       "address": "ul. Pomocna 8, 00-001 Konin",
       "datePosted": "2026-01-17",
       "deadline": "2026-02-10",
-      "imageUrl": "/images/children/image11.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/children/image11.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Świetlica Środowiskowa Konin w Koninie",
       "faq": [
         {
@@ -12584,7 +12584,7 @@
       "address": "ul. Pomocna 20, 00-001 Siedlce",
       "datePosted": "2026-01-20",
       "deadline": "2026-02-01",
-      "imageUrl": "/images/accessories/image16.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/accessories/image16.avif",
       "imageAlt": "Zdjęcie zbiórki pomocowej organizowanej przez Fundacja Dobrego Serca Siedlce w Siedlcach",
       "faq": [
         {
@@ -12617,7 +12617,7 @@
       "address": "ul. Pomocna 10, 00-001 Oświęcim",
       "datePosted": "2026-01-29",
       "deadline": "2026-02-11",
-      "imageUrl": "/images/clothes_and_shoes/image8.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/clothes_and_shoes/image8.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Misja Charytatywna Oświęcim w Oświęcimiu",
       "faq": [
         {
@@ -12650,7 +12650,7 @@
       "address": "ul. Pomocna 5, 00-001 Jelenia Góra",
       "datePosted": "2026-02-14",
       "deadline": "2026-04-05",
-      "imageUrl": "/images/food_hygiene_blanket/image18.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/food_hygiene_blanket/image18.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Bank Żywności Jelenia Góra w Jeleniej Górze",
       "faq": [
         {
@@ -12684,7 +12684,7 @@
       "address": "ul. Pomocna 9, 00-001 Wejherowo",
       "datePosted": "2026-01-30",
       "deadline": "2026-03-13",
-      "imageUrl": "/images/homeless/image1.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/homeless/image1.avif",
       "imageAlt": "Zdjęcie zbiórki pilnej pomocy organizowanej przez Schronisko dla Bezdomnych Wejherowo w Wejherowie",
       "faq": [
         {
@@ -12718,7 +12718,7 @@
       "address": "ul. Pomocna 14, 00-001 Zielona Góra",
       "datePosted": "2026-02-13",
       "deadline": "2026-06-15",
-      "imageUrl": "/images/house_of_a_single_mother/image23.avif",
+      "imageUrl": "https://res.cloudinary.com/dtoczcwf4/image/upload/images/house_of_a_single_mother/image23.avif",
       "imageAlt": "Zdjęcie zbiórki odzieży i obuwia organizowanej przez Centrum Wsparcia Kobiet Zielona Góra w Zielonej Górze",
       "faq": [
         {
